@@ -2,14 +2,41 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ArrowLeft, ExternalLink, ChevronRight, X, ChevronLeft as LeftIcon, ChevronRight as RightIcon } from "lucide-react";
+import { ArrowLeft, ExternalLink, ChevronRight, X, ChevronLeft as LeftIcon, ChevronRight as RightIcon, Shield } from "lucide-react";
 import Link from "next/link";
 import { Section } from "@/components/Section";
 import { Project } from "@/types/project";
+import { LanguageToggle } from "@/components/LanguageToggle";
+import { useLocale } from "@/components/LocaleProvider";
+import { getLocalizedText, localizeHref } from "@/lib/i18n";
 
 export default function ProjectClient({ project }: { project: Project }) {
+    const { locale } = useLocale();
     const [selectedImage, setSelectedImage] = useState<string | null>(null);
     const [currentIndex, setCurrentIndex] = useState(0);
+    const projectTitle = getLocalizedText(project.title, locale);
+    const copy = {
+        back: {
+            ko: "프로젝트 목록으로",
+            en: "Back to Projects",
+        },
+        privacy: {
+            ko: "개인정보 처리방침",
+            en: "Privacy Policy",
+        },
+        screenshots: {
+            ko: "스크린샷",
+            en: "SCREENSHOTS",
+        },
+        features: {
+            ko: "주요 특징",
+            en: "KEY FEATURES",
+        },
+        imageNotFound: {
+            ko: "이미지를 찾을 수 없습니다",
+            en: "Image Not Found",
+        },
+    };
 
     const openViewer = (image: string, index: number) => {
         setSelectedImage(image);
@@ -39,10 +66,11 @@ export default function ProjectClient({ project }: { project: Project }) {
     return (
         <main className="min-h-screen bg-black text-white">
             {/* Navigation */}
-            <nav className="p-6">
-                <Link href="/" className="inline-flex items-center gap-2 text-gray-400 hover:text-[#00FF41] transition-colors">
-                    <ArrowLeft size={20} /> 프로젝트 목록으로
+            <nav className="p-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+                <Link href={localizeHref("/", locale)} className="inline-flex items-center gap-2 text-gray-400 hover:text-[#00FF41] transition-colors">
+                    <ArrowLeft size={20} /> {getLocalizedText(copy.back, locale)}
                 </Link>
+                <LanguageToggle />
             </nav>
 
             <Section className="pt-10">
@@ -59,12 +87,12 @@ export default function ProjectClient({ project }: { project: Project }) {
                                 onClick={() => project.icon && openViewer(project.icon, -1)}
                             >
                                 {project.icon ? (
-                                    <img src={project.icon} alt={project.title} className="w-full h-full object-cover" />
+                                    <img src={project.icon} alt={projectTitle} className="w-full h-full object-cover" />
                                 ) : (
                                     <span className="text-[10px] text-gray-600">ICON</span>
                                 )}
                             </div>
-                            <h1 className="text-4xl font-bold mb-4">{project.title}</h1>
+                            <h1 className="text-4xl font-bold mb-4">{projectTitle}</h1>
                             <div className="flex flex-wrap gap-2 mb-8">
                                 {project.tags.map(tag => (
                                     <span key={tag} className="text-xs font-mono bg-[#00FF41]/10 text-[#00FF41] px-3 py-1 rounded-full border border-[#00FF41]/20">
@@ -73,7 +101,7 @@ export default function ProjectClient({ project }: { project: Project }) {
                                 ))}
                             </div>
                             <p className="text-gray-400 leading-relaxed mb-8 text-lg">
-                                {project.fullDescription}
+                                {getLocalizedText(project.fullDescription, locale)}
                             </p>
 
                             <div className="flex flex-col gap-4">
@@ -107,6 +135,14 @@ export default function ProjectClient({ project }: { project: Project }) {
                                         <ExternalLink size={18} /> Steam
                                     </a>
                                 )}
+                                {project.privacySlug && (
+                                    <Link
+                                        href={localizeHref(`/privacy/${project.privacySlug}`, locale)}
+                                        className="inline-flex items-center gap-3 border border-[#00FF41]/30 text-[#00FF41] font-bold px-6 py-3 rounded-lg hover:bg-[#00FF41]/10 transition-colors"
+                                    >
+                                        <Shield size={18} /> {getLocalizedText(copy.privacy, locale)}
+                                    </Link>
+                                )}
                             </div>
                         </motion.div>
                     </div>
@@ -116,7 +152,7 @@ export default function ProjectClient({ project }: { project: Project }) {
                         {project.screenshots.length > 0 && (
                             <div>
                                 <h2 className="text-xl font-bold mb-6 flex items-center gap-2">
-                                    <ChevronRight size={20} className="text-[#00FF41]" /> SCREENSHOTS
+                                    <ChevronRight size={20} className="text-[#00FF41]" /> {getLocalizedText(copy.screenshots, locale)}
                                 </h2>
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                                     {project.screenshots.map((sc, i) => (
@@ -125,11 +161,11 @@ export default function ProjectClient({ project }: { project: Project }) {
                                             className="aspect-[9/16] bg-gray-900 rounded-xl border border-gray-800 flex items-center justify-center text-gray-700 text-sm italic overflow-hidden cursor-pointer hover:border-[#00FF41]/30 transition-all hover:scale-[1.02]"
                                             onClick={() => openViewer(sc, i)}
                                         >
-                                            <img src={sc} alt={`${project.title} screenshot ${i + 1}`} className="w-full h-full object-cover shadow-2xl"
+                                            <img src={sc} alt={`${projectTitle} screenshot ${i + 1}`} className="w-full h-full object-cover shadow-2xl"
                                                 onError={(e) => {
                                                     const target = e.target as HTMLImageElement;
                                                     target.style.display = 'none';
-                                                    target.parentElement!.innerText = 'Image Not Found: ' + sc;
+                                                    target.parentElement!.innerText = `${getLocalizedText(copy.imageNotFound, locale)}: ${sc}`;
                                                 }} />
                                         </div>
                                     ))}
@@ -140,13 +176,13 @@ export default function ProjectClient({ project }: { project: Project }) {
                         {project.features.length > 0 && (
                             <div className="game-card p-10">
                                 <h2 className="text-xl font-bold mb-8 flex items-center gap-2">
-                                    <ChevronRight size={20} className="text-[#00FF41]" /> KEY FEATURES
+                                    <ChevronRight size={20} className="text-[#00FF41]" /> {getLocalizedText(copy.features, locale)}
                                 </h2>
                                 <ul className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                     {project.features.map((feature, i) => (
                                         <li key={i} className="flex gap-4 items-start">
                                             <div className="mt-1.5 w-1.5 h-1.5 bg-[#00FF41] rounded-full shrink-0" />
-                                            <span className="text-gray-300 leading-snug">{feature}</span>
+                                            <span className="text-gray-300 leading-snug">{getLocalizedText(feature, locale)}</span>
                                         </li>
                                     ))}
                                 </ul>
@@ -157,7 +193,7 @@ export default function ProjectClient({ project }: { project: Project }) {
             </Section>
 
             <footer className="py-20 text-center border-t border-gray-900 mt-20">
-                <p className="text-gray-600 text-sm">© 2026 DiskFactory | {project.title}</p>
+                <p className="text-gray-600 text-sm">© 2026 DiskFactory | {projectTitle}</p>
             </footer>
 
             {/* Image Viewer Modal */}

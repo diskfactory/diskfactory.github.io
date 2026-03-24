@@ -1,6 +1,7 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { LocaleProvider } from "@/components/LocaleProvider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -14,8 +15,12 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "DiskFactory | 디스크팩토리",
-  description: "Innovative Games and Software by DiskFactory",
-  viewport: "width=device-width, initial-scale=1",
+  description: "DiskFactory official site and privacy policies for mobile games.",
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
 };
 
 export default function RootLayout({
@@ -24,12 +29,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ko" className="dark">
+    <html lang="ko" className="dark" suppressHydrationWarning>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased selection:bg-brand-primary selection:text-black`}
       >
-        <div className="scanline" />
-        {children}
+        <LocaleProvider>
+          <div className="scanline" />
+          {children}
+        </LocaleProvider>
       </body>
     </html>
   );

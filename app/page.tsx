@@ -5,13 +5,40 @@ import { Section } from "@/components/Section";
 import { Gamepad2, Database, Mail, ArrowRight } from "lucide-react";
 import { projects } from "@/data/projects";
 import Link from "next/link";
+import { LanguageToggle } from "@/components/LanguageToggle";
+import { useLocale } from "@/components/LocaleProvider";
+import { getLocalizedText, localizeHref } from "@/lib/i18n";
 
 export default function Home() {
+  const { locale } = useLocale();
+  const copy = {
+    subtitle: {
+      ko: "디스크팩토리(DiskFactory)는 재미있는 상상력을 현실로 만드는 1인 게임 개발 스튜디오입니다.",
+      en: "DiskFactory is a solo game development studio turning playful ideas into real games.",
+    },
+    projectsTitle: {
+      ko: "현재 프로젝트",
+      en: "CURRENT PROJECTS",
+    },
+    rights: {
+      ko: "© 2026 DiskFactory. All rights reserved.",
+      en: "© 2026 DiskFactory. All rights reserved.",
+    },
+    privacy: {
+      ko: "개인정보 처리방침",
+      en: "Privacy Policy",
+    },
+  };
+
   return (
     <main className="min-h-screen bg-black text-white relative overflow-hidden">
       {/* Background Decor */}
       <div className="absolute top-0 left-0 w-full h-full opacity-20 pointer-events-none"
         style={{ backgroundImage: 'radial-gradient(circle at 50% 50%, #1a1a1a 0%, transparent 100%)' }} />
+
+      <div className="absolute top-6 right-6 z-20">
+        <LanguageToggle />
+      </div>
 
       {/* Hero Section */}
       <Section className="flex flex-col items-center justify-center min-h-[80vh] text-center pt-32">
@@ -41,7 +68,7 @@ export default function Home() {
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.4 }}
         >
-          디스크팩토리(DiskFactory)는 재미있는 상상력을 현실로 만드는 1인 게임 개발 스튜디오입니다.
+          {getLocalizedText(copy.subtitle, locale)}
         </motion.p>
 
         <motion.div
@@ -62,27 +89,27 @@ export default function Home() {
       {/* Projects Section */}
       <Section id="projects">
         <h2 className="text-4xl font-bold mb-12 flex items-center gap-3">
-          <Gamepad2 className="text-[#00FF41]" /> CURRENT PROJECTS
+          <Gamepad2 className="text-[#00FF41]" /> {getLocalizedText(copy.projectsTitle, locale)}
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {projects.map((project) => (
-            <Link key={project.id} href={`/projects/${project.id}`}>
+            <Link key={project.id} href={localizeHref(`/projects/${project.id}`, locale)}>
               <div className="game-card p-8 group cursor-pointer h-full flex flex-col">
                 {project.thumbnail && (
                   <div className="w-full h-48 bg-gray-900 rounded-md mb-6 overflow-hidden relative border border-gray-800 group-hover:border-[#00FF41]/30 transition-colors">
-                    <img src={project.thumbnail} alt={project.title} className="w-full h-full object-cover" />
+                    <img src={project.thumbnail} alt={getLocalizedText(project.title, locale)} className="w-full h-full object-cover" />
                   </div>
                 )}
 
                 <div className="flex items-center gap-4 mb-4">
                   {project.icon && (
                     <div className="w-12 h-12 bg-gray-800 rounded-lg flex items-center justify-center text-[10px] text-gray-600 border border-gray-700 overflow-hidden shrink-0">
-                      <img src={project.icon} alt={project.title} className="w-full h-full object-cover" />
+                      <img src={project.icon} alt={getLocalizedText(project.title, locale)} className="w-full h-full object-cover" />
                     </div>
                   )}
                   <div>
                     <h3 className="text-2xl font-bold group-hover:text-[#00FF41] transition-colors flex items-center gap-2">
-                      {project.title} <ArrowRight size={18} className="opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 transition-all text-[#00FF41]" />
+                      {getLocalizedText(project.title, locale)} <ArrowRight size={18} className="opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 transition-all text-[#00FF41]" />
                     </h3>
                     <div className="flex flex-wrap gap-2 mt-1">
                       {project.tags.map(tag => (
@@ -95,7 +122,7 @@ export default function Home() {
                 </div>
 
                 <p className="text-gray-400 text-sm leading-relaxed mb-6 flex-grow">
-                  {project.description}
+                  {getLocalizedText(project.description, locale)}
                 </p>
 
                 {/* 
@@ -152,10 +179,10 @@ export default function Home() {
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-10">
           <div>
             <div className="text-2xl font-bold mb-2">DISKFACTORY</div>
-            <p className="text-gray-500 text-sm">© 2026 DiskFactory. All rights reserved.</p>
+            <p className="text-gray-500 text-sm">{getLocalizedText(copy.rights, locale)}</p>
           </div>
           <div className="flex gap-8 text-sm text-gray-400">
-            <a href="/privacy" className="hover:text-[#00FF41] transition-colors">개인정보 처리방침</a>
+            <Link href={localizeHref("/privacy", locale)} className="hover:text-[#00FF41] transition-colors">{getLocalizedText(copy.privacy, locale)}</Link>
             <a href="mailto:contact@diskfactory.com" className="flex items-center gap-2 hover:text-[#00FF41] transition-colors">
               <Mail size={16} /> CONTACT
             </a>

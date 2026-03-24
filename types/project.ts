@@ -1,8 +1,10 @@
+import { LocalizedText } from "@/types/i18n";
+
 export interface Project {
     id: string;
-    title: string;
-    description: string;
-    fullDescription: string;
+    title: LocalizedText;
+    description: LocalizedText;
+    fullDescription: LocalizedText;
     thumbnail: string;
     icon: string;
     tags: string[];
@@ -11,6 +13,7 @@ export interface Project {
         appstore?: string;
         steam?: string;
     };
+    privacySlug?: string;
     screenshots: string[];
-    features: string[];
+    features: LocalizedText[];
 }
