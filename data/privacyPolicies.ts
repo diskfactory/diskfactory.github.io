@@ -131,6 +131,7 @@ export const privacyPolicies: PrivacyPolicy[] = [
             ko: "SwipeRunner",
             en: "SwipeRunner",
         },
+        projectId: "swipe-runner",
         summary: {
             ko: "SwipeRunner 앱에 적용되는 제출용 개인정보처리방침입니다.",
             en: "This is the privacy policy submitted for the SwipeRunner app.",

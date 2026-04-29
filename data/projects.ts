@@ -40,15 +40,53 @@ export const projects: Project[] = [
             },
         ],
     },
-    // {
-    //     id: "prj2",
-    //     title: "가제: Project MIVS",
-    //     description: "디스크팩토리의 차기작이 준비 중입니다. 어떤 놀라움이 기다리고 있을까요?",
-    //     fullDescription: "현재 기획 개발단계에 있는 흥미로운 신규 프로젝트입니다. 조금만 더 기다려 주세요!",
-    //     thumbnail: "/images/projects/sample-thumb.png",
-    //     icon: "/images/projects/sample-icon.png",
-    //     tags: ["Planning", "RPG"],
-    //     screenshots: [],
-    //     features: []
-    // }
+    {
+        id: "swipe-runner",
+        title: {
+            ko: "스와이프 러너 : 3D 파쿠르 게임",
+            en: "Swipe Runner: 3D Parkour Game",
+        },
+        description: {
+            ko: "간편한 조작으로 멋진 파쿠르 액션을 경험해보세요!",
+            en: "Experience amazing parkour action with simple controls!",
+        },
+        fullDescription: {
+            ko: "3방향 스와이프로 다가오는 여러 장애물을 피해 멋진 파쿠르 액션을 수행해보세요!\n아슬아슬하게 피할수록 더 빨리지고 파쿠르중 부딪힌 장애물은 부숴버릴 수 있습니다!",
+            en: "Perform amazing parkour actions by swiping through multiple obstacles coming your way!\nThe faster you avoid, the faster you move, and obstacles you hit during parkour can be destroyed.",
+        },
+        thumbnail: "/images/swiperunner/screen1_ko.png",
+        icon: "/images/swiperunner/appicon.png",
+        tags: ["Casual", "Action", "Parkour"],
+        links: {
+            playstore: "https://play.google.com/store/apps/details?id=com.diskfactory.swiperunner",
+        },
+        privacySlug: "swipe-runner",
+        youtubeId: "tueZtuWrk2o",
+        screenshots: [
+            "/images/swiperunner/screenshot1.png",
+            "/images/swiperunner/screenshot2.png",
+            "/images/swiperunner/screenshot3.png",
+            "/images/swiperunner/screenshot4.png",
+            "/images/swiperunner/screenshot5.png",
+            "/images/swiperunner/screenshot6.png",
+        ],
+        features: [
+            {
+                ko: "간편한 스와이프 조작",
+                en: "Simple swipe controls",
+            },
+            {
+                ko: "다양한 장애물과 파쿠르 액션",
+                en: "Various obstacles and parkour actions",
+            },
+            {
+                ko: "아슬아슬할수록 더 빨라지는 스피드",
+                en: "The closer the call, the faster you go",
+            },
+            {
+                ko: "장애물을 부숴버리는 쾌감",
+                en: "Satisfying obstacle destruction",
+            },
+        ],
+    }
 ];

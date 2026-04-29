@@ -14,7 +14,18 @@ export default function ProjectClient({ project }: { project: Project }) {
     const { locale } = useLocale();
     const [selectedImage, setSelectedImage] = useState<string | null>(null);
     const [currentIndex, setCurrentIndex] = useState(0);
+    const [galleryIndex, setGalleryIndex] = useState(0);
     const projectTitle = getLocalizedText(project.title, locale);
+
+    // Build unified gallery items: youtube first, then screenshots
+    const galleryItems: { type: "youtube" | "image"; src: string }[] = [];
+    if (project.youtubeId) {
+        galleryItems.push({ type: "youtube", src: project.youtubeId });
+    }
+    project.screenshots.forEach((sc) => {
+        galleryItems.push({ type: "image", src: sc });
+    });
+
     const copy = {
         back: {
             ko: "프로젝트 목록으로",
@@ -24,9 +35,9 @@ export default function ProjectClient({ project }: { project: Project }) {
             ko: "개인정보 처리방침",
             en: "Privacy Policy",
         },
-        screenshots: {
-            ko: "스크린샷",
-            en: "SCREENSHOTS",
+        gallery: {
+            ko: "갤러리",
+            en: "GALLERY",
         },
         features: {
             ko: "주요 특징",
@@ -149,26 +160,74 @@ export default function ProjectClient({ project }: { project: Project }) {
 
                     {/* Right: Gallery & Features */}
                     <div className="lg:col-span-2 space-y-16">
-                        {project.screenshots.length > 0 && (
+                        {galleryItems.length > 0 && (
                             <div>
                                 <h2 className="text-xl font-bold mb-6 flex items-center gap-2">
-                                    <ChevronRight size={20} className="text-[#00FF41]" /> {getLocalizedText(copy.screenshots, locale)}
+                                    <ChevronRight size={20} className="text-[#00FF41]" /> {getLocalizedText(copy.gallery, locale)}
                                 </h2>
-                                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                    {project.screenshots.map((sc, i) => (
-                                        <div
-                                            key={i}
-                                            className="aspect-[9/16] bg-gray-900 rounded-xl border border-gray-800 flex items-center justify-center text-gray-700 text-sm italic overflow-hidden cursor-pointer hover:border-[#00FF41]/30 transition-all hover:scale-[1.02]"
-                                            onClick={() => openViewer(sc, i)}
-                                        >
-                                            <img src={sc} alt={`${projectTitle} screenshot ${i + 1}`} className="w-full h-full object-cover shadow-2xl"
+                                <div className="relative">
+                                    {/* Current Item */}
+                                    <div className="aspect-[9/16] max-w-sm mx-auto bg-gray-900 rounded-xl border border-gray-800 overflow-hidden">
+                                        {galleryItems[galleryIndex].type === "youtube" ? (
+                                            <iframe
+                                                src={`https://www.youtube.com/embed/${galleryItems[galleryIndex].src}`}
+                                                className="w-full h-full"
+                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                                allowFullScreen
+                                            />
+                                        ) : (
+                                            <img
+                                                src={galleryItems[galleryIndex].src}
+                                                alt={`${projectTitle} ${galleryIndex + 1}`}
+                                                className="w-full h-full object-cover cursor-pointer"
+                                                onClick={() => openViewer(galleryItems[galleryIndex].src, galleryIndex)}
                                                 onError={(e) => {
                                                     const target = e.target as HTMLImageElement;
                                                     target.style.display = 'none';
-                                                    target.parentElement!.innerText = `${getLocalizedText(copy.imageNotFound, locale)}: ${sc}`;
-                                                }} />
+                                                    target.parentElement!.innerText = getLocalizedText(copy.imageNotFound, locale);
+                                                }}
+                                            />
+                                        )}
+                                    </div>
+
+                                    {/* Arrow Navigation */}
+                                    {galleryItems.length > 1 && (
+                                        <>
+                                            <button
+                                                onClick={() => setGalleryIndex((galleryIndex - 1 + galleryItems.length) % galleryItems.length)}
+                                                className="absolute left-0 top-1/2 -translate-y-1/2 p-2 text-white hover:text-[#00FF41] transition-colors"
+                                            >
+                                                <LeftIcon size={36} />
+                                            </button>
+                                            <button
+                                                onClick={() => setGalleryIndex((galleryIndex + 1) % galleryItems.length)}
+                                                className="absolute right-0 top-1/2 -translate-y-1/2 p-2 text-white hover:text-[#00FF41] transition-colors"
+                                            >
+                                                <RightIcon size={36} />
+                                            </button>
+                                        </>
+                                    )}
+
+                                    {/* Thumbnail Previews */}
+                                    {galleryItems.length > 1 && (
+                                        <div className="flex justify-center gap-2 mt-4 overflow-x-auto py-1">
+                                            {galleryItems.map((item, i) => (
+                                                <button
+                                                    key={i}
+                                                    onClick={() => setGalleryIndex(i)}
+                                                    className={`relative w-14 h-24 rounded-md overflow-hidden shrink-0 border-2 transition-all ${i === galleryIndex ? "border-[#00FF41] opacity-100" : "border-transparent opacity-50 hover:opacity-80"}`}
+                                                >
+                                                    {item.type === "youtube" ? (
+                                                        <div className="w-full h-full bg-gray-800 flex items-center justify-center">
+                                                            <svg viewBox="0 0 24 24" className="w-5 h-5 text-red-500 fill-current"><path d="M8 5v14l11-7z" /></svg>
+                                                        </div>
+                                                    ) : (
+                                                        <img src={item.src} alt="" className="w-full h-full object-cover" />
+                                                    )}
+                                                </button>
+                                            ))}
                                         </div>
-                                    ))}
+                                    )}
                                 </div>
                             </div>
                         )}

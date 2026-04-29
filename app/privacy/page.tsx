@@ -21,8 +21,8 @@ export default function PrivacyIndexPage() {
             en: "Back",
         },
         title: {
-            ko: "게임별 개인정보처리방침",
-            en: "Privacy Policies by Game",
+            ko: "개인정보처리방침",
+            en: "Privacy Policy",
         },
         appPolicy: {
             ko: "앱 정책",

@@ -17,7 +17,7 @@ export default function Home() {
       en: "DiskFactory is a solo game development studio turning playful ideas into real games.",
     },
     projectsTitle: {
-      ko: "현재 프로젝트",
+      ko: "프로젝트",
       en: "CURRENT PROJECTS",
     },
     rights: {
