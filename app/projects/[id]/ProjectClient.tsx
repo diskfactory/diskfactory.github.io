@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ArrowLeft, ExternalLink, ChevronRight, X, ChevronLeft as LeftIcon, ChevronRight as RightIcon, Shield } from "lucide-react";
+import { ArrowLeft, ExternalLink, ChevronRight, X, ChevronLeft as LeftIcon, ChevronRight as RightIcon, Shield, Trash2 } from "lucide-react";
 import Link from "next/link";
 import { Section } from "@/components/Section";
 import { Project } from "@/types/project";
@@ -34,6 +34,10 @@ export default function ProjectClient({ project }: { project: Project }) {
         privacy: {
             ko: "개인정보 처리방침",
             en: "Privacy Policy",
+        },
+        accountDeletion: {
+            ko: "계정 삭제 요청 안내",
+            en: "Account Deletion Request",
         },
         gallery: {
             ko: "갤러리",
@@ -251,8 +255,28 @@ export default function ProjectClient({ project }: { project: Project }) {
                 </div>
             </Section>
 
-            <footer className="py-20 text-center border-t border-gray-900 mt-20">
+            <footer className="py-20 text-center border-t border-gray-900 mt-20 px-6">
                 <p className="text-gray-600 text-sm">© 2026 DiskFactory | {projectTitle}</p>
+                {(project.privacySlug || project.accountDeletionSlug) && (
+                    <div className="mt-6 flex flex-wrap items-center justify-center gap-3">
+                        {project.privacySlug && (
+                            <Link
+                                href={localizeHref(`/privacy/${project.privacySlug}`, locale)}
+                                className="inline-flex items-center gap-2 rounded-full border border-white/10 px-4 py-2 text-xs font-bold text-gray-400 hover:border-[#00FF41]/40 hover:text-[#00FF41] transition-colors"
+                            >
+                                <Shield size={14} /> {getLocalizedText(copy.privacy, locale)}
+                            </Link>
+                        )}
+                        {project.accountDeletionSlug && (
+                            <Link
+                                href={localizeHref(`/account-deletion/${project.accountDeletionSlug}`, locale)}
+                                className="inline-flex items-center gap-2 rounded-full border border-[#00FF41]/30 px-4 py-2 text-xs font-bold text-[#00FF41] hover:bg-[#00FF41]/10 transition-colors"
+                            >
+                                <Trash2 size={14} /> {getLocalizedText(copy.accountDeletion, locale)}
+                            </Link>
+                        )}
+                    </div>
+                )}
             </footer>
 
             {/* Image Viewer Modal */}

@@ -132,15 +132,15 @@ export const privacyPolicies: PrivacyPolicy[] = [
             en: "SwipeRunner",
         },
         projectId: "swipe-runner",
-        summary: {
-            ko: "SwipeRunner 앱에 적용되는 제출용 개인정보처리방침입니다.",
-            en: "This is the privacy policy submitted for the SwipeRunner app.",
+        summary: {  // 서머리 쓰지마라.
+            ko: "",
+            en: "",
         },
         introduction: {
-            ko: "본 개인정보처리방침은 서비스 제공자가 무료 서비스로 제공하는 모바일 앱 'SwipeRunner'에 적용됩니다. 본 서비스는 현 상태 그대로 제공됩니다.",
-            en: "This privacy policy applies to the SwipeRunner app, which is provided by the Service Provider as a free mobile service. This service is intended for use as is.",
+            ko: "본 개인정보처리방침은 디스크팩토리(DiskFactory)가 무료 서비스로 제공하는 모바일 앱 'SwipeRunner'에 적용됩니다. 본 서비스는 현 상태 그대로 제공됩니다.",
+            en: "This privacy policy applies to the SwipeRunner app, which is provided by DiskFactory as a free mobile service. This service is intended for use as is.",
         },
-        effectiveDate: "2026-03-17",
+        effectiveDate: "2026-05-03",
         contactEmail: "yeojh97@gmail.com",
         sections: [
             {
@@ -159,16 +159,46 @@ export const privacyPolicies: PrivacyPolicy[] = [
                         en: "The Application does not gather precise information about the location of your mobile device.",
                     },
                     {
+                        ko: "Google Play Games Services를 통해 로그인 또는 게임 서비스 기능을 사용하는 경우, 서비스 제공자는 Google이 제공하는 게임별 고유 플레이어 ID 또는 이에 준하는 중복되지 않는 식별자를 처리할 수 있습니다. 이 식별자는 게임 이벤트를 같은 사용자 또는 세션과 연결하고 중복 집계를 방지하기 위해 사용됩니다.",
+                        en: "When you use sign-in or game service features through Google Play Games Services, the Service Provider may process a game-scoped unique player ID or a similar non-duplicated identifier provided by Google. This identifier is used to associate game events with the same user or session and to prevent duplicate event aggregation.",
+                    },
+                    {
+                        ko: "서비스 개선과 게임 밸런스 분석을 위해 Mixpanel에 게임 이벤트 정보가 전송될 수 있습니다. 전송되는 정보에는 가명 처리된 고유 식별자, 이벤트 이름과 속성, 이벤트 발생 시간, 앱 버전, 기기 및 운영체제 정보, 언어/지역 정보, IP 주소를 통해 추정되는 대략적인 위치 정보가 포함될 수 있습니다.",
+                        en: "For service improvement and gameplay balance analysis, gameplay event information may be transmitted to Mixpanel. The transmitted information may include a pseudonymous unique identifier, event names and properties, event timestamps, app version, device and operating system information, language/region information, and approximate location inferred from IP address.",
+                    },
+                    {
+                        ko: "앱 안정성 개선과 오류 대응을 위해 Sentry에 크래시 로그, 오류 이벤트, 성능 진단 정보가 전송될 수 있습니다. 전송되는 정보에는 오류 발생 시간, 앱 버전, 기기 및 운영체제 정보, 오류가 발생한 코드 위치 또는 스택 트레이스, IP 주소 등 기술 정보가 포함될 수 있습니다.",
+                        en: "For app stability improvement and error response, crash logs, error events, and performance diagnostics may be transmitted to Sentry. The transmitted information may include error timestamps, app version, device and operating system information, code location or stack traces related to the error, IP address, and other technical information.",
+                    },
+                    {
                         ko: "애플리케이션은 사용자의 데이터를 처리하거나 기능을 제공하기 위해 인공지능(AI) 기술을 사용하지 않습니다.",
                         en: "The Application does not use Artificial Intelligence (AI) technologies to process your data or provide features.",
                     },
                     {
-                        ko: "서비스 제공자는 중요한 정보, 필수 고지, 마케팅 프로모션을 제공하기 위해 사용자가 제공한 정보를 바탕으로 때때로 연락할 수 있습니다.",
-                        en: "The Service Provider may use the information you provided to contact you from time to time to provide important information, required notices and marketing promotions.",
+                        ko: "사용자가 문의 과정에서 이메일 주소 등 연락처 정보를 직접 제공하는 경우, 서비스 제공자는 답변 제공, 필수 고지, 요청 처리 목적을 위해 해당 정보를 사용할 수 있습니다.",
+                        en: "If you directly provide contact information, such as an email address, during an inquiry, the Service Provider may use that information to respond, provide required notices, and process your request.",
                     },
                     {
-                        ko: "더 나은 경험을 위해 서비스 제공자는 특정 개인식별정보의 제공을 요청할 수 있으며, 요청된 정보는 본 개인정보처리방침에 설명된 방식으로 보유 및 이용됩니다.",
-                        en: "For a better experience, while using the Application, the Service Provider may require you to provide certain personally identifiable information. The information requested will be retained by them and used as described in this privacy policy.",
+                        ko: "서비스 제공자는 사용자의 실제 이름, 이메일 주소, 전화번호, Google Play 프로필 이미지 등 직접적인 개인식별정보를 게임 이벤트 분석 목적으로 의도적으로 Mixpanel에 전송하지 않습니다. 다만 사용자가 문의 등 별도 경로로 정보를 제공하는 경우에는 본 개인정보처리방침에 설명된 방식으로 보유 및 이용됩니다.",
+                        en: "The Service Provider does not intentionally transmit directly identifiable information such as your real name, email address, phone number, or Google Play profile image to Mixpanel for gameplay event analytics. However, if you provide information through a separate channel such as an inquiry, it will be retained and used as described in this privacy policy.",
+                    },
+                ],
+                bullets: [
+                    {
+                        ko: "Google Play Games Services의 게임별 고유 플레이어 ID 또는 이에 준하는 중복되지 않는 식별자",
+                        en: "Game-scoped unique player ID from Google Play Games Services or a similar non-duplicated identifier",
+                    },
+                    {
+                        ko: "레벨 시작/완료, 점수, 실패/재시도, 장애물·아이템 상호작용 등 게임 플레이 이벤트",
+                        en: "Gameplay events such as level start/completion, score, failure/retry, and obstacle or item interactions",
+                    },
+                    {
+                        ko: "앱 버전, 기기 모델, 운영체제, 언어/지역, IP 기반 대략 위치 등 분석에 필요한 앱·기기 정보",
+                        en: "App and device information needed for analytics, such as app version, device model, operating system, language/region, and IP-based approximate location",
+                    },
+                    {
+                        ko: "오류 로그, 크래시 정보, 성능 진단 정보, 스택 트레이스 등 앱 안정성 개선에 필요한 기술 정보",
+                        en: "Technical information needed for app stability improvement, such as error logs, crash information, performance diagnostics, and stack traces",
                     },
                 ],
             },
@@ -180,15 +210,35 @@ export const privacyPolicies: PrivacyPolicy[] = [
                 },
                 paragraphs: [
                     {
-                        ko: "서비스 제공자가 애플리케이션과 서비스를 개선할 수 있도록 집계되고 익명화된 데이터만이 주기적으로 외부 서비스로 전송됩니다. 서비스 제공자는 본 개인정보처리방침에 설명된 방식으로 사용자의 정보를 제삼자와 공유할 수 있습니다.",
-                        en: "Only aggregated, anonymized data is periodically transmitted to external services to aid the Service Provider in improving the Application and their service. The Service Provider may share your information with third parties in the ways that are described in this privacy statement.",
+                        ko: "서비스 제공자가 애플리케이션과 서비스를 개선할 수 있도록 사용 정보, 게임 이벤트, 오류 및 진단 정보, 가명 처리된 고유 식별자 및 기술 정보가 제삼자 서비스로 전송될 수 있습니다. 서비스 제공자는 본 개인정보처리방침에 설명된 목적과 방식으로 사용자의 정보를 제삼자와 공유할 수 있습니다.",
+                        en: "Usage information, gameplay events, error and diagnostic information, pseudonymous unique identifiers, and technical information may be transmitted to third-party services to help the Service Provider improve the Application and related services. The Service Provider may share your information with third parties for the purposes and in the ways described in this privacy statement.",
                     },
                     {
                         ko: "애플리케이션은 자체적인 개인정보처리방침을 가진 제삼자 서비스를 사용합니다. 사용되는 제삼자 서비스 제공업체의 개인정보처리방침 링크는 아래와 같습니다.",
                         en: "Please note that the Application utilizes third-party services that have their own Privacy Policy about handling data. Below are the links to the privacy policy of the third-party service providers used by the Application.",
                     },
+                    {
+                        ko: "Mixpanel은 서비스 제공자의 지시에 따라 게임 이벤트 분석 데이터를 처리하며, Google Play Games Services는 로그인, 업적, 리더보드 등 Google Play 게임 기능 제공과 고유 플레이어 ID 제공을 위해 사용될 수 있습니다.",
+                        en: "Mixpanel processes gameplay analytics data under the Service Provider's instructions, and Google Play Games Services may be used to provide Google Play game features such as sign-in, achievements, leaderboards, and unique player IDs.",
+                    },
+                    {
+                        ko: "Sentry는 서비스 제공자의 지시에 따라 앱 오류, 크래시, 성능 문제를 탐지하고 해결하기 위한 진단 데이터를 처리합니다.",
+                        en: "Sentry processes diagnostic data under the Service Provider's instructions to detect and resolve app errors, crashes, and performance issues.",
+                    },
                 ],
                 services: [
+                    {
+                        name: "Mixpanel",
+                        url: "https://mixpanel.com/legal/privacy-policy/",
+                    },
+                    {
+                        name: "Sentry",
+                        url: "https://sentry.io/privacy/",
+                    },
+                    {
+                        name: "Google Play Games Services",
+                        url: "https://policies.google.com/privacy",
+                    },
                     {
                         name: "AdMob",
                         url: "https://support.google.com/admob/answer/6128543?hl=en",
@@ -232,6 +282,10 @@ export const privacyPolicies: PrivacyPolicy[] = [
                         ko: "애플리케이션을 삭제하면 모든 정보 수집을 쉽게 중단할 수 있습니다. 모바일 기기 또는 앱 마켓플레이스에서 제공하는 표준 삭제 절차를 이용하면 됩니다.",
                         en: "You can stop all collection of information by the Application easily by uninstalling it. You may use the standard uninstall processes as may be available as part of your mobile device or via the mobile application marketplace or network.",
                     },
+                    {
+                        ko: "게임 이벤트 분석 데이터의 삭제를 요청하려면 아래 연락처로 문의할 수 있습니다. 서비스 제공자는 요청 확인을 위해 필요한 범위에서 앱 식별자 또는 Google Play Games Services 식별자와 같은 정보를 요청할 수 있으며, 확인 후 합리적인 기간 내에 관련 데이터를 삭제하거나 익명화합니다. Google 계정 및 Google Play Games Services 자체 데이터의 관리와 삭제는 Google에서 제공하는 설정 및 정책을 따릅니다.",
+                        en: "To request deletion of gameplay analytics data, you may contact the Service Provider using the contact details below. The Service Provider may request information such as an app identifier or Google Play Games Services identifier only as necessary to verify the request, and will delete or anonymize related data within a reasonable period after verification. Management and deletion of Google Account and Google Play Games Services data are governed by Google's settings and policies.",
+                    },
                 ],
             },
             {
@@ -244,6 +298,10 @@ export const privacyPolicies: PrivacyPolicy[] = [
                     {
                         ko: "서비스 제공자는 사용자가 애플리케이션을 사용하는 동안과 그 이후 합리적인 기간 동안 사용자가 제공한 데이터를 보유합니다. 애플리케이션을 통해 제공한 데이터의 삭제를 원할 경우 yeojh97@gmail.com 으로 연락하면 합리적인 기간 내에 응답합니다.",
                         en: "The Service Provider will retain User Provided data for as long as you use the Application and for a reasonable time thereafter. If you'd like them to delete User Provided Data that you have provided via the Application, please contact them at yeojh97@gmail.com and they will respond in a reasonable time.",
+                    },
+                    {
+                        ko: "Mixpanel로 전송된 게임 이벤트 분석 데이터와 가명 처리된 고유 식별자, Sentry로 전송된 오류 및 진단 데이터는 서비스 개선, 통계 분석, 오류 대응 등 처리 목적에 필요한 기간 동안 보유되며, 목적 달성 또는 삭제 요청 처리 후에는 삭제 또는 익명화됩니다.",
+                        en: "Gameplay analytics data and pseudonymous unique identifiers transmitted to Mixpanel, as well as error and diagnostic data transmitted to Sentry, are retained for as long as necessary for service improvement, statistical analysis, troubleshooting, and similar processing purposes, and are deleted or anonymized after the purpose is fulfilled or a deletion request is processed.",
                     },
                 ],
             },
@@ -274,6 +332,10 @@ export const privacyPolicies: PrivacyPolicy[] = [
                     {
                         ko: "서비스 제공자는 사용자의 정보 기밀성을 보호하는 것을 중요하게 생각하며, 처리 및 보관하는 정보를 보호하기 위해 물리적, 전자적, 절차적 보호 조치를 제공합니다.",
                         en: "The Service Provider is concerned about safeguarding the confidentiality of your information. The Service Provider provides physical, electronic, and procedural safeguards to protect information the Service Provider processes and maintains.",
+                    },
+                    {
+                        ko: "외부 분석 및 오류 진단 서비스로 전송되는 데이터는 가능한 범위에서 암호화된 통신 경로를 통해 전송되며, 서비스 제공자는 불필요한 직접 식별 정보가 게임 이벤트 분석 및 오류 진단에 포함되지 않도록 관리합니다.",
+                        en: "Data transmitted to external analytics and error diagnostics services is sent through encrypted communication channels where available, and the Service Provider manages the analytics and diagnostics implementation to avoid including unnecessary directly identifiable information in gameplay event analytics and error diagnostics.",
                     },
                 ],
             },

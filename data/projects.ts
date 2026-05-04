@@ -61,6 +61,7 @@ export const projects: Project[] = [
             playstore: "https://play.google.com/store/apps/details?id=com.diskfactory.swiperunner",
         },
         privacySlug: "swipe-runner",
+        accountDeletionSlug: "swipe-runner",
         youtubeId: "tueZtuWrk2o",
         screenshots: [
             "/images/swiperunner/screenshot1.png",
