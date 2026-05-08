@@ -19,6 +19,7 @@ const sectionIcons: Record<PrivacyPolicySectionKind, React.ReactNode> = {
     security: <Shield size={18} className="text-[#00FF41]" />,
     changes: <RefreshCw size={18} className="text-[#00FF41]" />,
     consent: <CheckCircle size={18} className="text-[#00FF41]" />,
+    contact: <Mail size={18} className="text-[#00FF41]" />,
 };
 
 interface PrivacyPolicyClientProps {

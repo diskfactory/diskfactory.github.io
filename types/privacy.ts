@@ -9,7 +9,8 @@ export type PrivacyPolicySectionKind =
     | "children"
     | "security"
     | "changes"
-    | "consent";
+    | "consent"
+    | "contact";
 
 export interface PrivacyPolicyService {
     name: string;

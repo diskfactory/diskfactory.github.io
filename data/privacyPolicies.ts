@@ -367,4 +367,219 @@ export const privacyPolicies: PrivacyPolicy[] = [
             },
         ],
     },
+    {
+        slug: "tank-pop-block-puzzle",
+        appName: {
+            ko: "Tank Pop Block Puzzle",
+            en: "Tank Pop Block Puzzle",
+        },
+        projectId: "tank-pop-block-puzzle",
+        summary: {
+            ko: "Tank Pop Block Puzzle 앱에 적용되는 개인정보처리방침입니다.",
+            en: "This privacy policy applies to the Tank Pop Block Puzzle app.",
+        },
+        introduction: {
+            ko: "본 개인정보처리방침은 디스크팩토리(이하 '서비스 제공자')가 무료 서비스로 제작한 모바일 기기용 Tank Pop Block Puzzle 앱(이하 '애플리케이션')에 적용됩니다. 본 서비스는 '있는 그대로' 이용하도록 제공됩니다.",
+            en: "This privacy policy applies to the Tank Pop Block Puzzle app (hereby referred to as the Application) for mobile devices that was created by 디스크팩토리 (hereby referred to as the Service Provider) as a Free service. This service is intended for use AS IS.",
+        },
+        effectiveDate: "2026-05-08",
+        contactEmail: "yeojh97@gmail.com",
+        sections: [
+            {
+                kind: "collection",
+                title: {
+                    ko: "정보 수집 및 이용",
+                    en: "Information Collection and Use",
+                },
+                paragraphs: [
+                    {
+                        ko: "애플리케이션은 다운로드 및 사용 시 정보를 수집할 수 있습니다. 수집될 수 있는 정보는 다음과 같습니다.",
+                        en: "The Application collects information when you download and use it. This information may include the following.",
+                    },
+                    {
+                        ko: "애플리케이션은 모바일 기기의 정밀 위치 정보를 수집하지 않습니다.",
+                        en: "The Application does not gather precise information about the location of your mobile device.",
+                    },
+                    {
+                        ko: "애플리케이션은 사용자의 데이터를 처리하거나 기능을 제공하기 위해 인공지능(AI) 기술을 사용하지 않습니다.",
+                        en: "The Application does not use Artificial Intelligence (AI) technologies to process your data or provide features.",
+                    },
+                    {
+                        ko: "서비스 제공자는 사용자가 제공한 정보를 수시로 연락하여 중요한 정보, 필수 고지 및 마케팅 프로모션을 제공하는 데 사용할 수 있습니다.",
+                        en: "The Service Provider may use the information you provided to contact you from time to time to provide important information, required notices, and marketing promotions.",
+                    },
+                    {
+                        ko: "더 나은 경험을 위해 애플리케이션 사용 중 서비스 제공자는 특정 개인 식별 정보를 제공하도록 요청할 수 있습니다. 서비스 제공자가 요청하는 정보는 본 개인정보처리방침에 설명된 방식으로 보관 및 사용됩니다.",
+                        en: "For a better experience, while using the Application, the Service Provider may require you to provide certain personally identifiable information. The information that the Service Provider requests will be retained by them and used as described in this privacy policy.",
+                    },
+                ],
+                bullets: [
+                    {
+                        ko: "기기의 인터넷 프로토콜 주소(IP 주소)",
+                        en: "Your device's Internet Protocol address, such as IP address",
+                    },
+                    {
+                        ko: "방문한 애플리케이션 페이지, 방문 시간과 날짜, 해당 페이지에 머문 시간",
+                        en: "The pages of the Application that you visit, the time and date of your visit, and the time spent on those pages",
+                    },
+                    {
+                        ko: "애플리케이션 사용 시간",
+                        en: "The time spent on the Application",
+                    },
+                    {
+                        ko: "모바일 기기에서 사용하는 운영체제",
+                        en: "The operating system you use on your mobile device",
+                    },
+                ],
+            },
+            {
+                kind: "sharing",
+                title: {
+                    ko: "제삼자 접근",
+                    en: "Third Party Access",
+                },
+                paragraphs: [
+                    {
+                        ko: "서비스 제공자가 애플리케이션과 서비스를 개선할 수 있도록 집계 및 익명화된 데이터만 외부 서비스로 주기적으로 전송됩니다. 서비스 제공자는 본 개인정보처리방침에 설명된 방식으로 사용자의 정보를 제삼자와 공유할 수 있습니다.",
+                        en: "Only aggregated, anonymized data is periodically transmitted to external services to aid the Service Provider in improving the Application and their service. The Service Provider may share your information with third parties in the ways that are described in this privacy statement.",
+                    },
+                    {
+                        ko: "애플리케이션은 자체 개인정보처리방침을 가진 제삼자 서비스를 사용합니다. 애플리케이션이 사용하는 제삼자 서비스 제공업체의 개인정보처리방침 링크는 아래와 같습니다.",
+                        en: "Please note that the Application utilizes third-party services that have their own Privacy Policy about handling data. Below are the links to the Privacy Policy of the third-party service providers used by the Application.",
+                    },
+                    {
+                        ko: "서비스 제공자는 사용자 제공 정보 및 자동 수집 정보를 다음과 같은 경우 공개할 수 있습니다.",
+                        en: "The Service Provider may disclose User Provided and Automatically Collected Information in the following cases.",
+                    },
+                ],
+                services: [
+                    {
+                        name: "Google Play Services",
+                        url: "https://www.google.com/policies/privacy/",
+                    },
+                    {
+                        name: "AdMob",
+                        url: "https://support.google.com/admob/answer/6128543?hl=en",
+                    },
+                    {
+                        name: "Google Analytics for Firebase",
+                        url: "https://firebase.google.com/support/privacy",
+                    },
+                    {
+                        name: "Unity",
+                        url: "https://unity3d.com/legal/privacy-policy",
+                    },
+                ],
+                bullets: [
+                    {
+                        ko: "소환장 또는 이에 준하는 법적 절차를 준수하기 위해 법률상 요구되는 경우",
+                        en: "as required by law, such as to comply with a subpoena, or similar legal process",
+                    },
+                    {
+                        ko: "권리 보호, 사용자 또는 타인의 안전 보호, 사기 조사, 정부 요청 대응을 위해 공개가 필요하다고 선의로 판단하는 경우",
+                        en: "when they believe in good faith that disclosure is necessary to protect their rights, protect your safety or the safety of others, investigate fraud, or respond to a government request",
+                    },
+                    {
+                        ko: "서비스 제공자를 대신하여 업무를 수행하고, 공개된 정보를 독립적으로 사용하지 않으며, 본 개인정보처리방침의 규칙을 준수하기로 동의한 신뢰할 수 있는 서비스 제공업체와 공유하는 경우",
+                        en: "with their trusted services providers who work on their behalf, do not have an independent use of the information disclosed to them, and have agreed to adhere to the rules set forth in this privacy statement",
+                    },
+                ],
+            },
+            {
+                kind: "deletion",
+                title: {
+                    ko: "옵트아웃 권리",
+                    en: "Opt-Out Rights",
+                },
+                paragraphs: [
+                    {
+                        ko: "애플리케이션을 삭제하면 모든 정보 수집을 쉽게 중단할 수 있습니다. 모바일 기기 또는 모바일 애플리케이션 마켓플레이스나 네트워크에서 제공하는 표준 삭제 절차를 이용하면 됩니다.",
+                        en: "You can stop all collection of information by the Application easily by uninstalling it. You may use the standard uninstall processes as may be available as part of your mobile device or via the mobile application marketplace or network.",
+                    },
+                ],
+            },
+            {
+                kind: "retention",
+                title: {
+                    ko: "데이터 보유 정책",
+                    en: "Data Retention Policy",
+                },
+                paragraphs: [
+                    {
+                        ko: "서비스 제공자는 사용자가 애플리케이션을 사용하는 동안과 그 이후 합리적인 기간 동안 사용자 제공 데이터를 보유합니다. 애플리케이션을 통해 제공한 사용자 제공 데이터의 삭제를 원할 경우 yeojh97@gmail.com 으로 연락하면 합리적인 기간 내에 응답합니다.",
+                        en: "The Service Provider will retain User Provided data for as long as you use the Application and for a reasonable time thereafter. If you'd like them to delete User Provided Data that you have provided via the Application, please contact them at yeojh97@gmail.com and they will respond in a reasonable time.",
+                    },
+                ],
+            },
+            {
+                kind: "children",
+                title: {
+                    ko: "아동",
+                    en: "Children",
+                },
+                paragraphs: [
+                    {
+                        ko: "서비스 제공자는 13세 미만 아동의 데이터를 고의로 요청하거나 13세 미만 아동을 대상으로 마케팅하지 않습니다.",
+                        en: "The Service Provider does not use the Application to knowingly solicit data from or market to children under the age of 13.",
+                    },
+                    {
+                        ko: "애플리케이션은 13세 미만을 대상으로 하지 않습니다. 서비스 제공자는 13세 미만 아동의 개인 식별 정보를 고의로 수집하지 않습니다. 13세 미만 아동이 개인정보를 제공한 사실을 서비스 제공자가 발견하는 경우, 해당 정보는 서버에서 즉시 삭제됩니다. 부모 또는 보호자가 자녀가 개인정보를 제공했다는 사실을 알고 있다면 서비스 제공자에게 연락하여 필요한 조치를 요청할 수 있습니다.",
+                        en: "The Application does not address anyone under the age of 13. The Service Provider does not knowingly collect personally identifiable information from children under 13 years of age. In the case the Service Provider discovers that a child under 13 has provided personal information, the Service Provider will immediately delete this from their servers. If you are a parent or guardian and you are aware that your child has provided personal information, please contact the Service Provider so that they will be able to take the necessary actions.",
+                    },
+                ],
+            },
+            {
+                kind: "security",
+                title: {
+                    ko: "보안",
+                    en: "Security",
+                },
+                paragraphs: [
+                    {
+                        ko: "서비스 제공자는 사용자 정보의 기밀성을 보호하는 것을 중요하게 생각합니다. 서비스 제공자는 처리 및 유지하는 정보를 보호하기 위해 물리적, 전자적, 절차적 보호 조치를 제공합니다.",
+                        en: "The Service Provider is concerned about safeguarding the confidentiality of your information. The Service Provider provides physical, electronic, and procedural safeguards to protect information the Service Provider processes and maintains.",
+                    },
+                ],
+            },
+            {
+                kind: "changes",
+                title: {
+                    ko: "변경 사항",
+                    en: "Changes",
+                },
+                paragraphs: [
+                    {
+                        ko: "본 개인정보처리방침은 사유를 불문하고 수시로 업데이트될 수 있습니다. 서비스 제공자는 이 페이지를 새로운 개인정보처리방침으로 업데이트하여 변경 사항을 알립니다. 정기적으로 본 개인정보처리방침을 확인하는 것이 좋으며, 계속 사용하면 모든 변경 사항에 동의한 것으로 간주됩니다.",
+                        en: "This Privacy Policy may be updated from time to time for any reason. The Service Provider will notify you of any changes to the Privacy Policy by updating this page with the new Privacy Policy. You are advised to consult this Privacy Policy regularly for any changes, as continued use is deemed approval of all changes.",
+                    },
+                ],
+            },
+            {
+                kind: "consent",
+                title: {
+                    ko: "동의",
+                    en: "Your Consent",
+                },
+                paragraphs: [
+                    {
+                        ko: "애플리케이션을 사용함으로써 사용자는 현재 및 향후 개정되는 본 개인정보처리방침에 명시된 정보 처리에 동의하는 것으로 간주됩니다.",
+                        en: "By using the Application, you are consenting to the processing of your information as set forth in this Privacy Policy now and as amended by us.",
+                    },
+                ],
+            },
+            {
+                kind: "contact",
+                title: {
+                    ko: "문의",
+                    en: "Contact Us",
+                },
+                paragraphs: [
+                    {
+                        ko: "애플리케이션 사용 중 개인정보와 관련하여 질문이 있거나 서비스 제공자의 처리 방식에 관한 문의가 있는 경우 yeojh97@gmail.com 으로 연락해 주세요.",
+                        en: "If you have any questions regarding privacy while using the Application, or have questions about the practices, please contact the Service Provider via email at yeojh97@gmail.com.",
+                    },
+                ],
+            },
+        ],
+    },
 ];
