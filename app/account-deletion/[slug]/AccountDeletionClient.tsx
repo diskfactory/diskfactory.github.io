@@ -23,72 +23,90 @@ export default function AccountDeletionClient({ guide, project }: AccountDeletio
         back: {
             ko: "프로젝트로 돌아가기",
             en: "Back to Project",
+            "pt-BR": "Voltar ao projeto",
         },
         overline: {
             ko: "Account & Data Deletion",
             en: "Account & Data Deletion",
+            "pt-BR": "Exclusão de conta e dados",
         },
         title: {
             ko: `${appName} 계정 삭제 요청`,
             en: `${appName} Account Deletion Request`,
+            "pt-BR": `Solicitação de exclusão da conta do ${appName}`,
         },
         description: {
             ko: "앱 안에서 사용자가 직접 삭제를 완료하는 기능은 제공하지 않습니다. 대신 이메일을 통해 SwipeRunner 계정 및 관련 데이터 삭제를 요청할 수 있습니다.",
             en: "The app does not provide a self-service in-app deletion feature. Instead, you can request deletion of your SwipeRunner account and related data by email.",
+            "pt-BR": "O app não oferece uma função de exclusão direta dentro do aplicativo. Em vez disso, você pode solicitar por e-mail a exclusão da sua conta do SwipeRunner e dos dados relacionados.",
         },
         emailCta: {
             ko: "삭제 요청 이메일 보내기",
             en: "Send Deletion Request",
+            "pt-BR": "Enviar solicitação de exclusão",
         },
         privacy: {
             ko: "개인정보 처리방침",
             en: "Privacy Policy",
+            "pt-BR": "Política de Privacidade",
         },
         effectiveDate: {
             ko: "시행일",
             en: "Effective Date",
+            "pt-BR": "Data de vigência",
         },
         contact: {
             ko: "요청 접수 이메일",
             en: "Request Email",
+            "pt-BR": "E-mail para solicitações",
         },
         requestTitle: {
             ko: "요청 시 포함할 내용",
             en: "What to Include",
+            "pt-BR": "O que incluir",
         },
         deletionTitle: {
             ko: "삭제 또는 익명화되는 데이터",
             en: "Data Deleted or Anonymized",
+            "pt-BR": "Dados excluídos ou anonimizados",
         },
         retentionTitle: {
             ko: "삭제 대상에서 제외될 수 있는 데이터",
             en: "Data That May Be Retained",
+            "pt-BR": "Dados que podem ser mantidos",
         },
         processTitle: {
             ko: "처리 절차",
             en: "Request Process",
+            "pt-BR": "Processo da solicitação",
         },
         responseTitle: {
             ko: "처리 기간",
             en: "Response Time",
+            "pt-BR": "Prazo de resposta",
         },
         googleNoteTitle: {
             ko: "Google Play Games 데이터 안내",
             en: "Google Play Games Data Note",
+            "pt-BR": "Observação sobre dados do Google Play Games",
         },
         googleNote: {
             ko: "Google 계정, Google Play Games 프로필, 업적, 리더보드 등 Google이 직접 관리하는 데이터는 DiskFactory가 삭제할 수 없습니다. 해당 데이터는 Google 계정 또는 Google Play Games 설정에서 관리해 주세요.",
             en: "DiskFactory cannot delete data directly managed by Google, such as Google Account data, Google Play Games profiles, achievements, or leaderboards. Please manage that data through your Google Account or Google Play Games settings.",
+            "pt-BR": "A DiskFactory não pode excluir dados gerenciados diretamente pelo Google, como dados da Conta Google, perfis do Google Play Games, conquistas ou rankings. Gerencie esses dados pela sua Conta Google ou pelas configurações do Google Play Games.",
         },
         noSensitive: {
             ko: "요청 이메일에는 비밀번호, 결제 정보, 신분증 등 민감한 정보를 포함하지 마세요.",
             en: "Do not include sensitive information such as passwords, payment information, or identification documents in your request email.",
+            "pt-BR": "Não inclua informações sensíveis no e-mail de solicitação, como senhas, dados de pagamento ou documentos de identificação.",
         },
     };
 
     const emailSubject =
         locale === "ko"
             ? "[SwipeRunner] 계정 및 데이터 삭제 요청"
+            : locale === "pt-BR"
+                ? "[SwipeRunner] Solicitação de exclusão da conta e dos dados"
             : "[SwipeRunner] Account and Data Deletion Request";
     const emailBody =
         locale === "ko"
@@ -103,6 +121,18 @@ export default function AccountDeletionClient({ guide, project }: AccountDeletio
                 "",
                 "비밀번호, 결제 정보, 신분증 등 민감 정보는 포함하지 않습니다.",
             ].join("\n")
+            : locale === "pt-BR"
+                ? [
+                    "Olá, equipe da DiskFactory,",
+                    "",
+                    "Gostaria de solicitar a exclusão da minha conta do SwipeRunner e dos dados relacionados.",
+                    "",
+                    "Conta do Google Play Games ou apelido do jogador:",
+                    "Escopo da exclusão: excluir minha conta e todos os dados de jogo relacionados",
+                    "E-mail para resposta:",
+                    "",
+                    "Não estou incluindo informações sensíveis, como senhas, dados de pagamento ou documentos de identificação.",
+                ].join("\n")
             : [
                 "Hello DiskFactory team,",
                 "",

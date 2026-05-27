@@ -9,5 +9,6 @@ export function localizeHref(path: string, locale: Locale) {
         return path;
     }
 
-    return path.includes("?") ? `${path}&lang=en` : `${path}?lang=en`;
+    const langParam = encodeURIComponent(locale);
+    return path.includes("?") ? `${path}&lang=${langParam}` : `${path}?lang=${langParam}`;
 }

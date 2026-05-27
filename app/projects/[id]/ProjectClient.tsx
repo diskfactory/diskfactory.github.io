@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ArrowLeft, ExternalLink, ChevronRight, X, ChevronLeft as LeftIcon, ChevronRight as RightIcon, Shield, Trash2 } from "lucide-react";
+import { ArrowLeft, ExternalLink, ChevronRight, X, ChevronLeft as LeftIcon, ChevronRight as RightIcon, Shield, Trash2, FileText } from "lucide-react";
 import Link from "next/link";
 import { Section } from "@/components/Section";
 import { Project } from "@/types/project";
@@ -30,26 +30,37 @@ export default function ProjectClient({ project }: { project: Project }) {
         back: {
             ko: "프로젝트 목록으로",
             en: "Back to Projects",
+            "pt-BR": "Voltar aos projetos",
         },
         privacy: {
             ko: "개인정보 처리방침",
             en: "Privacy Policy",
+            "pt-BR": "Política de Privacidade",
+        },
+        terms: {
+            ko: "서비스 이용약관",
+            en: "Terms of Service",
+            "pt-BR": "Termos de Serviço",
         },
         accountDeletion: {
             ko: "계정 삭제 요청 안내",
             en: "Account Deletion Request",
+            "pt-BR": "Solicitação de exclusão da conta",
         },
         gallery: {
             ko: "갤러리",
             en: "GALLERY",
+            "pt-BR": "GALERIA",
         },
         features: {
             ko: "주요 특징",
             en: "KEY FEATURES",
+            "pt-BR": "RECURSOS PRINCIPAIS",
         },
         imageNotFound: {
             ko: "이미지를 찾을 수 없습니다",
             en: "Image Not Found",
+            "pt-BR": "Imagem não encontrada",
         },
     };
 
@@ -158,6 +169,14 @@ export default function ProjectClient({ project }: { project: Project }) {
                                         <Shield size={18} /> {getLocalizedText(copy.privacy, locale)}
                                     </Link>
                                 )}
+                                {project.termsSlug && (
+                                    <Link
+                                        href={localizeHref(`/terms/${project.termsSlug}`, locale)}
+                                        className="inline-flex items-center gap-3 border border-white/10 text-white font-bold px-6 py-3 rounded-lg hover:bg-white/5 transition-colors"
+                                    >
+                                        <FileText size={18} /> {getLocalizedText(copy.terms, locale)}
+                                    </Link>
+                                )}
                             </div>
                         </motion.div>
                     </div>
@@ -257,8 +276,16 @@ export default function ProjectClient({ project }: { project: Project }) {
 
             <footer className="py-20 text-center border-t border-gray-900 mt-20 px-6">
                 <p className="text-gray-600 text-sm">© 2026 DiskFactory | {projectTitle}</p>
-                {(project.privacySlug || project.accountDeletionSlug) && (
+                {(project.privacySlug || project.termsSlug || project.accountDeletionSlug) && (
                     <div className="mt-6 flex flex-wrap items-center justify-center gap-3">
+                        {project.termsSlug && (
+                            <Link
+                                href={localizeHref(`/terms/${project.termsSlug}`, locale)}
+                                className="inline-flex items-center gap-2 rounded-full border border-white/10 px-4 py-2 text-xs font-bold text-gray-400 hover:border-[#00FF41]/40 hover:text-[#00FF41] transition-colors"
+                            >
+                                <FileText size={14} /> {getLocalizedText(copy.terms, locale)}
+                            </Link>
+                        )}
                         {project.privacySlug && (
                             <Link
                                 href={localizeHref(`/privacy/${project.privacySlug}`, locale)}

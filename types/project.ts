@@ -14,6 +14,7 @@ export interface Project {
         steam?: string;
     };
     privacySlug?: string;
+    termsSlug?: string;
     accountDeletionSlug?: string;
     youtubeId?: string;
     screenshots: string[];

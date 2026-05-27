@@ -15,18 +15,27 @@ export default function Home() {
     subtitle: {
       ko: "디스크팩토리(DiskFactory)는 재미있는 상상력을 현실로 만드는 1인 게임 개발 스튜디오입니다.",
       en: "DiskFactory is a solo game development studio turning playful ideas into real games.",
+      "pt-BR": "A DiskFactory é um estúdio solo de jogos que transforma ideias divertidas em jogos reais.",
     },
     projectsTitle: {
       ko: "프로젝트",
       en: "CURRENT PROJECTS",
+      "pt-BR": "PROJETOS ATUAIS",
     },
     rights: {
       ko: "© 2026 DiskFactory. All rights reserved.",
       en: "© 2026 DiskFactory. All rights reserved.",
+      "pt-BR": "© 2026 DiskFactory. Todos os direitos reservados.",
     },
     privacy: {
       ko: "개인정보 처리방침",
       en: "Privacy Policy",
+      "pt-BR": "Política de Privacidade",
+    },
+    terms: {
+      ko: "서비스 이용약관",
+      en: "Terms of Service",
+      "pt-BR": "Termos de Serviço",
     },
   };
 
@@ -36,9 +45,9 @@ export default function Home() {
       <div className="absolute top-0 left-0 w-full h-full opacity-20 pointer-events-none"
         style={{ backgroundImage: 'radial-gradient(circle at 50% 50%, #1a1a1a 0%, transparent 100%)' }} />
 
-      <div className="absolute top-6 right-6 z-20">
+      <header className="absolute inset-x-0 top-0 z-20 flex justify-end px-6 py-6">
         <LanguageToggle />
-      </div>
+      </header>
 
       {/* Hero Section */}
       <Section className="flex flex-col items-center justify-center min-h-[80vh] text-center pt-32">
@@ -182,6 +191,7 @@ export default function Home() {
             <p className="text-gray-500 text-sm">{getLocalizedText(copy.rights, locale)}</p>
           </div>
           <div className="flex gap-8 text-sm text-gray-400">
+            <Link href={localizeHref("/terms", locale)} className="hover:text-[#00FF41] transition-colors">{getLocalizedText(copy.terms, locale)}</Link>
             <Link href={localizeHref("/privacy", locale)} className="hover:text-[#00FF41] transition-colors">{getLocalizedText(copy.privacy, locale)}</Link>
             <a href="mailto:contact@diskfactory.com" className="flex items-center gap-2 hover:text-[#00FF41] transition-colors">
               <Mail size={16} /> CONTACT

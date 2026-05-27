@@ -11,7 +11,7 @@ interface LocaleContextValue {
 const LocaleContext = createContext<LocaleContextValue | null>(null);
 
 function isLocale(value: string | null): value is Locale {
-    return value === "ko" || value === "en";
+    return value === "ko" || value === "en" || value === "pt-BR";
 }
 
 export function LocaleProvider({ children }: { children: React.ReactNode }) {
@@ -40,7 +40,7 @@ export function LocaleProvider({ children }: { children: React.ReactNode }) {
         if (locale === "ko") {
             params.delete("lang");
         } else {
-            params.set("lang", "en");
+            params.set("lang", locale);
         }
 
         const query = params.toString();
