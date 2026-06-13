@@ -15,6 +15,8 @@ export default function PrivacyIndexPage() {
         ...policy,
         project: projects.find((project) => project.id === policy.projectId),
     }));
+    const getPolicyLocale = (policy: (typeof policies)[number]) =>
+        policy.supportedLocales?.includes(locale) ? locale : "ko";
     const copy = {
         back: {
             ko: "돌아가기",
@@ -83,12 +85,16 @@ export default function PrivacyIndexPage() {
                                 transition={{ delay: idx * 0.08 }}
                                 className="game-card p-8 md:p-10"
                             >
+                                {(() => {
+                                    const policyLocale = getPolicyLocale(policy);
+
+                                    return (
                                 <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-8">
                                     <div className="space-y-5">
                                         <div className="flex items-center gap-4">
                                             {policy.project?.icon ? (
                                                 <div className="w-16 h-16 rounded-2xl overflow-hidden bg-gray-900 border border-gray-800 shrink-0">
-                                                    <img src={policy.project.icon} alt={getLocalizedText(policy.appName, locale)} className="w-full h-full object-cover" />
+                                                    <img src={policy.project.icon} alt={getLocalizedText(policy.appName, policyLocale)} className="w-full h-full object-cover" />
                                                 </div>
                                             ) : (
                                                 <div className="w-16 h-16 rounded-2xl bg-gray-900 border border-gray-800 flex items-center justify-center shrink-0">
@@ -97,11 +103,11 @@ export default function PrivacyIndexPage() {
                                             )}
                                             <div className="space-y-1">
                                                 <p className="text-xs uppercase tracking-[0.25em] text-gray-500 font-mono">{getLocalizedText(copy.appPolicy, locale)}</p>
-                                                <h2 className="text-2xl md:text-3xl font-bold">{getLocalizedText(policy.appName, locale)}</h2>
+                                                <h2 className="text-2xl md:text-3xl font-bold">{getLocalizedText(policy.appName, policyLocale)}</h2>
                                             </div>
                                         </div>
 
-                                        <p className="text-gray-400 leading-relaxed max-w-2xl">{getLocalizedText(policy.summary, locale)}</p>
+                                        <p className="text-gray-400 leading-relaxed max-w-2xl">{getLocalizedText(policy.summary, policyLocale)}</p>
 
                                         <div className="flex flex-wrap gap-3 text-sm">
                                             <div className="inline-flex items-center gap-2 px-3 py-2 rounded-full border border-gray-800 bg-black/40 text-gray-300">
@@ -116,7 +122,7 @@ export default function PrivacyIndexPage() {
 
                                     <div className="flex flex-col gap-3 min-w-full lg:min-w-56">
                                         <Link
-                                            href={localizeHref(`/privacy/${policy.slug}`, locale)}
+                                            href={localizeHref(`/privacy/${policy.slug}`, policyLocale)}
                                             className="inline-flex items-center justify-center gap-2 bg-[#00FF41] text-black font-bold px-6 py-3 rounded-full hover:scale-[1.02] transition-transform"
                                         >
                                             {getLocalizedText(copy.openPolicy, locale)} <ArrowRight size={18} />
@@ -141,6 +147,8 @@ export default function PrivacyIndexPage() {
                                         )}
                                     </div>
                                 </div>
+                                    );
+                                })()}
                             </motion.div>
                         ))}
                     </div>

@@ -1,4 +1,4 @@
-import { LocalizedText } from "@/types/i18n";
+import { Locale, LocalizedText } from "@/types/i18n";
 
 export type PrivacyPolicySectionKind =
     | "collection"
@@ -29,6 +29,7 @@ export interface PrivacyPolicy {
     slug: string;
     appName: LocalizedText;
     projectId?: string;
+    supportedLocales?: Locale[];
     summary: LocalizedText;
     introduction: LocalizedText;
     effectiveDate: string;

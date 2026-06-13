@@ -156,5 +156,52 @@ export const projects: Project[] = [
                 "pt-BR": "Diversão estratégica escondida em regras simples",
             },
         ],
+    },
+    {
+        id: "uptiger",
+        title: {
+            ko: "눈 떠보니 호랑이",
+            en: "Up Tiger",
+            "pt-BR": "Up Tiger",
+        },
+        description: {
+            ko: "눈을 떠보니 호랑이가 되어버렸다! 튼튼한 밧줄을 잡고 끝없이 올라가는 캐주얼 게임.",
+            en: "I woke up as a tiger! Grab sturdy ropes and climb as far as you can in this endless casual game.",
+            "pt-BR": "Acordei como um tigre! Pegue as cordas firmes e suba o máximo que puder neste jogo casual infinito.",
+        },
+        fullDescription: {
+            ko: "오누이를 키우고 있는 멋진 어머니인 나! 그러던 어느 날 귀가 중 호랑이를 만났고, 너무 놀라 기절했는데 눈을 떠보니 호랑이가 되어버렸다?!\n\n튼튼한 밧줄은 잡고, 썩은 밧줄은 피하세요. 터치 모드와 스와이프 모드 중 원하는 조작 방식을 선택해 끝없이 이어지는 밧줄을 타고 더 높이 올라가 보세요.",
+            en: "I was a proud mother raising two children. One day on my way home, I ran into a tiger, fainted from the shock, and when I opened my eyes... I had become the tiger?!\n\nGrab sturdy ropes and avoid rotten ones. Choose between touch mode and swipe mode, then keep climbing higher through an endless chain of ropes.",
+            "pt-BR": "Eu era uma mãe orgulhosa criando dois filhos. Um dia, voltando para casa, encontrei um tigre, desmaiei de susto e, quando abri os olhos... eu tinha virado o tigre?!\n\nPegue as cordas firmes e evite as cordas podres. Escolha entre o modo por toque e o modo por gesto, e continue subindo cada vez mais por uma sequência infinita de cordas.",
+        },
+        thumbnail: "/images/uptiger/TitleLogo.png",
+        icon: "/images/uptiger/AppIcon.png",
+        tags: ["Endless", "Casual"],
+        links: {
+            playstore: "https://play.google.com/store/apps/details?id=com.diskfactory.uptiger",
+        },
+        privacySlug: "uptiger",
+        screenshots: [
+            "/images/uptiger/Screen1.png",
+            "/images/uptiger/Screen2.png",
+            "/images/uptiger/Screen3.png",
+        ],
+        features: [
+            {
+                ko: "터치 모드와 스와이프 모드, 두 가지 입력 방식 지원",
+                en: "Two input styles: touch mode and swipe mode",
+                "pt-BR": "Dois estilos de controle: modo por toque e modo por gesto",
+            },
+            {
+                ko: "튼튼한 밧줄은 잡고, 썩은 밧줄은 피하는 순간 판단",
+                en: "Quick decisions: grab sturdy ropes and avoid rotten ones",
+                "pt-BR": "Decisões rápidas: pegue as cordas firmes e evite as podres",
+            },
+            {
+                ko: "끝없이 이어지는 가벼운 캐주얼 도전",
+                en: "A light casual challenge that keeps going",
+                "pt-BR": "Um desafio casual leve que continua sem parar",
+            },
+        ],
     }
 ];

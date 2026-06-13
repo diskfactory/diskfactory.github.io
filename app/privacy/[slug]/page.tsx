@@ -24,10 +24,15 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
         policy.appName.ko === policy.appName.en
             ? policy.appName.ko
             : `${policy.appName.ko} | ${policy.appName.en}`;
+    const isKoreanOnly = policy.supportedLocales?.length === 1 && policy.supportedLocales[0] === "ko";
 
     return {
-        title: `${appName} Privacy Policy | 개인정보처리방침 | DiskFactory`,
-        description: `${policy.summary.ko} ${policy.summary.en}`,
+        title: isKoreanOnly
+            ? `${policy.appName.ko} 개인정보처리방침 | DiskFactory`
+            : `${appName} Privacy Policy | 개인정보처리방침 | DiskFactory`,
+        description: isKoreanOnly
+            ? policy.summary.ko
+            : `${policy.summary.ko} ${policy.summary.en}`,
     };
 }
 

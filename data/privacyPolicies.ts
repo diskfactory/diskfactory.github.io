@@ -1,4 +1,11 @@
 import { PrivacyPolicy } from "@/types/privacy";
+import { LocalizedText } from "@/types/i18n";
+
+const koOnly = (text: string): LocalizedText => ({
+    ko: text,
+    en: text,
+    "pt-BR": text,
+});
 
 export const privacyPolicies: PrivacyPolicy[] = [
     {
@@ -685,6 +692,119 @@ export const privacyPolicies: PrivacyPolicy[] = [
                         en: "If you have any questions regarding privacy while using the Application, or have questions about the practices, please contact the Service Provider via email at yeojh97@gmail.com.",
                         "pt-BR": "Se tiver dúvidas sobre privacidade ao usar o Aplicativo ou sobre as práticas do Provedor do Serviço, entre em contato por e-mail em yeojh97@gmail.com.",
                     },
+                ],
+            },
+        ],
+    },
+    {
+        slug: "uptiger",
+        appName: koOnly("눈 떠보니 호랑이"),
+        projectId: "uptiger",
+        supportedLocales: ["ko"],
+        summary: koOnly("눈 떠보니 호랑이 앱에 적용되는 개인정보처리방침입니다."),
+        introduction: koOnly("본 개인정보처리방침은 디스크팩토리(DiskFactory, 이하 \"서비스 제공자\")가 무료 서비스로 제공하는 모바일 앱 '눈 떠보니 호랑이'(이하 \"애플리케이션\")에 적용됩니다. 본 서비스는 현 상태 그대로 제공됩니다."),
+        effectiveDate: "2026-06-13",
+        contactEmail: "yeojh97@gmail.com",
+        sections: [
+            {
+                kind: "collection",
+                title: koOnly("정보 수집 및 이용"),
+                paragraphs: [
+                    koOnly("애플리케이션은 다운로드 및 사용 시 정보를 수집할 수 있습니다. 수집될 수 있는 정보는 다음과 같습니다."),
+                    koOnly("애플리케이션은 모바일 기기의 정밀 위치 정보를 수집하지 않습니다."),
+                    koOnly("애플리케이션은 사용자의 데이터를 처리하거나 기능을 제공하기 위해 인공지능(AI) 기술을 사용하지 않습니다."),
+                    koOnly("사용자가 문의 과정에서 이메일 주소 등 연락처 정보를 직접 제공하는 경우, 서비스 제공자는 답변 제공, 필수 고지, 요청 처리 목적을 위해 해당 정보를 사용할 수 있습니다."),
+                ],
+                bullets: [
+                    koOnly("기기의 인터넷 프로토콜 주소(IP 주소)"),
+                    koOnly("방문한 애플리케이션 페이지, 방문 시간과 날짜, 해당 페이지에 머문 시간"),
+                    koOnly("애플리케이션 사용 시간"),
+                    koOnly("모바일 기기에서 사용하는 운영체제"),
+                ],
+            },
+            {
+                kind: "sharing",
+                title: koOnly("제삼자 접근"),
+                paragraphs: [
+                    koOnly("서비스 제공자가 애플리케이션과 서비스를 개선할 수 있도록 집계 및 익명화된 데이터가 외부 서비스로 전송될 수 있습니다. 서비스 제공자는 본 개인정보처리방침에 설명된 목적과 방식으로 사용자의 정보를 제삼자와 공유할 수 있습니다."),
+                    koOnly("애플리케이션은 자체 개인정보처리방침을 가진 제삼자 서비스를 사용합니다. 애플리케이션이 사용하는 제삼자 서비스 제공업체의 개인정보처리방침 링크는 아래와 같습니다."),
+                    koOnly("서비스 제공자는 사용자 제공 정보 및 자동 수집 정보를 다음과 같은 경우 공개할 수 있습니다."),
+                ],
+                services: [
+                    {
+                        name: "Google Play Services",
+                        url: "https://www.google.com/policies/privacy/",
+                    },
+                    {
+                        name: "AdMob",
+                        url: "https://policies.google.com/technologies/partner-sites",
+                    },
+                    {
+                        name: "Google Analytics for Firebase",
+                        url: "https://firebase.google.com/support/privacy",
+                    },
+                    {
+                        name: "Unity",
+                        url: "https://unity3d.com/legal/privacy-policy",
+                    },
+                ],
+                bullets: [
+                    koOnly("법령상 요구되는 경우"),
+                    koOnly("권리 보호, 사용자 또는 타인의 안전 보호, 사기 조사, 정부 요청 대응을 위해 공개가 필요하다고 선의로 판단하는 경우"),
+                    koOnly("서비스 제공자를 대신하여 업무를 수행하고, 공개된 정보를 독립적으로 사용하지 않으며, 본 개인정보처리방침의 규칙을 준수하기로 동의한 신뢰할 수 있는 서비스 제공업체와 공유하는 경우"),
+                ],
+            },
+            {
+                kind: "deletion",
+                title: koOnly("옵트아웃 및 삭제"),
+                paragraphs: [
+                    koOnly("애플리케이션을 삭제하면 기기에서의 추가 정보 수집을 중단할 수 있습니다. 모바일 기기 또는 앱 마켓플레이스에서 제공하는 표준 삭제 절차를 이용하면 됩니다."),
+                    koOnly("개인정보의 열람, 정정, 삭제 또는 처리정지를 요청하려면 아래 연락처로 문의할 수 있습니다. 서비스 제공자는 요청 확인 후 합리적인 기간 내에 관련 법령에 따라 처리합니다."),
+                ],
+            },
+            {
+                kind: "retention",
+                title: koOnly("데이터 보유 정책"),
+                paragraphs: [
+                    koOnly("서비스 제공자는 사용자가 애플리케이션을 사용하는 동안과 그 이후 합리적인 기간 동안 필요한 데이터를 보유할 수 있습니다."),
+                    koOnly("처리 목적이 달성되었거나 삭제 요청이 처리된 경우, 관련 법령상 보관이 필요한 정보를 제외하고 해당 정보를 삭제하거나 더 이상 개인을 식별할 수 없도록 익명화합니다."),
+                ],
+            },
+            {
+                kind: "children",
+                title: koOnly("아동"),
+                paragraphs: [
+                    koOnly("서비스 제공자는 만 14세 미만 아동의 개인정보를 고의로 수집하거나 만 14세 미만 아동을 대상으로 마케팅하지 않습니다."),
+                    koOnly("애플리케이션은 만 14세 미만 아동을 대상으로 하지 않습니다. 만 14세 미만 아동이 개인정보를 제공한 사실을 서비스 제공자가 발견하는 경우, 해당 정보는 지체 없이 삭제됩니다. 부모 또는 보호자가 자녀가 개인정보를 제공했다는 사실을 알고 있다면 서비스 제공자에게 연락하여 필요한 조치를 요청할 수 있습니다."),
+                ],
+            },
+            {
+                kind: "security",
+                title: koOnly("보안"),
+                paragraphs: [
+                    koOnly("서비스 제공자는 사용자의 정보 기밀성을 보호하는 것을 중요하게 생각하며, 처리 및 보관하는 정보를 보호하기 위해 물리적, 전자적, 절차적 보호 조치를 제공합니다."),
+                ],
+            },
+            {
+                kind: "changes",
+                title: koOnly("변경 사항"),
+                paragraphs: [
+                    koOnly("본 개인정보처리방침은 필요에 따라 업데이트될 수 있습니다. 서비스 제공자는 이 페이지를 새로운 개인정보처리방침으로 업데이트하여 변경 사항을 알립니다."),
+                    koOnly("정기적으로 본 개인정보처리방침을 확인하는 것이 좋으며, 변경 후 애플리케이션을 계속 사용하면 변경 사항에 동의한 것으로 간주될 수 있습니다."),
+                ],
+            },
+            {
+                kind: "consent",
+                title: koOnly("동의"),
+                paragraphs: [
+                    koOnly("애플리케이션을 사용함으로써 사용자는 본 개인정보처리방침에 명시된 정보 처리와 이후 개정 사항에 동의하는 것으로 간주됩니다."),
+                ],
+            },
+            {
+                kind: "contact",
+                title: koOnly("문의"),
+                paragraphs: [
+                    koOnly("애플리케이션 사용 중 개인정보와 관련하여 질문이 있거나 서비스 제공자의 처리 방식에 관한 문의가 있는 경우 yeojh97@gmail.com 으로 연락해 주세요."),
                 ],
             },
         ],

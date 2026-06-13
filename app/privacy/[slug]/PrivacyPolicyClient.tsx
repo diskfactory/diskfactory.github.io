@@ -29,12 +29,20 @@ interface PrivacyPolicyClientProps {
 
 export default function PrivacyPolicyClient({ policy, project }: PrivacyPolicyClientProps) {
     const { locale } = useLocale();
-    const appName = getLocalizedText(policy.appName, locale);
+    const supportedLocales = policy.supportedLocales ?? (["ko", "en", "pt-BR"] as const);
+    const displayLocale = supportedLocales.includes(locale) ? locale : "ko";
+    const hasMultipleLocales = supportedLocales.length > 1;
+    const appName = getLocalizedText(policy.appName, displayLocale);
     const copy = {
         back: {
             ko: "정책 목록으로",
             en: "Back to Policies",
             "pt-BR": "Voltar às políticas",
+        },
+        overline: {
+            ko: "개인정보처리방침 | DiskFactory",
+            en: "Privacy Policy | DiskFactory",
+            "pt-BR": "Política de Privacidade | DiskFactory",
         },
         pageTitle: {
             ko: `${appName} 개인정보처리방침`,
@@ -67,10 +75,10 @@ export default function PrivacyPolicyClient({ policy, project }: PrivacyPolicyCl
         <main className="min-h-screen bg-black text-white py-20 px-6">
             <div className="max-w-4xl mx-auto">
                 <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-12">
-                    <Link href={localizeHref("/privacy", locale)} className="inline-flex items-center gap-2 text-gray-400 hover:text-[#00FF41] transition-colors group">
-                        <ArrowLeft size={20} className="group-hover:-translate-x-1 transition-transform" /> {getLocalizedText(copy.back, locale)}
+                    <Link href={localizeHref("/privacy", displayLocale)} className="inline-flex items-center gap-2 text-gray-400 hover:text-[#00FF41] transition-colors group">
+                        <ArrowLeft size={20} className="group-hover:-translate-x-1 transition-transform" /> {getLocalizedText(copy.back, displayLocale)}
                     </Link>
-                    <LanguageToggle />
+                    {hasMultipleLocales && <LanguageToggle />}
                 </div>
 
                 <motion.div
@@ -79,24 +87,24 @@ export default function PrivacyPolicyClient({ policy, project }: PrivacyPolicyCl
                     className="space-y-12"
                 >
                     <header className="border-b border-gray-900 pb-10 space-y-4">
-                        <p className="text-gray-500 font-mono text-sm uppercase tracking-widest">Privacy Policy | DiskFactory</p>
-                        <h1 className="text-4xl md:text-5xl font-bold tracking-tight">{getLocalizedText(copy.pageTitle, locale)}</h1>
-                        <p className="text-gray-400 leading-relaxed max-w-3xl">{getLocalizedText(policy.summary, locale)}</p>
+                        <p className="text-gray-500 font-mono text-sm uppercase tracking-widest">{getLocalizedText(copy.overline, displayLocale)}</p>
+                        <h1 className="text-4xl md:text-5xl font-bold tracking-tight">{getLocalizedText(copy.pageTitle, displayLocale)}</h1>
+                        <p className="text-gray-400 leading-relaxed max-w-3xl">{getLocalizedText(policy.summary, displayLocale)}</p>
                     </header>
 
                     <div className="grid gap-8">
                         <div className="game-card p-10 bg-gray-900/20 space-y-5">
                             <p className="text-lg text-gray-300 leading-relaxed italic">
-                                &quot;{getLocalizedText(policy.introduction, locale)}&quot;
+                                &quot;{getLocalizedText(policy.introduction, displayLocale)}&quot;
                             </p>
 
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
                                 <div className="rounded-2xl border border-gray-900 bg-black/30 p-4">
-                                    <p className="text-xs uppercase tracking-[0.2em] text-gray-500 font-mono mb-2">{getLocalizedText(copy.effectiveDate, locale)}</p>
+                                    <p className="text-xs uppercase tracking-[0.2em] text-gray-500 font-mono mb-2">{getLocalizedText(copy.effectiveDate, displayLocale)}</p>
                                     <p className="text-white">{policy.effectiveDate}</p>
                                 </div>
                                 <div className="rounded-2xl border border-gray-900 bg-black/30 p-4">
-                                    <p className="text-xs uppercase tracking-[0.2em] text-gray-500 font-mono mb-2">{getLocalizedText(copy.contact, locale)}</p>
+                                    <p className="text-xs uppercase tracking-[0.2em] text-gray-500 font-mono mb-2">{getLocalizedText(copy.contact, displayLocale)}</p>
                                     <p className="text-[#00FF41] break-all">{policy.contactEmail}</p>
                                 </div>
                             </div>
@@ -139,12 +147,12 @@ export default function PrivacyPolicyClient({ policy, project }: PrivacyPolicyCl
                                 >
                                     <div className="flex items-center gap-3 mb-4">
                                         {sectionIcons[section.kind]}
-                                        <h2 className="text-xl font-bold text-white">{getLocalizedText(section.title, locale)}</h2>
+                                        <h2 className="text-xl font-bold text-white">{getLocalizedText(section.title, displayLocale)}</h2>
                                     </div>
                                     <div className="pl-7 border-l border-gray-800 space-y-4">
                                         {section.paragraphs.map((paragraph, paragraphIndex) => (
                                             <p key={paragraphIndex} className="text-gray-400 leading-relaxed">
-                                                {getLocalizedText(paragraph, locale)}
+                                                {getLocalizedText(paragraph, displayLocale)}
                                             </p>
                                         ))}
                                     </div>
@@ -153,7 +161,7 @@ export default function PrivacyPolicyClient({ policy, project }: PrivacyPolicyCl
                                             {section.bullets.map((bullet, bulletIndex) => (
                                                 <li key={bulletIndex} className="flex gap-3 text-gray-400">
                                                     <span className="mt-2 h-1.5 w-1.5 rounded-full bg-[#00FF41] shrink-0" />
-                                                    <span>{getLocalizedText(bullet, locale)}</span>
+                                                    <span>{getLocalizedText(bullet, displayLocale)}</span>
                                                 </li>
                                             ))}
                                         </ul>
@@ -181,13 +189,13 @@ export default function PrivacyPolicyClient({ policy, project }: PrivacyPolicyCl
                             <div className="space-y-6">
                                 <div className="space-y-1">
                                     <h3 className="text-xs font-mono text-gray-500 uppercase tracking-widest flex items-center gap-2">
-                                        <Mail size={12} /> {getLocalizedText(copy.contactInfo, locale)}
+                                        <Mail size={12} /> {getLocalizedText(copy.contactInfo, displayLocale)}
                                     </h3>
                                     <p className="text-lg text-[#00FF41] break-all">{policy.contactEmail}</p>
                                 </div>
                                 <div className="space-y-1">
                                     <h3 className="text-xs font-mono text-gray-500 uppercase tracking-widest flex items-center gap-2">
-                                        <Clock size={12} /> {getLocalizedText(copy.effectiveDate, locale)}
+                                        <Clock size={12} /> {getLocalizedText(copy.effectiveDate, displayLocale)}
                                     </h3>
                                     <p className="text-white">{policy.effectiveDate}</p>
                                 </div>
@@ -197,7 +205,7 @@ export default function PrivacyPolicyClient({ policy, project }: PrivacyPolicyCl
                                 onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
                                 className="px-8 py-3 bg-white/5 border border-white/10 rounded-full text-xs font-bold hover:bg-white/10 transition-all uppercase tracking-widest"
                             >
-                                {getLocalizedText(copy.backToTop, locale)}
+                                {getLocalizedText(copy.backToTop, displayLocale)}
                             </button>
                         </div>
                     </div>
