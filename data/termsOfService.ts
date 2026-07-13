@@ -1,4 +1,11 @@
 import { TermsOfService } from "@/types/terms";
+import { LocalizedText } from "@/types/i18n";
+
+const koOnly = (text: string): LocalizedText => ({
+    ko: text,
+    en: text,
+    "pt-BR": text,
+});
 
 export const termsOfService: TermsOfService[] = [
     {
@@ -450,6 +457,129 @@ export const termsOfService: TermsOfService[] = [
                         en: "Email: yeojh97@gmail.com",
                         "pt-BR": "E-mail: yeojh97@gmail.com",
                     },
+                ],
+            },
+        ],
+    },
+    {
+        slug: "uptiger",
+        appName: koOnly("눈 떠보니 호랑이"),
+        projectId: "uptiger",
+        privacySlug: "uptiger",
+        supportedLocales: ["ko"],
+        summary: koOnly("본 약관은 디스크팩토리가 제공하는 모바일 게임 '눈 떠보니 호랑이'와 관련 서비스의 이용조건 및 회사와 이용자의 권리·의무를 정합니다."),
+        introduction: koOnly("본 약관은 디스크팩토리(이하 \"회사\")가 제공하는 모바일 게임 '눈 떠보니 호랑이'와 관련 서비스(이하 \"서비스\")의 이용조건 및 회사와 이용자의 권리·의무를 정합니다."),
+        effectiveDate: "2026-07-14",
+        contactEmail: "contact@diskfactory.app",
+        sections: [
+            {
+                kind: "purpose",
+                title: koOnly("1. 목적 및 적용"),
+                paragraphs: [
+                    koOnly("본 약관은 서비스에 표시되거나 연결된 때부터 적용됩니다. 서비스에는 게임 플레이, 광고, 리더보드, 구매·구독 및 이에 부수되는 기능이 포함됩니다."),
+                ],
+            },
+            {
+                kind: "eligibility",
+                title: koOnly("2. 이용자와 미성년자"),
+                paragraphs: [
+                    koOnly("서비스는 별도 회원가입 없이 이용할 수 있으며, 일부 기능은 Apps in Toss, Google Play 또는 Apple App Store 등 플랫폼 계정이나 기능을 이용할 수 있습니다."),
+                    koOnly("서비스는 만 14세 미만 아동을 주된 대상으로 하지 않습니다. 미성년자가 유료상품을 구매하려는 경우에는 법정대리인의 동의가 필요하며, 필요한 동의 없이 이루어진 결제는 관계 법령에 따라 취소할 수 있습니다."),
+                ],
+            },
+            {
+                kind: "service",
+                title: koOnly("3. 서비스 제공과 변경"),
+                paragraphs: [
+                    koOnly("일부 기능과 제공 방식은 이용 플랫폼, 기기, 운영체제 및 앱 버전에 따라 다를 수 있습니다. 인터넷 연결이나 플랫폼 이용에 따른 통신요금은 이용자가 부담합니다."),
+                    koOnly("회사는 운영상 또는 기술상 필요한 경우 서비스를 변경하거나 일시 중단할 수 있습니다. 이용자에게 중대한 영향을 주는 변경 또는 서비스 종료는 합리적인 기간 전에 안내합니다."),
+                ],
+            },
+            {
+                kind: "payments",
+                title: koOnly("4. 월간 구독, 해지 및 환불"),
+                paragraphs: [
+                    koOnly("월간 구독은 1개월 단위로 자동 갱신되는 상품입니다. 정확한 상품명, 가격, 이용기간 및 제공 혜택은 구매 화면에 표시됩니다."),
+                    koOnly("결제는 이용자가 선택한 플랫폼을 통해 이루어지며, 이용자가 해지하기 전까지 해당 플랫폼의 결제정책에 따라 자동 갱신될 수 있습니다."),
+                    koOnly("이용자는 각 플랫폼의 구독 관리 기능 또는 고객지원 절차를 통해 다음 결제를 취소할 수 있습니다. 앱을 삭제하는 것만으로는 구독이 취소되지 않으며, 취소 후에도 이미 결제한 이용기간이 끝날 때까지 혜택을 이용할 수 있습니다."),
+                    koOnly("이용자는 관계 법령이 정한 날부터 7일 이내 청약철회를 할 수 있습니다. 다만 즉시 제공된 디지털콘텐츠 등 법령상 제한 사유를 사전에 안내받고 제공 개시에 동의한 경우에는 제한될 수 있으며, 나누어 제공되는 콘텐츠의 미제공 부분은 예외입니다."),
+                    koOnly("적법한 청약철회가 접수되면 회사는 관계 법령에 따라 3영업일 이내 환급에 필요한 조치를 합니다. 실제 환급 반영 시점은 결제 플랫폼의 처리 일정에 따라 달라질 수 있습니다."),
+                    koOnly("구매 복구, 결제 취소 및 환불은 관계 법령과 결제가 이루어진 Apps in Toss, Google Play 또는 Apple App Store의 절차에 따릅니다. 환불 또는 결제 취소가 완료되면 해당 상품의 혜택이 회수될 수 있습니다."),
+                ],
+            },
+            {
+                kind: "user_conduct",
+                title: koOnly("5. 이용자의 의무"),
+                paragraphs: [
+                    koOnly("이용자는 본 약관, 플랫폼 정책 및 관련 법령을 준수하여 서비스를 이용해야 하며 다음 행위를 해서는 안 됩니다."),
+                ],
+                bullets: [
+                    koOnly("서비스, 광고 또는 결제 기능을 부정하게 이용하는 행위"),
+                    koOnly("프로그램을 변조하거나 비정상적인 방법으로 게임 결과를 조작하는 행위"),
+                    koOnly("서비스 운영을 방해하거나 다른 이용자 또는 제3자의 권리를 침해하는 행위"),
+                    koOnly("법령 또는 공서양속에 위반되는 행위"),
+                ],
+            },
+            {
+                kind: "enforcement",
+                title: koOnly("6. 이용 제한"),
+                paragraphs: [
+                    koOnly("회사는 위반행위가 확인된 경우 위반 정도와 영향을 고려하여 경고, 기록 반영 제한, 기능 제한 또는 서비스 이용 제한 등 필요한 조치를 할 수 있습니다. 이용자는 contact@diskfactory.app을 통해 이의를 제기할 수 있습니다."),
+                ],
+            },
+            {
+                kind: "ip",
+                title: koOnly("7. 지식재산권"),
+                paragraphs: [
+                    koOnly("서비스의 프로그램, 그래픽, 음악, 문구, 상표 및 그 밖의 콘텐츠에 관한 권리는 회사 또는 정당한 권리자에게 있습니다."),
+                    koOnly("이용자는 개인적이고 비영리적인 범위에서만 서비스를 이용할 수 있으며, 법령상 허용되는 경우를 제외하고 서비스를 복제·배포·변조·역설계하거나 영리적으로 이용해서는 안 됩니다."),
+                ],
+            },
+            {
+                kind: "privacy",
+                title: koOnly("8. 개인정보 보호 및 외부 서비스"),
+                paragraphs: [
+                    koOnly("개인정보 처리에 관한 사항은 별도로 공개하는 '눈 떠보니 호랑이 개인정보처리방침'에 따릅니다."),
+                    koOnly("서비스는 Apps in Toss, Google Play, Apple App Store, 광고·분석 및 결제·구독 서비스 등 외부 플랫폼을 이용할 수 있으며, 해당 서비스의 이용에는 각 사업자의 약관과 정책이 함께 적용될 수 있습니다."),
+                ],
+            },
+            {
+                kind: "liability",
+                title: koOnly("9. 책임"),
+                paragraphs: [
+                    koOnly("회사는 천재지변, 통신망 또는 플랫폼 장애, 이용자의 귀책사유 등 회사가 합리적으로 통제하기 어려운 사유로 발생한 손해에 대해서는 책임을 지지 않습니다."),
+                    koOnly("다만 회사의 고의 또는 과실로 이용자에게 손해가 발생한 경우에는 관계 법령에 따라 책임을 부담하며, 본 약관은 법률상 배제할 수 없는 소비자의 권리를 제한하지 않습니다."),
+                ],
+            },
+            {
+                kind: "changes",
+                title: koOnly("10. 약관의 변경"),
+                paragraphs: [
+                    koOnly("회사는 법령 또는 서비스 변경에 따라 본 약관을 개정할 수 있습니다. 일반적인 변경은 시행 7일 전, 이용자에게 불리한 중요한 변경은 시행 30일 전부터 서비스 또는 관련 페이지를 통해 안내합니다."),
+                    koOnly("법령상 별도의 동의가 필요한 변경은 해당 절차를 따릅니다."),
+                ],
+            },
+            {
+                kind: "law",
+                title: koOnly("11. 준거법 및 분쟁해결"),
+                paragraphs: [
+                    koOnly("본 약관에는 대한민국 법령이 적용됩니다. 분쟁이 발생한 경우 회사와 이용자는 원만한 해결을 위해 협의하며, 해결되지 않는 경우 관계 법령에 따른 관할법원에서 해결합니다."),
+                ],
+            },
+            {
+                kind: "contact",
+                title: koOnly("12. 사업자 정보 및 문의"),
+                paragraphs: [
+                    koOnly("서비스, 결제, 환불 또는 본 약관에 관한 문의는 contact@diskfactory.app으로 접수할 수 있습니다."),
+                ],
+                bullets: [
+                    koOnly("상호: 디스크팩토리"),
+                    koOnly("대표자: 여재훈"),
+                    koOnly("사업자등록번호: 831-74-00614"),
+                    koOnly("통신판매업 신고번호: 2026-서울마포-1049"),
+                    koOnly("통신판매업 신고기관: 서울특별시 마포구청"),
+                    koOnly("주소: 서울특별시 마포구 월드컵로 196, B105-E176호"),
+                    koOnly("이메일: contact@diskfactory.app"),
                 ],
             },
         ],

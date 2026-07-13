@@ -1,4 +1,4 @@
-import { LocalizedText } from "@/types/i18n";
+import { LocalizedText, Locale } from "@/types/i18n";
 
 export type TermsOfServiceSectionKind =
     | "purpose"
@@ -32,6 +32,7 @@ export interface TermsOfService {
     appName: LocalizedText;
     projectId?: string;
     privacySlug?: string;
+    supportedLocales?: Locale[];
     summary: LocalizedText;
     introduction: LocalizedText;
     effectiveDate: string;

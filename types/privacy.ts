@@ -17,10 +17,23 @@ export interface PrivacyPolicyService {
     url: string;
 }
 
+export interface PrivacyPolicyTableCell {
+    text: LocalizedText;
+    url?: string;
+}
+
+export interface PrivacyPolicyTable {
+    caption: LocalizedText;
+    headers: LocalizedText[];
+    rows: PrivacyPolicyTableCell[][];
+}
+
 export interface PrivacyPolicySection {
     kind: PrivacyPolicySectionKind;
     title: LocalizedText;
     paragraphs: LocalizedText[];
+    table?: PrivacyPolicyTable;
+    notes?: LocalizedText[];
     bullets?: LocalizedText[];
     services?: PrivacyPolicyService[];
 }

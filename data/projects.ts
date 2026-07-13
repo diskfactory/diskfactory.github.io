@@ -174,17 +174,19 @@ export const projects: Project[] = [
             en: "I was a proud mother raising two children. One day on my way home, I ran into a tiger, fainted from the shock, and when I opened my eyes... I had become the tiger?!\n\nGrab sturdy ropes and avoid rotten ones. Choose between touch mode and swipe mode, then keep climbing higher through an endless chain of ropes.",
             "pt-BR": "Eu era uma mãe orgulhosa criando dois filhos. Um dia, voltando para casa, encontrei um tigre, desmaiei de susto e, quando abri os olhos... eu tinha virado o tigre?!\n\nPegue as cordas firmes e evite as cordas podres. Escolha entre o modo por toque e o modo por gesto, e continue subindo cada vez mais por uma sequência infinita de cordas.",
         },
-        thumbnail: "/images/uptiger/TitleLogo.png",
-        icon: "/images/uptiger/AppIcon.png",
+        thumbnail: "/images/uptiger/Thumbnail.png",
+        icon: "/images/uptiger/AppIcon2.png",
         tags: ["Endless", "Casual"],
         links: {
             playstore: "https://play.google.com/store/apps/details?id=com.diskfactory.uptiger",
         },
         privacySlug: "uptiger",
+        termsSlug: "uptiger",
         screenshots: [
-            "/images/uptiger/Screen1.png",
-            "/images/uptiger/Screen2.png",
-            "/images/uptiger/Screen3.png",
+            "/images/uptiger/01.png",
+            "/images/uptiger/02.png",
+            "/images/uptiger/03.png",
+            "/images/uptiger/04.png",
         ],
         features: [
             {

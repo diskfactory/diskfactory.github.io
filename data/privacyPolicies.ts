@@ -1,10 +1,15 @@
-import { PrivacyPolicy } from "@/types/privacy";
+import { PrivacyPolicy, PrivacyPolicyTableCell } from "@/types/privacy";
 import { LocalizedText } from "@/types/i18n";
 
 const koOnly = (text: string): LocalizedText => ({
     ko: text,
     en: text,
     "pt-BR": text,
+});
+
+const koCell = (text: string, url?: string): PrivacyPolicyTableCell => ({
+    text: koOnly(text),
+    url,
 });
 
 export const privacyPolicies: PrivacyPolicy[] = [
@@ -701,110 +706,190 @@ export const privacyPolicies: PrivacyPolicy[] = [
         appName: koOnly("눈 떠보니 호랑이"),
         projectId: "uptiger",
         supportedLocales: ["ko"],
-        summary: koOnly("눈 떠보니 호랑이 앱에 적용되는 개인정보처리방침입니다."),
-        introduction: koOnly("본 개인정보처리방침은 디스크팩토리(DiskFactory, 이하 \"서비스 제공자\")가 무료 서비스로 제공하는 모바일 앱 '눈 떠보니 호랑이'(이하 \"애플리케이션\")에 적용됩니다. 본 서비스는 현 상태 그대로 제공됩니다."),
-        effectiveDate: "2026-06-13",
-        contactEmail: "yeojh97@gmail.com",
+        summary: koOnly("별도 회원가입 없이 서비스 제공에 필요한 정보만 처리하며, 개인정보를 판매하지 않습니다."),
+        introduction: koOnly("디스크팩토리(이하 \"회사\")는 모바일 게임 '눈 떠보니 호랑이'(이하 \"서비스\") 이용자의 개인정보를 보호하기 위해 다음과 같이 개인정보처리방침을 공개합니다."),
+        effectiveDate: "2026-07-14",
+        contactEmail: "contact@diskfactory.app",
         sections: [
             {
                 kind: "collection",
-                title: koOnly("정보 수집 및 이용"),
+                title: koOnly("1. 처리하는 개인정보"),
                 paragraphs: [
-                    koOnly("애플리케이션은 다운로드 및 사용 시 정보를 수집할 수 있습니다. 수집될 수 있는 정보는 다음과 같습니다."),
-                    koOnly("애플리케이션은 모바일 기기의 정밀 위치 정보를 수집하지 않습니다."),
-                    koOnly("애플리케이션은 사용자의 데이터를 처리하거나 기능을 제공하기 위해 인공지능(AI) 기술을 사용하지 않습니다."),
-                    koOnly("사용자가 문의 과정에서 이메일 주소 등 연락처 정보를 직접 제공하는 경우, 서비스 제공자는 답변 제공, 필수 고지, 요청 처리 목적을 위해 해당 정보를 사용할 수 있습니다."),
+                    koOnly("회사는 별도 회원가입 계정을 운영하지 않으며, 이름, 생년월일, 전화번호 또는 카드번호를 직접 입력받지 않습니다."),
+                    koOnly("서비스 제공, 리더보드 운영, 광고 및 이용 통계, 결제·구독 확인을 위해 플랫폼과 서비스 기능에 따라 다음 정보 중 일부가 처리될 수 있습니다."),
                 ],
-                bullets: [
-                    koOnly("기기의 인터넷 프로토콜 주소(IP 주소)"),
-                    koOnly("방문한 애플리케이션 페이지, 방문 시간과 날짜, 해당 페이지에 머문 시간"),
-                    koOnly("애플리케이션 사용 시간"),
-                    koOnly("모바일 기기에서 사용하는 운영체제"),
-                ],
-            },
-            {
-                kind: "sharing",
-                title: koOnly("제삼자 접근"),
-                paragraphs: [
-                    koOnly("서비스 제공자가 애플리케이션과 서비스를 개선할 수 있도록 집계 및 익명화된 데이터가 외부 서비스로 전송될 수 있습니다. 서비스 제공자는 본 개인정보처리방침에 설명된 목적과 방식으로 사용자의 정보를 제삼자와 공유할 수 있습니다."),
-                    koOnly("애플리케이션은 자체 개인정보처리방침을 가진 제삼자 서비스를 사용합니다. 애플리케이션이 사용하는 제삼자 서비스 제공업체의 개인정보처리방침 링크는 아래와 같습니다."),
-                    koOnly("서비스 제공자는 사용자 제공 정보 및 자동 수집 정보를 다음과 같은 경우 공개할 수 있습니다."),
-                ],
-                services: [
-                    {
-                        name: "Google Play Services",
-                        url: "https://www.google.com/policies/privacy/",
-                    },
-                    {
-                        name: "AdMob",
-                        url: "https://policies.google.com/technologies/partner-sites",
-                    },
-                    {
-                        name: "Google Analytics for Firebase",
-                        url: "https://firebase.google.com/support/privacy",
-                    },
-                    {
-                        name: "Unity",
-                        url: "https://unity3d.com/legal/privacy-policy",
-                    },
-                ],
-                bullets: [
-                    koOnly("법령상 요구되는 경우"),
-                    koOnly("권리 보호, 사용자 또는 타인의 안전 보호, 사기 조사, 정부 요청 대응을 위해 공개가 필요하다고 선의로 판단하는 경우"),
-                    koOnly("서비스 제공자를 대신하여 업무를 수행하고, 공개된 정보를 독립적으로 사용하지 않으며, 본 개인정보처리방침의 규칙을 준수하기로 동의한 신뢰할 수 있는 서비스 제공업체와 공유하는 경우"),
-                ],
-            },
-            {
-                kind: "deletion",
-                title: koOnly("옵트아웃 및 삭제"),
-                paragraphs: [
-                    koOnly("애플리케이션을 삭제하면 기기에서의 추가 정보 수집을 중단할 수 있습니다. 모바일 기기 또는 앱 마켓플레이스에서 제공하는 표준 삭제 절차를 이용하면 됩니다."),
-                    koOnly("개인정보의 열람, 정정, 삭제 또는 처리정지를 요청하려면 아래 연락처로 문의할 수 있습니다. 서비스 제공자는 요청 확인 후 합리적인 기간 내에 관련 법령에 따라 처리합니다."),
+                table: {
+                    caption: koOnly("처리하는 개인정보와 이용 목적"),
+                    headers: [koOnly("구분"), koOnly("처리 항목"), koOnly("이용 목적")],
+                    rows: [
+                        [
+                            koCell("게임 및 플랫폼"),
+                            koCell("플랫폼 이용자 식별정보, 앱이 생성한 임의 식별자, 점수·리더보드·게임 이용기록, 기기·운영체제·앱 버전·IP 주소"),
+                            koCell("서비스 제공 및 리더보드 운영"),
+                        ],
+                        [
+                            koCell("광고 및 이용 통계"),
+                            koCell("광고·앱 인스턴스 식별정보, 광고 노출·이용기록, 게임 이용기록 및 진단정보"),
+                            koCell("광고 제공 및 이용 통계"),
+                        ],
+                        [
+                            koCell("결제 및 구독"),
+                            koCell("이용자·상품·주문·거래 식별정보, 가격·통화, 구독·갱신·만료·환불 상태 및 오류기록"),
+                            koCell("결제·구독 확인 및 혜택 제공"),
+                        ],
+                        [
+                            koCell("문의"),
+                            koCell("이메일 주소, 플랫폼 문의 식별정보, 문의내용 및 첨부자료"),
+                            koCell("문의 답변"),
+                        ],
+                    ],
+                },
+                notes: [
+                    koOnly("카드번호와 계좌번호 등 결제수단 정보는 결제 플랫폼이 직접 처리하며 회사는 직접 수집하거나 저장하지 않습니다."),
+                    koOnly("광고 식별자를 포함한 기기 식별정보는 운영체제 설정과 광고 제공 방식에 따라 처리될 수 있습니다. 이용자는 기기의 개인정보 보호 또는 광고 설정에서 광고 식별자 이용을 제한하거나 재설정할 수 있으며, 이 경우 맞춤형 광고 대신 일반 광고가 제공될 수 있습니다."),
                 ],
             },
             {
                 kind: "retention",
-                title: koOnly("데이터 보유 정책"),
+                title: koOnly("2. 보유기간 및 파기"),
                 paragraphs: [
-                    koOnly("서비스 제공자는 사용자가 애플리케이션을 사용하는 동안과 그 이후 합리적인 기간 동안 필요한 데이터를 보유할 수 있습니다."),
-                    koOnly("처리 목적이 달성되었거나 삭제 요청이 처리된 경우, 관련 법령상 보관이 필요한 정보를 제외하고 해당 정보를 삭제하거나 더 이상 개인을 식별할 수 없도록 익명화합니다."),
+                    koOnly("회사는 처리 목적이 달성되거나 보유기간이 끝난 개인정보를 지체 없이 삭제합니다. 전자적 정보는 복구하기 어려운 방법으로 삭제합니다."),
+                ],
+                bullets: [
+                    koOnly("게임·리더보드 기록: 서비스 제공 기간 또는 이용자의 삭제 요청 처리 시까지"),
+                    koOnly("전자상거래법에 따른 계약·청약철회 및 대금결제·서비스 공급 기록(상품·주문·거래·환불정보): 5년"),
+                    koOnly("전자상거래법에 따른 소비자 불만·분쟁 처리 기록(문의내용 및 처리결과): 3년"),
+                    koOnly("일반 문의기록: 답변 완료 후 1년"),
+                    koOnly("외부 서비스가 직접 처리하는 정보: 해당 서비스의 설정과 개인정보처리방침에 따른 기간"),
+                ],
+            },
+            {
+                kind: "sharing",
+                title: koOnly("3. 개인정보 처리위탁 및 외부 플랫폼"),
+                paragraphs: [
+                    koOnly("회사는 이용자의 개인정보를 판매하지 않으며, 법령에 근거가 있거나 이용자가 동의한 경우를 제외하고 처리 목적과 무관하게 제3자에게 제공하지 않습니다."),
+                    koOnly("회사는 서비스 운영에 필요한 범위에서 아래 사업자에게 개인정보 처리업무를 위탁합니다."),
+                    koOnly("Apps in Toss, Google Play 및 Apple App Store가 앱 배포와 결제를 위해 직접 처리하는 정보에는 각 플랫폼의 개인정보처리방침이 적용됩니다."),
+                ],
+                table: {
+                    caption: koOnly("개인정보 처리 수탁자와 위탁업무"),
+                    headers: [koOnly("수탁자"), koOnly("위탁업무"), koOnly("정책")],
+                    rows: [
+                        [
+                            koCell("Google LLC"),
+                            koCell("광고 제공, 이용 통계, 게임 플랫폼 기능 및 데이터 보관"),
+                            koCell("Google 개인정보처리방침", "https://policies.google.com/privacy"),
+                        ],
+                        [
+                            koCell("RevenueCat, Inc."),
+                            koCell("구매·구독 확인 및 관리"),
+                            koCell("RevenueCat 개인정보처리방침", "https://www.revenuecat.com/privacy"),
+                        ],
+                        [
+                            koCell("Cloudflare, Inc."),
+                            koCell("서비스 운영 및 보안"),
+                            koCell("Cloudflare 개인정보처리방침", "https://www.cloudflare.com/policies/privacy/"),
+                        ],
+                        [
+                            koCell("Slack Technologies, LLC"),
+                            koCell("구독 관련 운영 알림"),
+                            koCell("Slack 개인정보처리방침", "https://slack.com/trust/privacy/privacy-policy"),
+                        ],
+                    ],
+                },
+                services: [
+                    {
+                        name: "Apps in Toss",
+                        url: "https://toss.im/privacy",
+                    },
+                    {
+                        name: "Apple",
+                        url: "https://www.apple.com/legal/privacy/",
+                    },
+                ],
+            },
+            {
+                kind: "sharing",
+                title: koOnly("4. 개인정보의 국외 처리"),
+                paragraphs: [
+                    koOnly("국외 사업자가 처리하는 정보는 서비스 이용계약의 이행에 필요한 처리위탁·보관을 근거로 이전될 수 있습니다(개인정보 보호법 제28조의8제1항제3호). 별도 동의가 필요한 처리는 이용자의 동의를 받은 경우에만 진행합니다."),
+                    koOnly("이용자는 기기 설정을 변경하거나 선택 기능을 이용하지 않는 방법으로 일부 국외 처리를 제한할 수 있습니다. 다만 결제·구독 확인 등 서비스 제공에 필수적인 처리를 거부하면 해당 기능을 이용하기 어려울 수 있습니다."),
+                ],
+                table: {
+                    caption: koOnly("개인정보 국외 처리 현황"),
+                    headers: [
+                        koOnly("이전받는 자·연락처"),
+                        koOnly("이전 항목·목적"),
+                        koOnly("시기·방법"),
+                        koOnly("국가·보유기간"),
+                    ],
+                    rows: [
+                        [
+                            koCell("Google LLC\nGoogle 개인정보 보호 문의", "https://support.google.com/policies/answer/9581826"),
+                            koCell("기기·광고·이용정보, 플랫폼 식별정보, 구매·구독정보 / 광고·통계·게임 플랫폼 기능 및 데이터 보관"),
+                            koCell("기능 이용 시 암호화된 네트워크 전송"),
+                            koCell("미국 및 Google이 공개한 서비스 처리시설 소재 국가 / 서비스 설정 또는 처리 목적 달성 시까지"),
+                        ],
+                        [
+                            koCell("RevenueCat, Inc.\ncompliance@revenuecat.com", "mailto:compliance@revenuecat.com"),
+                            koCell("앱이 생성한 임의 식별자와 구매·구독정보 / 구매 확인 및 구독 관리"),
+                            koCell("구매·복구·상태 확인 시 암호화된 네트워크 전송"),
+                            koCell("미국 / 처리 목적 달성 또는 관계 법령상 보존기간까지"),
+                        ],
+                        [
+                            koCell("Cloudflare, Inc.\nprivacyquestions@cloudflare.com", "mailto:privacyquestions@cloudflare.com"),
+                            koCell("IP 주소, 이용자·주문·거래 식별정보 및 구독 운영정보 / 서비스 운영 및 보안"),
+                            koCell("서비스 요청 또는 구독 상태 변경 시 암호화된 네트워크 전송"),
+                            koCell("미국 및 유럽경제지역 / 처리 목적 달성 또는 관계 법령상 보존기간까지"),
+                        ],
+                        [
+                            koCell("Slack Technologies, LLC\nprivacy@slack.com", "mailto:privacy@slack.com"),
+                            koCell("이용자 식별정보와 구독 상태정보 / 구독 관련 운영 알림"),
+                            koCell("구독 상태 변경 시 암호화된 네트워크 전송"),
+                            koCell("미국 / 회사의 보관 설정에 따른 기간 또는 처리 목적 달성 시까지"),
+                        ],
+                    ],
+                },
+            },
+            {
+                kind: "deletion",
+                title: koOnly("5. 이용자의 권리"),
+                paragraphs: [
+                    koOnly("이용자 또는 법정대리인은 개인정보의 열람, 정정, 삭제, 처리정지 및 동의 철회를 요청할 수 있습니다. 요청은 contact@diskfactory.app 또는 입점 플랫폼의 고객문의 기능으로 접수할 수 있습니다."),
+                    koOnly("회사가 별도 회원계정을 운영하지 않으므로 요청 대상 확인을 위해 플랫폼 이용자 식별정보나 거래번호 등 최소한의 확인정보를 요청할 수 있습니다. 플랫폼이 직접 관리하는 정보는 해당 플랫폼의 설정 또는 고객지원을 통해 처리해야 할 수 있습니다."),
+                    koOnly("앱 삭제 시 앱을 통한 추가 정보 전송은 중단되지만, 구독 유지·정산·해지·환불 등 계약 이행 또는 관계 법령상 필요한 처리는 계속될 수 있으며 이미 전송된 정보는 자동으로 삭제되지 않습니다."),
                 ],
             },
             {
                 kind: "children",
-                title: koOnly("아동"),
+                title: koOnly("6. 만 14세 미만 아동"),
                 paragraphs: [
-                    koOnly("서비스 제공자는 만 14세 미만 아동의 개인정보를 고의로 수집하거나 만 14세 미만 아동을 대상으로 마케팅하지 않습니다."),
-                    koOnly("애플리케이션은 만 14세 미만 아동을 대상으로 하지 않습니다. 만 14세 미만 아동이 개인정보를 제공한 사실을 서비스 제공자가 발견하는 경우, 해당 정보는 지체 없이 삭제됩니다. 부모 또는 보호자가 자녀가 개인정보를 제공했다는 사실을 알고 있다면 서비스 제공자에게 연락하여 필요한 조치를 요청할 수 있습니다."),
+                    koOnly("서비스는 만 14세 미만 아동을 주된 대상으로 설계하거나 마케팅하지 않으며, 이용자의 생년월일이나 연령을 직접 수집하지 않습니다."),
+                    koOnly("만 14세 미만 아동이 고객문의 등 동의가 필요한 방식으로 개인정보를 제공하는 경우에는 법정대리인의 동의가 필요합니다. 회사가 필요한 동의 없이 아동의 개인정보가 수집된 사실을 확인하면 해당 정보를 삭제하거나 필요한 보호조치를 합니다."),
                 ],
             },
             {
                 kind: "security",
-                title: koOnly("보안"),
+                title: koOnly("7. 안전성 확보조치"),
                 paragraphs: [
-                    koOnly("서비스 제공자는 사용자의 정보 기밀성을 보호하는 것을 중요하게 생각하며, 처리 및 보관하는 정보를 보호하기 위해 물리적, 전자적, 절차적 보호 조치를 제공합니다."),
+                    koOnly("회사는 개인정보를 안전하게 처리하기 위해 접근권한 관리, 암호화 통신 및 서비스 제공업체 관리 등 필요한 기술적·관리적 보호조치를 적용합니다."),
                 ],
             },
             {
                 kind: "changes",
-                title: koOnly("변경 사항"),
+                title: koOnly("8. 방침의 변경"),
                 paragraphs: [
-                    koOnly("본 개인정보처리방침은 필요에 따라 업데이트될 수 있습니다. 서비스 제공자는 이 페이지를 새로운 개인정보처리방침으로 업데이트하여 변경 사항을 알립니다."),
-                    koOnly("정기적으로 본 개인정보처리방침을 확인하는 것이 좋으며, 변경 후 애플리케이션을 계속 사용하면 변경 사항에 동의한 것으로 간주될 수 있습니다."),
-                ],
-            },
-            {
-                kind: "consent",
-                title: koOnly("동의"),
-                paragraphs: [
-                    koOnly("애플리케이션을 사용함으로써 사용자는 본 개인정보처리방침에 명시된 정보 처리와 이후 개정 사항에 동의하는 것으로 간주됩니다."),
+                    koOnly("본 방침이 변경되는 경우 시행일과 주요 변경 내용을 이 페이지 또는 서비스 내 공지를 통해 안내합니다."),
                 ],
             },
             {
                 kind: "contact",
-                title: koOnly("문의"),
+                title: koOnly("9. 개인정보 보호책임자 및 문의"),
                 paragraphs: [
-                    koOnly("애플리케이션 사용 중 개인정보와 관련하여 질문이 있거나 서비스 제공자의 처리 방식에 관한 문의가 있는 경우 yeojh97@gmail.com 으로 연락해 주세요."),
+                    koOnly("개인정보 보호책임자: 여재훈"),
+                    koOnly("회사: 디스크팩토리 / 주소: 서울특별시 마포구 월드컵로 196, B105-E176호"),
+                    koOnly("이메일: contact@diskfactory.app"),
+                    koOnly("개인정보 침해 상담은 개인정보침해신고센터(국번 없이 118) 또는 개인정보분쟁조정위원회(1833-6972)를 이용할 수 있습니다."),
                 ],
             },
         ],

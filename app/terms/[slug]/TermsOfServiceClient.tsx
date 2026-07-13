@@ -56,7 +56,10 @@ interface TermsOfServiceClientProps {
 }
 
 export default function TermsOfServiceClient({ terms, project }: TermsOfServiceClientProps) {
-    const { locale } = useLocale();
+    const { locale: requestedLocale } = useLocale();
+    const supportedLocales = terms.supportedLocales ?? (["ko", "en", "pt-BR"] as const);
+    const locale = supportedLocales.includes(requestedLocale) ? requestedLocale : "ko";
+    const hasMultipleLocales = supportedLocales.length > 1;
     const appName = getLocalizedText(terms.appName, locale);
     const privacySlug = terms.privacySlug ?? project?.privacySlug;
     const copy = {
@@ -104,7 +107,7 @@ export default function TermsOfServiceClient({ terms, project }: TermsOfServiceC
                     <Link href={localizeHref("/terms", locale)} className="inline-flex items-center gap-2 text-gray-400 hover:text-[#00FF41] transition-colors group">
                         <ArrowLeft size={20} className="group-hover:-translate-x-1 transition-transform" /> {getLocalizedText(copy.back, locale)}
                     </Link>
-                    <LanguageToggle />
+                    {hasMultipleLocales && <LanguageToggle />}
                 </div>
 
                 <motion.div

@@ -156,6 +156,72 @@ export default function PrivacyPolicyClient({ policy, project }: PrivacyPolicyCl
                                             </p>
                                         ))}
                                     </div>
+                                    {section.table && (
+                                        <div
+                                            className="mt-5 overflow-x-auto rounded-xl border border-gray-800 bg-gray-950/70 focus:outline-none focus:ring-2 focus:ring-[#00FF41]/50"
+                                            role="region"
+                                            aria-label={getLocalizedText(section.table.caption, displayLocale)}
+                                            tabIndex={0}
+                                        >
+                                            <table className="w-full min-w-[720px] border-collapse text-left text-sm">
+                                                <caption className="sr-only">
+                                                    {getLocalizedText(section.table.caption, displayLocale)}
+                                                </caption>
+                                                <thead className="bg-gray-900/90">
+                                                    <tr>
+                                                        {section.table.headers.map((header, headerIndex) => (
+                                                            <th
+                                                                key={headerIndex}
+                                                                scope="col"
+                                                                className="border-b border-gray-800 px-4 py-3 font-bold text-white"
+                                                            >
+                                                                {getLocalizedText(header, displayLocale)}
+                                                            </th>
+                                                        ))}
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    {section.table.rows.map((row, rowIndex) => (
+                                                        <tr key={rowIndex} className="border-b border-gray-900 last:border-b-0">
+                                                            {row.map((cell, cellIndex) => {
+                                                                const cellText = getLocalizedText(cell.text, displayLocale);
+                                                                const isExternalLink = cell.url?.startsWith("http");
+
+                                                                return (
+                                                                    <td
+                                                                        key={cellIndex}
+                                                                        className="whitespace-pre-line px-4 py-3 align-top leading-relaxed text-gray-400"
+                                                                    >
+                                                                        {cell.url ? (
+                                                                            <a
+                                                                                href={cell.url}
+                                                                                target={isExternalLink ? "_blank" : undefined}
+                                                                                rel={isExternalLink ? "noopener noreferrer" : undefined}
+                                                                                className="font-semibold text-[#00FF41] underline decoration-[#00FF41]/30 underline-offset-4 hover:decoration-[#00FF41]"
+                                                                            >
+                                                                                {cellText}
+                                                                            </a>
+                                                                        ) : (
+                                                                            cellText
+                                                                        )}
+                                                                    </td>
+                                                                );
+                                                            })}
+                                                        </tr>
+                                                    ))}
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    )}
+                                    {section.notes && (
+                                        <div className="mt-4 space-y-3 text-sm text-gray-500">
+                                            {section.notes.map((note, noteIndex) => (
+                                                <p key={noteIndex} className="leading-relaxed">
+                                                    {getLocalizedText(note, displayLocale)}
+                                                </p>
+                                            ))}
+                                        </div>
+                                    )}
                                     {section.bullets && (
                                         <ul className="mt-4 ml-7 space-y-3">
                                             {section.bullets.map((bullet, bulletIndex) => (
