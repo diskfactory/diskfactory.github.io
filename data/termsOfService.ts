@@ -577,7 +577,6 @@ export const termsOfService: TermsOfService[] = [
                     koOnly("대표자: 여재훈"),
                     koOnly("사업자등록번호: 831-74-00614"),
                     koOnly("통신판매업 신고번호: 2026-서울마포-1049"),
-                    koOnly("통신판매업 신고기관: 서울특별시 마포구청"),
                     koOnly("주소: 서울특별시 마포구 월드컵로 196, B105-E176호"),
                     koOnly("이메일: contact@diskfactory.app"),
                 ],
