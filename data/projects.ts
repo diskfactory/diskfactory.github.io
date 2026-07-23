@@ -26,7 +26,7 @@ export const projects: Project[] = [
         links: {
             playstore: "https://play.google.com/store/apps/details?id=com.diskactory.smashdowndown&hl=ko"
         },
-        privacySlug: "floor-crusher",
+        privacySlug: "smash-downdown",
         screenshots: [
             "/images/pj1/img1.jpg"
         ],
