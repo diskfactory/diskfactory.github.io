@@ -35,9 +35,9 @@ export default function Home() {
       "pt-BR": "VER JOGOS",
     },
     projectsTitle: {
-      ko: "재미를 담은 게임들",
-      en: "PLAYFUL GAMES",
-      "pt-BR": "JOGOS CHEIOS DE DIVERSÃO",
+      ko: "프로젝트",
+      en: "PROJECTS",
+      "pt-BR": "PROJETOS",
     },
     projectsDescription: {
       ko: "빠른 액션부터 한 손 퍼즐까지, 작은 아이디어를 재미있는 플레이로 다듬었습니다.",
