@@ -186,9 +186,9 @@ export const termsOfService: TermsOfService[] = [
                         "pt-BR": "O Serviço básico é oferecido gratuitamente, e a Empresa pode disponibilizar produtos pagos, como o direito de remover anúncios. O nome do produto, o preço final, os benefícios e as condições serão exibidos na tela de compra.",
                     },
                     {
-                        ko: "광고제거권은 한 번 구매하면 서비스 제공기간 동안 구매에 사용된 이용자 또는 플랫폼 계정에서 사용할 수 있는 비소모성·일회성 상품이며, 정기적으로 결제되는 구독상품이 아닙니다.",
-                        en: "The no-ads entitlement is a non-consumable, one-time product available to the user or platform account used for the purchase while the Service is provided. It is not a recurring subscription.",
-                        "pt-BR": "O direito de remover anúncios é um produto não consumível e de compra única, disponível para o usuário ou a conta da plataforma usada na compra enquanto o Serviço for oferecido. Não é uma assinatura recorrente.",
+                        ko: "광고제거권은 한 번 구매하면 서비스 제공기간 동안 사용할 수 있는 비소모성·일회성 상품이며, 정기적으로 결제되는 구독상품이 아닙니다.",
+                        en: "The no-ads entitlement is a non-consumable, one-time product available while the Service is provided. It is not a recurring subscription.",
+                        "pt-BR": "O direito de remover anúncios é um produto não consumível e de compra única, disponível enquanto o Serviço for oferecido. Não é uma assinatura recorrente.",
                     },
                     {
                         ko: "광고제거권이 정상적으로 적용되면 해당 버전의 서비스에서 배너광고, 전면광고 및 보상형 광고 영상의 노출이 제거됩니다. 보상형 광고와 연결되었던 게임 내 보상은 기존 지급 조건을 충족한 경우 광고 영상 시청 없이 동일하게 지급됩니다.",
@@ -196,24 +196,9 @@ export const termsOfService: TermsOfService[] = [
                         "pt-BR": "Quando o direito de remover anúncios estiver ativo, banners, anúncios intersticiais e vídeos de anúncios recompensados serão removidos da versão aplicável do Serviço. As recompensas do jogo antes vinculadas a anúncios recompensados serão concedidas sem assistir ao vídeo quando as condições de recompensa existentes forem atendidas.",
                     },
                     {
-                        ko: "본 약관에서 '영구'란 별도의 정기결제 없이 광고제거권이 적용된 계정에서 서비스 제공기간 동안 혜택이 유지된다는 의미입니다. 서비스 종료 이후까지 서비스 제공을 보장하거나 광고제거권의 소유권 또는 양도권을 부여한다는 의미는 아닙니다.",
-                        en: "In these Terms, \"lifetime\" means that the benefit remains on the applicable account without recurring charges while the Service is provided. It does not guarantee operation after the Service ends or grant ownership or transfer rights in the entitlement.",
-                        "pt-BR": "Nestes Termos, \"vitalício\" significa que o benefício permanece na conta aplicável, sem cobranças recorrentes, enquanto o Serviço for oferecido. Isso não garante a operação após o encerramento do Serviço nem concede propriedade ou direito de transferência sobre o benefício.",
-                    },
-                    {
-                        ko: "Google Play 버전의 광고제거권은 Google Play Billing을 통해 결제되고 RevenueCat을 통해 구매 확인과 복구가 이루어집니다. Google Play Games에 로그인한 경우 해당 이용자 식별값을 사용해 RevenueCat 권리를 연결하며, 로그인하지 않은 경우에는 RevenueCat의 익명 앱 이용자 식별값이 사용될 수 있습니다. 이 버전의 광고제거권 처리에는 Apps in Toss와 Apps in Toss 전용 구매 서버가 사용되지 않습니다.",
-                        en: "In the Google Play version, the no-ads entitlement is purchased through Google Play Billing and verified or restored through RevenueCat. When you are signed in to Google Play Games, that user identifier is used to link the RevenueCat entitlement; otherwise, a RevenueCat anonymous app-user identifier may be used. Apps in Toss and its dedicated purchase server are not used for this version's no-ads purchase.",
-                        "pt-BR": "Na versão do Google Play, o direito de remover anúncios é comprado pelo Google Play Billing e verificado ou restaurado pela RevenueCat. Quando você está conectado ao Google Play Games, esse identificador é usado para vincular o direito na RevenueCat; caso contrário, pode ser usado um identificador anônimo de usuário do aplicativo da RevenueCat. O Apps in Toss e seu servidor de compras exclusivo não são usados nessa versão.",
-                    },
-                    {
-                        ko: "Apps in Toss 버전의 광고제거권은 Apps in Toss 로그인/IAP를 통해 인증·결제되고, 토스 계정과 디스크팩토리가 Cloudflare Worker/D1으로 운영하는 전용 구매 서버를 통해 구매 확인 및 복구가 이루어집니다. 이 버전의 광고제거권 처리에는 RevenueCat이 사용되지 않습니다.",
-                        en: "In the Apps in Toss version, authentication and payment use Apps in Toss login/IAP, and the purchase is verified or restored using the Toss account and DiskFactory's dedicated purchase server operated with Cloudflare Worker/D1. RevenueCat is not used for this version's no-ads purchase.",
-                        "pt-BR": "Na versão do Apps in Toss, a autenticação e o pagamento usam o login/IAP do Apps in Toss, e a compra é verificada ou restaurada por meio da conta Toss e do servidor de compras exclusivo da DiskFactory operado com Cloudflare Worker/D1. A RevenueCat não é usada nessa versão.",
-                    },
-                    {
-                        ko: "Google Play 버전과 Apps in Toss 버전의 광고제거권은 서로 다른 결제 경로와 이용자 식별체계를 사용하므로 다른 버전으로 자동 이전되거나 복구되지 않습니다. 이용자는 광고제거권을 구매한 버전과 해당 계정에서 구매 복구를 진행해야 합니다.",
-                        en: "The Google Play and Apps in Toss versions use different purchase paths and user-identification systems, so a no-ads entitlement is not automatically transferred or restored across versions. You must restore the purchase in the version and account through which it was purchased.",
-                        "pt-BR": "As versões do Google Play e do Apps in Toss usam fluxos de compra e sistemas de identificação diferentes; por isso, o direito de remover anúncios não é transferido nem restaurado automaticamente entre versões. A restauração deve ser feita na versão e na conta em que a compra foi realizada.",
+                        ko: "광고제거권은 구매한 서비스 버전에 적용되며 다른 플랫폼에서 제공되는 버전으로 자동 이전되지 않습니다. 구매 복구는 구매한 버전에서 구매정보를 확인할 수 있는 경우 제공됩니다.",
+                        en: "The no-ads entitlement applies to the Service version in which it was purchased and does not transfer automatically to a version offered through another platform. Restoration is available in the purchased version when the purchase can be verified.",
+                        "pt-BR": "O direito de remover anúncios se aplica à versão do Serviço em que foi comprado e não é transferido automaticamente para uma versão oferecida por outra plataforma. A restauração fica disponível na versão da compra quando ela puder ser verificada.",
                     },
                     {
                         ko: "이용자는 계약내용에 관한 서면을 받은 날 또는 상품을 이용할 수 있게 된 날 중 늦은 날부터 7일 이내에 유료상품의 청약철회를 요청할 수 있습니다. 다만 광고제거권과 같이 구매 즉시 제공되는 디지털콘텐츠는 구매 전에 청약철회 제한 가능성을 안내하고 이용자가 즉시 제공에 동의한 경우 관계 법령이 허용하는 범위에서 청약철회가 제한될 수 있습니다.",
@@ -397,11 +382,6 @@ export const termsOfService: TermsOfService[] = [
                     "pt-BR": "Plataformas de terceiros e serviços externos",
                 },
                 paragraphs: [
-                    {
-                        ko: "Google Play 버전은 Google Play Billing과 RevenueCat을 통해 광고제거권의 가격 조회, 결제, 구매 확인, 구매 복구 및 환불 상태 확인 기능을 제공합니다. Apps in Toss 버전은 Apps in Toss 로그인/IAP와 디스크팩토리가 운영하는 Cloudflare Worker/D1 구매 서버를 통해 같은 기능을 제공합니다. 두 결제 경로는 동일한 광고제거권 구매 처리에 함께 사용되지 않습니다.",
-                        en: "The Google Play version uses Google Play Billing and RevenueCat to retrieve prices, process payments, verify or restore purchases, and confirm refund status for the no-ads entitlement. The Apps in Toss version provides those functions through Apps in Toss login/IAP and DiskFactory's Cloudflare Worker/D1 purchase server. The two purchase paths are not used together for the same no-ads purchase.",
-                        "pt-BR": "A versão do Google Play usa o Google Play Billing e a RevenueCat para consultar preços, processar pagamentos, verificar ou restaurar compras e confirmar o status de reembolso do direito de remover anúncios. A versão do Apps in Toss oferece essas funções pelo login/IAP do Apps in Toss e pelo servidor de compras Cloudflare Worker/D1 operado pela DiskFactory. Os dois fluxos não são usados juntos na mesma compra do direito de remover anúncios.",
-                    },
                     {
                         ko: "외부 플랫폼을 통한 결제에는 실제 결제가 이루어진 플랫폼의 이용약관, 결제정책 및 환불정책이 함께 적용됩니다. 이용자는 해당 외부 플랫폼의 정책을 확인하고 준수해야 합니다.",
                         en: "Purchases through an external platform are also subject to the terms, payment policies, and refund policies of the platform on which the purchase was actually made. You must review and comply with the applicable platform policies.",

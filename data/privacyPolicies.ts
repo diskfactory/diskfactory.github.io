@@ -482,14 +482,9 @@ export const privacyPolicies: PrivacyPolicy[] = [
                         "pt-BR": "O Aplicativo não usa tecnologias de inteligência artificial (IA) para tratar seus dados ou fornecer funcionalidades.",
                     },
                     {
-                        ko: "Google Play 버전에서 광고제거권을 이용하는 경우 Google Play Billing이 결제를 처리하고 RevenueCat이 구매 확인과 권리 관리를 수행합니다. 이 과정에서 상품 식별자(SKU), 구매내역과 구매·환불 상태, 광고제거권 활성 상태 및 RevenueCat 앱 이용자 식별값이 처리될 수 있습니다. Google Play Games에 로그인한 경우에는 해당 이용자 식별값이 RevenueCat 앱 이용자 식별에 사용되며, 로그인하지 않은 경우에는 RevenueCat의 익명 앱 이용자 식별값이 사용될 수 있습니다. 이 처리 경로에는 Apps in Toss와 Apps in Toss 전용 구매 서버가 사용되지 않습니다.",
-                        en: "In the Google Play version, Google Play Billing processes the payment and RevenueCat verifies the purchase and manages the entitlement. The product identifier (SKU), purchase history and purchase or refund status, entitlement status, and RevenueCat app user identifier may be processed. When you are signed in to Google Play Games, that user identifier is used for RevenueCat app-user identification; otherwise, a RevenueCat anonymous app-user identifier may be used. Apps in Toss and its dedicated purchase server are not used in this processing path.",
-                        "pt-BR": "Na versão do Google Play, o Google Play Billing processa o pagamento e a RevenueCat verifica a compra e gerencia o direito. Podem ser tratados o identificador do produto (SKU), o histórico e o status da compra ou do reembolso, o status do direito e o identificador de usuário do aplicativo da RevenueCat. Quando você está conectado ao Google Play Games, esse identificador é usado para identificar o usuário na RevenueCat; caso contrário, pode ser usado um identificador anônimo de usuário do aplicativo da RevenueCat. O Apps in Toss e seu servidor de compras exclusivo não são usados nesse fluxo.",
-                    },
-                    {
-                        ko: "Apps in Toss 버전에서 광고제거권을 이용하는 경우 Apps in Toss 로그인과 IAP가 인증 및 결제를 처리하고, 디스크팩토리가 Cloudflare Worker와 D1으로 운영하는 전용 구매 서버가 주문 확인과 권리 관리를 수행합니다. 이 과정에서 토스가 제공하는 이용자 식별값, 상품 식별자(SKU), 주문번호, 주문·환불 상태, 광고제거권 활성 상태와 확인 시각 및 인증용 세션 토큰이 처리되며, 서버에는 세션 토큰의 해시값이 저장됩니다. 이 처리 경로에는 RevenueCat이 사용되지 않습니다.",
-                        en: "In the Apps in Toss version, Apps in Toss login and IAP handle authentication and payment, and DiskFactory's dedicated purchase server, operated with Cloudflare Worker and D1, verifies orders and manages entitlements. The user identifier provided by Toss, product identifier (SKU), order number, order or refund status, entitlement status and verification timestamps, and authentication session token are processed, while a hash of the session token is stored on the server. RevenueCat is not used in this processing path.",
-                        "pt-BR": "Na versão do Apps in Toss, o login e o IAP do Apps in Toss realizam a autenticação e o pagamento, e o servidor de compras exclusivo da DiskFactory, operado com Cloudflare Worker e D1, verifica pedidos e gerencia direitos. São tratados o identificador de usuário fornecido pela Toss, o identificador do produto (SKU), o número e o status do pedido ou do reembolso, o status do direito e os horários de verificação e o token de sessão de autenticação, enquanto um hash do token é armazenado no servidor. A RevenueCat não é usada nesse fluxo.",
+                        ko: "광고제거권의 구매·복구 및 환불 확인 과정에서 플랫폼 또는 구매 관리 서비스가 제공하는 이용자 식별정보, 인증정보, 상품·거래 확인정보, 구매·환불 상태 및 광고제거권 적용 상태가 처리될 수 있습니다. 실제 처리 항목은 이용자가 사용하는 서비스 버전과 결제 플랫폼에 따라 달라질 수 있습니다.",
+                        en: "When processing, restoring, or confirming a refund for the no-ads entitlement, the Application may process user identifiers provided by a platform or purchase-management service, authentication information, product and transaction-verification information, purchase or refund status, and entitlement status. The actual information processed may vary by Service version and payment platform.",
+                        "pt-BR": "Ao processar ou restaurar o direito de remover anúncios, ou confirmar um reembolso, o Aplicativo pode tratar identificadores de usuário fornecidos por uma plataforma ou serviço de gestão de compras, informações de autenticação, informações do produto e de verificação da transação, status da compra ou do reembolso e status do direito. As informações efetivamente tratadas podem variar conforme a versão do Serviço e a plataforma de pagamento.",
                     },
                     {
                         ko: "서비스 제공자는 이용자의 카드번호, 계좌번호 등 결제수단의 상세정보를 직접 수집하지 않습니다. 해당 정보는 이용자가 결제하는 Google Play 또는 Apps in Toss 등 결제 플랫폼에서 처리합니다.",
@@ -554,9 +549,9 @@ export const privacyPolicies: PrivacyPolicy[] = [
                         "pt-BR": "O Provedor do Serviço pode tratar informações por meio de plataformas externas ou prestadores de serviço, conforme necessário para operar o jogo, analisar o uso, exibir anúncios, autenticar usuários, processar compras pagas, restaurar compras e confirmar reembolsos.",
                     },
                     {
-                        ko: "Google Play 버전의 광고제거권 결제에는 Google Play Billing을, 구매 확인과 권리 관리에는 RevenueCat을 사용합니다. Apps in Toss 버전에서는 Apps in Toss 로그인/IAP와 디스크팩토리가 운영하는 Cloudflare Worker/D1 구매 서버를 사용합니다. 서로 다른 버전의 결제 경로는 해당 광고제거권 구매 처리에 함께 사용되지 않으며, 공통 광고·분석·알림 서비스는 구매 처리와 별개로 적용될 수 있습니다.",
-                        en: "The Google Play version uses Google Play Billing for payment and RevenueCat for purchase verification and entitlement management. The Apps in Toss version uses Apps in Toss login/IAP and DiskFactory's Cloudflare Worker/D1 purchase server. The two purchase paths are not used together for the same no-ads purchase, while common advertising, analytics, or notification services may apply separately from purchase processing.",
-                        "pt-BR": "A versão do Google Play usa o Google Play Billing para pagamento e a RevenueCat para verificação da compra e gestão do direito. A versão do Apps in Toss usa o login/IAP do Apps in Toss e o servidor de compras Cloudflare Worker/D1 operado pela DiskFactory. Os dois fluxos não são usados juntos na mesma compra do direito de remover anúncios, enquanto serviços comuns de publicidade, análise ou notificações podem ser aplicados separadamente do processamento da compra.",
+                        ko: "앱 배포·결제 플랫폼은 결제를 직접 처리하며, 구매 관리 서비스 제공업체는 구매 확인과 복구를 지원할 수 있습니다. 적용되는 외부 서비스는 이용자가 사용하는 서비스 버전에 따라 다를 수 있습니다.",
+                        en: "App distribution and payment platforms process payments directly, while purchase-management service providers may support purchase verification and restoration. The external services involved may vary by Service version.",
+                        "pt-BR": "As plataformas de distribuição e pagamento processam os pagamentos diretamente, enquanto os prestadores de gestão de compras podem auxiliar na verificação e restauração das compras. Os serviços externos envolvidos podem variar conforme a versão do Serviço.",
                     },
                     {
                         ko: "애플리케이션은 아래와 같이 자체 개인정보처리방침을 운영하는 외부 서비스를 이용할 수 있습니다. 결제와 무관한 광고·분석·알림 서비스는 해당 기능이 제공되는 버전에서 적용됩니다.",
@@ -680,11 +675,6 @@ export const privacyPolicies: PrivacyPolicy[] = [
                         ko: "전자상거래법에 따른 표시·광고 기록: 표시·광고일부터 6개월",
                         en: "Representations and advertising records under e-commerce law: 6 months from publication",
                         "pt-BR": "Registros de oferta e publicidade conforme a lei de comércio eletrônico: 6 meses a partir da publicação",
-                    },
-                    {
-                        ko: "만료된 인증 세션: 만료 후 다음 인증 또는 세션 정리 과정에서 파기",
-                        en: "Expired authentication sessions: deleted during the next authentication or session-cleanup process after expiration",
-                        "pt-BR": "Sessões de autenticação expiradas: excluídas no próximo processo de autenticação ou limpeza de sessões após o vencimento",
                     },
                 ],
             },
