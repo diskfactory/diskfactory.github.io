@@ -1,158 +1,213 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Section } from "@/components/Section";
-import { Gamepad2, Database, Mail, ArrowRight } from "lucide-react";
-import { projects } from "@/data/projects";
+import { ArrowRight, Gamepad2, Mail, Sparkles } from "lucide-react";
 import Link from "next/link";
 import { LanguageToggle } from "@/components/LanguageToggle";
-import { useLocale } from "@/components/LocaleProvider";
-import { getLocalizedText, localizeHref } from "@/lib/i18n";
 import { ProjectCard } from "@/components/ProjectCard";
+import { Section } from "@/components/Section";
+import { useLocale } from "@/components/LocaleProvider";
+import { projects } from "@/data/projects";
+import { getLocalizedText, localizeHref } from "@/lib/i18n";
 
 export default function Home() {
   const { locale } = useLocale();
+  const featuredProjects = projects.slice(0, 4);
   const copy = {
+    studio: {
+      ko: "작지만 즐거움은 크게",
+      en: "SMALL TEAM, BIG FUN",
+      "pt-BR": "TIME PEQUENO, DIVERSÃO GIGANTE",
+    },
+    headline: {
+      ko: "톡톡 튀는 아이디어를\n손안의 게임으로",
+      en: "PLAYFUL IDEAS,\nPOCKET-SIZED GAMES",
+      "pt-BR": "IDEIAS DIVERTIDAS,\nJOGOS NA SUA MÃO",
+    },
     subtitle: {
-      ko: "디스크팩토리(DiskFactory)는 재미있는 상상력을 현실로 만드는 1인 게임 개발 스튜디오입니다.",
-      en: "DiskFactory is a solo game development studio turning playful ideas into real games.",
-      "pt-BR": "A DiskFactory é um estúdio solo de jogos que transforma ideias divertidas em jogos reais.",
+      ko: "디스크팩토리는 가볍게 시작해 오래 즐길 수 있는 캐주얼 게임을 만드는 1인 게임 스튜디오입니다.",
+      en: "DiskFactory is a solo game studio making casual games that are easy to start and fun to keep playing.",
+      "pt-BR": "A DiskFactory é um estúdio solo que cria jogos casuais fáceis de começar e gostosos de continuar jogando.",
+    },
+    explore: {
+      ko: "게임 둘러보기",
+      en: "EXPLORE GAMES",
+      "pt-BR": "VER JOGOS",
     },
     projectsTitle: {
-      ko: "프로젝트",
-      en: "CURRENT PROJECTS",
-      "pt-BR": "PROJETOS ATUAIS",
+      ko: "지금까지 만든 게임",
+      en: "GAMES WE'VE MADE",
+      "pt-BR": "JOGOS QUE CRIAMOS",
     },
-    viewAllProjects: {
+    projectsDescription: {
+      ko: "빠른 액션부터 한 손 퍼즐까지, 작은 아이디어를 재미있는 플레이로 다듬었습니다.",
+      en: "From quick action to one-handed puzzles, each small idea is shaped into playful moments.",
+      "pt-BR": "Da ação rápida aos puzzles com uma mão, transformamos pequenas ideias em momentos divertidos.",
+    },
+    viewAll: {
       ko: "전체 프로젝트 보기",
       en: "VIEW ALL PROJECTS",
       "pt-BR": "VER TODOS OS PROJETOS",
     },
+    noteTitle: {
+      ko: "재미를 만드는 작은 공장",
+      en: "A TINY FACTORY FOR FUN",
+      "pt-BR": "UMA PEQUENA FÁBRICA DE DIVERSÃO",
+    },
+    note: {
+      ko: "쉽게 이해하고, 기분 좋게 반응하고, 한 번 더 플레이하고 싶은 경험을 만듭니다.",
+      en: "We make experiences that are easy to understand, satisfying to play, and tempting to try one more time.",
+      "pt-BR": "Criamos experiências fáceis de entender, gostosas de jogar e que dão vontade de tentar mais uma vez.",
+    },
     rights: {
-      ko: "© 2026 DiskFactory. All rights reserved.",
-      en: "© 2026 DiskFactory. All rights reserved.",
-      "pt-BR": "© 2026 DiskFactory. Todos os direitos reservados.",
+      ko: "© 2026 DiskFactory. 재미를 계속 만드는 중!",
+      en: "© 2026 DiskFactory. Still making fun!",
+      "pt-BR": "© 2026 DiskFactory. Continuamos criando diversão!",
     },
-    privacy: {
-      ko: "개인정보 처리방침",
-      en: "Privacy Policy",
-      "pt-BR": "Política de Privacidade",
-    },
-    terms: {
-      ko: "서비스 이용약관",
-      en: "Terms of Service",
-      "pt-BR": "Termos de Serviço",
-    },
+    privacy: { ko: "개인정보 처리방침", en: "Privacy Policy", "pt-BR": "Política de Privacidade" },
+    terms: { ko: "서비스 이용약관", en: "Terms of Service", "pt-BR": "Termos de Serviço" },
   };
-  const featuredProjects = projects.slice(0, 4);
 
   return (
-    <main className="min-h-screen bg-black text-white relative overflow-hidden">
-      {/* Background Decor */}
-      <div className="absolute top-0 left-0 w-full h-full opacity-20 pointer-events-none"
-        style={{ backgroundImage: 'radial-gradient(circle at 50% 50%, #1a1a1a 0%, transparent 100%)' }} />
-
-      <header className="absolute inset-x-0 top-0 z-20 flex justify-end px-6 py-6">
-        <LanguageToggle />
-      </header>
-
-      {/* Hero Section */}
-      <Section className="flex flex-col items-center justify-center min-h-[80vh] text-center pt-32">
-        <motion.div
-          initial={{ scale: 0.8, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
-          transition={{ duration: 1, type: "spring" }}
-          className="mb-8"
-        >
-          <div className="w-24 h-24 bg-white rounded-xl flex items-center justify-center shadow-[0_0_30px_rgba(255,255,255,0.3)] mx-auto">
-            <Database className="text-black w-12 h-12" />
-          </div>
-        </motion.div>
-
-        <motion.h1
-          className="text-6xl md:text-8xl font-bold tracking-tighter mb-4"
-          initial={{ y: 20, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ delay: 0.2 }}
-        >
-          DISK<span className="text-[#00FF41]">FACTORY</span>
-        </motion.h1>
-
-        <motion.p
-          className="text-xl md:text-2xl text-gray-400 max-w-2xl mx-auto mb-10"
-          initial={{ y: 20, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ delay: 0.4 }}
-        >
-          {getLocalizedText(copy.subtitle, locale)}
-        </motion.p>
-
-        <motion.div
-          initial={{ y: 20, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ delay: 0.6 }}
-          className="flex gap-4"
-        >
-          {/* <button className="px-8 py-4 bg-[#00FF41] text-black font-bold rounded-full hover:scale-105 transition-transform flex items-center gap-2">
-            게임 보러가기 <ArrowRight size={20} />
-          </button>
-          <button className="px-8 py-4 border border-gray-700 rounded-full hover:bg-gray-900 transition-colors">
-            소개
-          </button> */}
-        </motion.div>
-      </Section>
-
-      {/* Projects Section */}
-      <Section id="projects">
-        <div className="mb-12 flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
-          <h2 className="text-4xl font-bold flex items-center gap-3">
-            <Gamepad2 className="text-[#00FF41]" /> {getLocalizedText(copy.projectsTitle, locale)}
-          </h2>
+    <main className="casual-shell min-h-screen overflow-hidden">
+      <header className="relative z-30 mx-auto flex max-w-7xl items-center justify-between px-6 py-6">
+        <Link href={localizeHref("/", locale)} className="flex items-center gap-3 font-black tracking-tight">
+          <span className="sticker grid h-11 w-11 rotate-[-4deg] place-items-center rounded-2xl bg-[#ffd95a] text-xl">D</span>
+          <span className="text-lg sm:text-xl">DISKFACTORY</span>
+        </Link>
+        <div className="flex items-center gap-3">
           <Link
             href={localizeHref("/projects", locale)}
-            className="group inline-flex w-fit items-center gap-2 rounded-full border border-gray-700 px-5 py-3 text-sm font-bold text-gray-200 transition-colors hover:border-[#00FF41] hover:text-[#00FF41] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#00FF41]"
+            className="hidden text-sm font-extrabold text-[#5d5a78] transition-colors hover:text-[#6c7cff] sm:block"
           >
-            {getLocalizedText(copy.viewAllProjects, locale)}
-            <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
+            PROJECTS
           </Link>
+          <LanguageToggle />
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {featuredProjects.map((project) => (
-            <ProjectCard key={project.id} project={project} />
-          ))}
+      </header>
+
+      <Section className="relative grid min-h-[44rem] items-center gap-14 pb-28 pt-14 lg:grid-cols-[1.08fr_0.92fr] lg:pt-10">
+        <div className="relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="mb-7 inline-flex items-center gap-2 rounded-full border-2 border-[#252442] bg-[#dff8f0] px-4 py-2 text-xs font-black tracking-[0.15em]"
+          >
+            <Sparkles size={15} className="text-[#ff7163]" />
+            {getLocalizedText(copy.studio, locale)}
+          </motion.div>
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.08 }}
+            className="whitespace-pre-line text-[clamp(3.25rem,8vw,6.8rem)] font-black leading-[0.93] tracking-[-0.065em]"
+          >
+            {getLocalizedText(copy.headline, locale)}
+          </motion.h1>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.16 }}
+            className="mt-8 max-w-2xl text-lg font-medium leading-relaxed text-[#66627c] sm:text-xl"
+          >
+            {getLocalizedText(copy.subtitle, locale)}
+          </motion.p>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.24 }}
+            className="mt-9 flex flex-wrap gap-4"
+          >
+            <Link href="#projects" className="play-button bg-[#6c7cff] px-6 py-3.5 text-white">
+              <Gamepad2 size={19} /> {getLocalizedText(copy.explore, locale)}
+            </Link>
+            <a href="mailto:contact@diskfactory.com" className="play-button bg-white px-6 py-3.5">
+              <Mail size={18} /> CONTACT
+            </a>
+          </motion.div>
+        </div>
+
+        <div className="dot-grid relative mx-auto h-[30rem] w-full max-w-[34rem] rounded-[3.5rem] border-2 border-[#252442] bg-[#aeb8ff]/70">
+          <div className="absolute -left-5 top-16 h-24 w-24 rotate-12 rounded-[2rem] bg-[#ffd95a]" />
+          <div className="absolute -right-5 bottom-16 h-28 w-28 -rotate-12 rounded-full bg-[#65ddbd]" />
+          {featuredProjects.map((project, index) => {
+            const positions = [
+              "left-[8%] top-[10%] -rotate-6",
+              "right-[7%] top-[19%] rotate-6",
+              "left-[17%] bottom-[10%] rotate-3",
+              "right-[14%] bottom-[7%] -rotate-5",
+            ];
+            return (
+              <motion.div
+                key={project.id}
+                initial={{ opacity: 0, scale: 0.7, y: 25 }}
+                animate={{ opacity: 1, scale: 1, y: 0 }}
+                transition={{ delay: 0.25 + index * 0.1, type: "spring" }}
+                className={`sticker absolute ${positions[index]} h-32 w-32 overflow-hidden rounded-[2rem] bg-white p-2 sm:h-40 sm:w-40`}
+              >
+                <img
+                  src={project.icon}
+                  alt={getLocalizedText(project.title, locale)}
+                  className="h-full w-full rounded-[1.45rem] object-cover"
+                />
+              </motion.div>
+            );
+          })}
+          <div className="sticker absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rotate-[-3deg] rounded-2xl bg-[#ff7163] px-5 py-3 text-lg font-black text-white">
+            TAP · SWIPE · PLAY!
+          </div>
         </div>
       </Section>
 
-      {/* About / Philosophy 임시 주석 */}
-      {/* <Section className="bg-gray-900/10 rounded-3xl mb-20">
-        <div className="max-w-3xl">
-          <h2 className="text-4xl font-bold mb-6">PHILOSOPHY</h2>
-          <p className="text-xl text-gray-300 leading-relaxed mb-6">
-            "Disk"는 데이터의 저장소이자, 우리의 신체를 지탱하는 척추의 중심이기도 합니다.
-            기초를 탄탄히 하고, 그 위에 즐거움을 쌓아 올리는 것이 디스크팩토리의 철학입니다.
-          </p>
-          <div className="grid grid-cols-2 gap-4 text-sm font-mono text-gray-500">
-            <div className="flex items-center gap-2 italic">/ CD-ROM READY</div>
-            <div className="flex items-center gap-2 italic">/ SPINE SECURED</div>
-            <div className="flex items-center gap-2 italic">/ CREATIVITY LOADED</div>
-            <div className="flex items-center gap-2 italic">/ 1-MAN STUDIO</div>
-          </div>
+      <div className="border-y-2 border-[#252442] bg-[#ffd95a] py-3">
+        <div className="mx-auto flex max-w-7xl items-center justify-center gap-5 overflow-hidden whitespace-nowrap px-6 text-sm font-black tracking-[0.16em]">
+          <span>CASUAL GAMES</span><span>✦</span><span>PLAYFUL IDEAS</span><span>✦</span><span>MADE WITH CARE</span>
         </div>
-      </Section> */}
+      </div>
 
-      {/* Footer */}
-      <footer className="border-t border-gray-900 py-20 px-6">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-10">
+      <Section id="projects" className="py-28">
+        <div className="mb-12 flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
           <div>
-            <div className="text-2xl font-bold mb-2">DISKFACTORY</div>
-            <p className="text-gray-500 text-sm">{getLocalizedText(copy.rights, locale)}</p>
+            <p className="mb-3 text-sm font-black tracking-[0.16em] text-[#ff7163]">OUR GAMES</p>
+            <h2 className="text-4xl font-black tracking-tight sm:text-6xl">
+              {getLocalizedText(copy.projectsTitle, locale)}
+            </h2>
+            <p className="mt-5 max-w-2xl text-lg leading-relaxed text-[#66627c]">
+              {getLocalizedText(copy.projectsDescription, locale)}
+            </p>
           </div>
-          <div className="flex gap-8 text-sm text-gray-400">
-            <Link href={localizeHref("/terms", locale)} className="hover:text-[#00FF41] transition-colors">{getLocalizedText(copy.terms, locale)}</Link>
-            <Link href={localizeHref("/privacy", locale)} className="hover:text-[#00FF41] transition-colors">{getLocalizedText(copy.privacy, locale)}</Link>
-            <a href="mailto:contact@diskfactory.com" className="flex items-center gap-2 hover:text-[#00FF41] transition-colors">
-              <Mail size={16} /> CONTACT
-            </a>
+          <Link href={localizeHref("/projects", locale)} className="play-button w-fit bg-white px-5 py-3">
+            {getLocalizedText(copy.viewAll, locale)} <ArrowRight size={17} />
+          </Link>
+        </div>
+        <div className="grid grid-cols-1 gap-9 md:grid-cols-2">
+          {featuredProjects.map((project) => <ProjectCard key={project.id} project={project} />)}
+        </div>
+      </Section>
+
+      <Section className="pb-28 pt-8">
+        <div className="sticker relative overflow-hidden rounded-[2.5rem] bg-[#65ddbd] p-9 sm:p-14">
+          <div className="absolute -right-10 -top-10 h-40 w-40 rounded-full bg-[#ffd95a]" />
+          <p className="relative text-sm font-black tracking-[0.16em]">DISKFACTORY MANIFESTO</p>
+          <h2 className="relative mt-4 max-w-3xl text-3xl font-black leading-tight sm:text-5xl">
+            {getLocalizedText(copy.noteTitle, locale)}
+          </h2>
+          <p className="relative mt-5 max-w-3xl text-lg font-semibold leading-relaxed text-[#46435f]">
+            {getLocalizedText(copy.note, locale)}
+          </p>
+        </div>
+      </Section>
+
+      <footer className="border-t-2 border-[#252442] bg-white/60 px-6 py-14">
+        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-8 md:flex-row">
+          <div className="text-center md:text-left">
+            <div className="text-2xl font-black">DISKFACTORY</div>
+            <p className="mt-2 text-sm text-[#77738b]">{getLocalizedText(copy.rights, locale)}</p>
+          </div>
+          <div className="flex flex-wrap justify-center gap-6 text-sm font-bold">
+            <Link href={localizeHref("/terms", locale)} className="hover:text-[#6c7cff]">{getLocalizedText(copy.terms, locale)}</Link>
+            <Link href={localizeHref("/privacy", locale)} className="hover:text-[#6c7cff]">{getLocalizedText(copy.privacy, locale)}</Link>
+            <a href="mailto:contact@diskfactory.com" className="hover:text-[#ff7163]">CONTACT</a>
           </div>
         </div>
       </footer>

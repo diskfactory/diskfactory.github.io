@@ -90,43 +90,43 @@ export default function ProjectClient({ project }: { project: Project }) {
     };
 
     return (
-        <main className="min-h-screen bg-black text-white">
+        <main className="casual-shell min-h-screen text-[#252442]">
             {/* Navigation */}
-            <nav className="p-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-                <Link href={localizeHref("/", locale)} className="inline-flex items-center gap-2 text-gray-400 hover:text-[#00FF41] transition-colors">
+            <nav className="mx-auto max-w-7xl p-6 flex flex-row items-center justify-between gap-4">
+                <Link href={localizeHref("/projects", locale)} className="play-button bg-white px-4 py-2.5 text-sm">
                     <ArrowLeft size={20} /> {getLocalizedText(copy.back, locale)}
                 </Link>
                 <LanguageToggle />
             </nav>
 
-            <Section className="pt-10">
-                <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+            <Section className="pt-12">
+                <div className="grid grid-cols-1 lg:grid-cols-[0.92fr_1.45fr] gap-14">
                     {/* Left: Info */}
-                    <div className="lg:col-span-1">
+                    <div>
                         <motion.div
                             initial={{ opacity: 0, x: -20 }}
                             animate={{ opacity: 1, x: 0 }}
                             className="sticky top-10"
                         >
                             <div
-                                className="w-24 h-24 bg-gray-900 rounded-2xl mb-6 flex items-center justify-center border border-gray-800 shadow-[0_0_20px_rgba(0,0,255,0.1)] overflow-hidden cursor-pointer hover:border-[#00FF41]/50 transition-colors"
+                                className="sticker w-28 h-28 bg-white rounded-[2rem] mb-8 p-2 flex items-center justify-center overflow-hidden cursor-pointer -rotate-3 transition-transform hover:rotate-1"
                                 onClick={() => project.icon && openViewer(project.icon, -1)}
                             >
                                 {project.icon ? (
                                     <img src={project.icon} alt={projectTitle} className="w-full h-full object-cover" />
                                 ) : (
-                                    <span className="text-[10px] text-gray-600">ICON</span>
+                                    <span className="text-[10px] text-[#77738b]">ICON</span>
                                 )}
                             </div>
-                            <h1 className="text-4xl font-bold mb-4">{projectTitle}</h1>
+                            <h1 className="text-4xl sm:text-5xl font-black tracking-tight mb-4">{projectTitle}</h1>
                             <div className="flex flex-wrap gap-2 mb-8">
                                 {project.tags.map(tag => (
-                                    <span key={tag} className="text-xs font-mono bg-[#00FF41]/10 text-[#00FF41] px-3 py-1 rounded-full border border-[#00FF41]/20">
+                                    <span key={tag} className="text-xs font-black bg-[#fff0ad] px-3 py-1.5 rounded-full border border-[#252442]">
                                         {tag}
                                     </span>
                                 ))}
                             </div>
-                            <p className="text-gray-400 leading-relaxed mb-8 text-lg">
+                            <p className="text-[#66627c] whitespace-pre-line leading-relaxed mb-8 text-lg">
                                 {getLocalizedText(project.fullDescription, locale)}
                             </p>
 
@@ -136,7 +136,7 @@ export default function ProjectClient({ project }: { project: Project }) {
                                         href={project.links.playstore}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="inline-flex items-center gap-3 bg-[#00FF41] text-black font-bold px-6 py-3 rounded-lg hover:scale-105 transition-transform"
+                                        className="play-button justify-start bg-[#6c7cff] text-white px-6 py-3.5"
                                     >
                                         <ExternalLink size={18} /> Google Play
                                     </a>
@@ -146,7 +146,7 @@ export default function ProjectClient({ project }: { project: Project }) {
                                         href={project.links.appstore}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="inline-flex items-center gap-3 border border-gray-700 text-white font-bold px-6 py-3 rounded-lg hover:bg-gray-900 transition-colors"
+                                        className="play-button justify-start bg-white px-6 py-3.5"
                                     >
                                         <ExternalLink size={18} /> App Store
                                     </a>
@@ -156,7 +156,7 @@ export default function ProjectClient({ project }: { project: Project }) {
                                         href={project.links.steam}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="inline-flex items-center gap-3 border border-[#66c0f4]/50 text-[#66c0f4] font-bold px-6 py-3 rounded-lg hover:bg-[#66c0f4]/10 transition-colors"
+                                        className="play-button justify-start bg-[#dff8f0] px-6 py-3.5"
                                     >
                                         <ExternalLink size={18} /> Steam
                                     </a>
@@ -164,7 +164,7 @@ export default function ProjectClient({ project }: { project: Project }) {
                                 {project.privacySlug && (
                                     <Link
                                         href={localizeHref(`/privacy/${project.privacySlug}`, locale)}
-                                        className="inline-flex items-center gap-3 border border-[#00FF41]/30 text-[#00FF41] font-bold px-6 py-3 rounded-lg hover:bg-[#00FF41]/10 transition-colors"
+                                        className="inline-flex items-center gap-3 rounded-full border-2 border-[#252442]/15 px-5 py-3 text-sm font-bold text-[#5d5a78] hover:border-[#6c7cff] hover:text-[#6c7cff] transition-colors"
                                     >
                                         <Shield size={18} /> {getLocalizedText(copy.privacy, locale)}
                                     </Link>
@@ -172,7 +172,7 @@ export default function ProjectClient({ project }: { project: Project }) {
                                 {project.termsSlug && (
                                     <Link
                                         href={localizeHref(`/terms/${project.termsSlug}`, locale)}
-                                        className="inline-flex items-center gap-3 border border-white/10 text-white font-bold px-6 py-3 rounded-lg hover:bg-white/5 transition-colors"
+                                        className="inline-flex items-center gap-3 rounded-full border-2 border-[#252442]/15 px-5 py-3 text-sm font-bold text-[#5d5a78] hover:border-[#ff7163] hover:text-[#ff7163] transition-colors"
                                     >
                                         <FileText size={18} /> {getLocalizedText(copy.terms, locale)}
                                     </Link>
@@ -182,15 +182,16 @@ export default function ProjectClient({ project }: { project: Project }) {
                     </div>
 
                     {/* Right: Gallery & Features */}
-                    <div className="lg:col-span-2 space-y-16">
+                    <div className="space-y-16">
                         {galleryItems.length > 0 && (
                             <div>
-                                <h2 className="text-xl font-bold mb-6 flex items-center gap-2">
-                                    <ChevronRight size={20} className="text-[#00FF41]" /> {getLocalizedText(copy.gallery, locale)}
+                                <h2 className="text-2xl font-black mb-7 flex items-center gap-2">
+                                    <span className="grid h-9 w-9 place-items-center rounded-xl bg-[#ffd95a] border-2 border-[#252442]"><ChevronRight size={20} /></span>
+                                    {getLocalizedText(copy.gallery, locale)}
                                 </h2>
-                                <div className="relative">
+                                <div className="game-card relative bg-[#e7e5ff] p-5 sm:p-8">
                                     {/* Current Item */}
-                                    <div className="aspect-[9/16] max-w-sm mx-auto bg-gray-900 rounded-xl border border-gray-800 overflow-hidden">
+                                    <div className="aspect-[9/16] max-w-sm mx-auto bg-[#252442] rounded-[1.6rem] border-2 border-[#252442] overflow-hidden shadow-[5px_5px_0_#252442]">
                                         {galleryItems[galleryIndex].type === "youtube" ? (
                                             <iframe
                                                 src={`https://www.youtube.com/embed/${galleryItems[galleryIndex].src}`}
@@ -218,13 +219,15 @@ export default function ProjectClient({ project }: { project: Project }) {
                                         <>
                                             <button
                                                 onClick={() => setGalleryIndex((galleryIndex - 1 + galleryItems.length) % galleryItems.length)}
-                                                className="absolute left-0 top-1/2 -translate-y-1/2 p-2 text-white hover:text-[#00FF41] transition-colors"
+                                                aria-label="Previous gallery item"
+                                                className="absolute left-1 top-1/2 -translate-y-1/2 rounded-full border-2 border-[#252442] bg-white p-2 text-[#252442] transition-transform hover:-translate-x-1 sm:left-5"
                                             >
                                                 <LeftIcon size={36} />
                                             </button>
                                             <button
                                                 onClick={() => setGalleryIndex((galleryIndex + 1) % galleryItems.length)}
-                                                className="absolute right-0 top-1/2 -translate-y-1/2 p-2 text-white hover:text-[#00FF41] transition-colors"
+                                                aria-label="Next gallery item"
+                                                className="absolute right-1 top-1/2 -translate-y-1/2 rounded-full border-2 border-[#252442] bg-white p-2 text-[#252442] transition-transform hover:translate-x-1 sm:right-5"
                                             >
                                                 <RightIcon size={36} />
                                             </button>
@@ -238,10 +241,10 @@ export default function ProjectClient({ project }: { project: Project }) {
                                                 <button
                                                     key={i}
                                                     onClick={() => setGalleryIndex(i)}
-                                                    className={`relative w-14 h-24 rounded-md overflow-hidden shrink-0 border-2 transition-all ${i === galleryIndex ? "border-[#00FF41] opacity-100" : "border-transparent opacity-50 hover:opacity-80"}`}
+                                                    className={`relative w-14 h-24 rounded-xl overflow-hidden shrink-0 border-2 transition-all ${i === galleryIndex ? "border-[#ff7163] opacity-100 translate-y-[-2px]" : "border-[#252442]/20 opacity-60 hover:opacity-90"}`}
                                                 >
                                                     {item.type === "youtube" ? (
-                                                        <div className="w-full h-full bg-gray-800 flex items-center justify-center">
+                                                        <div className="w-full h-full bg-[#252442] flex items-center justify-center">
                                                             <svg viewBox="0 0 24 24" className="w-5 h-5 text-red-500 fill-current"><path d="M8 5v14l11-7z" /></svg>
                                                         </div>
                                                     ) : (
@@ -256,15 +259,16 @@ export default function ProjectClient({ project }: { project: Project }) {
                         )}
 
                         {project.features.length > 0 && (
-                            <div className="game-card p-10">
-                                <h2 className="text-xl font-bold mb-8 flex items-center gap-2">
-                                    <ChevronRight size={20} className="text-[#00FF41]" /> {getLocalizedText(copy.features, locale)}
+                            <div className="game-card bg-[#fffdf8] p-8 sm:p-10">
+                                <h2 className="text-2xl font-black mb-8 flex items-center gap-3">
+                                    <span className="grid h-9 w-9 place-items-center rounded-xl bg-[#65ddbd] border-2 border-[#252442]"><ChevronRight size={20} /></span>
+                                    {getLocalizedText(copy.features, locale)}
                                 </h2>
                                 <ul className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                     {project.features.map((feature, i) => (
                                         <li key={i} className="flex gap-4 items-start">
-                                            <div className="mt-1.5 w-1.5 h-1.5 bg-[#00FF41] rounded-full shrink-0" />
-                                            <span className="text-gray-300 leading-snug">{getLocalizedText(feature, locale)}</span>
+                                            <div className="mt-1.5 grid h-6 w-6 shrink-0 place-items-center rounded-full border-2 border-[#252442] bg-[#fff0ad] text-xs font-black">{i + 1}</div>
+                                            <span className="text-[#5d5a78] font-semibold leading-snug">{getLocalizedText(feature, locale)}</span>
                                         </li>
                                     ))}
                                 </ul>
@@ -274,14 +278,14 @@ export default function ProjectClient({ project }: { project: Project }) {
                 </div>
             </Section>
 
-            <footer className="py-20 text-center border-t border-gray-900 mt-20 px-6">
-                <p className="text-gray-600 text-sm">© 2026 DiskFactory | {projectTitle}</p>
+            <footer className="py-16 text-center border-t-2 border-[#252442] bg-white/50 mt-20 px-6">
+                <p className="text-[#77738b] text-sm font-semibold">© 2026 DiskFactory | {projectTitle}</p>
                 {(project.privacySlug || project.termsSlug || project.accountDeletionSlug) && (
                     <div className="mt-6 flex flex-wrap items-center justify-center gap-3">
                         {project.termsSlug && (
                             <Link
                                 href={localizeHref(`/terms/${project.termsSlug}`, locale)}
-                                className="inline-flex items-center gap-2 rounded-full border border-white/10 px-4 py-2 text-xs font-bold text-gray-400 hover:border-[#00FF41]/40 hover:text-[#00FF41] transition-colors"
+                                className="inline-flex items-center gap-2 rounded-full border-2 border-[#252442]/15 px-4 py-2 text-xs font-bold text-[#66627c] hover:border-[#6c7cff] hover:text-[#6c7cff] transition-colors"
                             >
                                 <FileText size={14} /> {getLocalizedText(copy.terms, locale)}
                             </Link>
@@ -289,7 +293,7 @@ export default function ProjectClient({ project }: { project: Project }) {
                         {project.privacySlug && (
                             <Link
                                 href={localizeHref(`/privacy/${project.privacySlug}`, locale)}
-                                className="inline-flex items-center gap-2 rounded-full border border-white/10 px-4 py-2 text-xs font-bold text-gray-400 hover:border-[#00FF41]/40 hover:text-[#00FF41] transition-colors"
+                                className="inline-flex items-center gap-2 rounded-full border-2 border-[#252442]/15 px-4 py-2 text-xs font-bold text-[#66627c] hover:border-[#6c7cff] hover:text-[#6c7cff] transition-colors"
                             >
                                 <Shield size={14} /> {getLocalizedText(copy.privacy, locale)}
                             </Link>
@@ -297,7 +301,7 @@ export default function ProjectClient({ project }: { project: Project }) {
                         {project.accountDeletionSlug && (
                             <Link
                                 href={localizeHref(`/account-deletion/${project.accountDeletionSlug}`, locale)}
-                                className="inline-flex items-center gap-2 rounded-full border border-[#00FF41]/30 px-4 py-2 text-xs font-bold text-[#00FF41] hover:bg-[#00FF41]/10 transition-colors"
+                                className="inline-flex items-center gap-2 rounded-full border-2 border-[#ff7163]/40 px-4 py-2 text-xs font-bold text-[#d95449] hover:bg-[#ffe6e2] transition-colors"
                             >
                                 <Trash2 size={14} /> {getLocalizedText(copy.accountDeletion, locale)}
                             </Link>

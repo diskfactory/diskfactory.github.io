@@ -147,7 +147,7 @@ export default function AccountDeletionClient({ guide, project }: AccountDeletio
     const mailtoHref = `mailto:${guide.contactEmail}?subject=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(emailBody)}`;
 
     return (
-        <main className="min-h-screen bg-black text-white overflow-hidden">
+        <main className="legal-shell min-h-screen overflow-hidden">
             <div className="absolute inset-x-0 top-0 h-[520px] bg-[radial-gradient(circle_at_50%_0%,rgba(0,255,65,0.18),transparent_62%)] pointer-events-none" />
 
             <nav className="relative z-10 p-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">

@@ -51,7 +51,7 @@ export default function PrivacyIndexPage() {
     };
 
     return (
-        <main className="min-h-screen bg-black text-white py-20 px-6 relative overflow-hidden">
+        <main className="legal-shell min-h-screen py-20 px-6 relative overflow-hidden">
             <div
                 className="absolute inset-0 opacity-20 pointer-events-none"
                 style={{ backgroundImage: "radial-gradient(circle at 20% 20%, #0f0f0f 0%, transparent 55%)" }}

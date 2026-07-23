@@ -72,7 +72,7 @@ export default function PrivacyPolicyClient({ policy, project }: PrivacyPolicyCl
     };
 
     return (
-        <main className="min-h-screen bg-black text-white py-20 px-6">
+        <main className="legal-shell min-h-screen py-20 px-6">
             <div className="max-w-4xl mx-auto">
                 <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-12">
                     <Link href={localizeHref("/privacy", displayLocale)} className="inline-flex items-center gap-2 text-gray-400 hover:text-[#00FF41] transition-colors group">
