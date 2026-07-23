@@ -9,7 +9,7 @@ export const accountDeletionGuides: AccountDeletionGuide[] = [
             "pt-BR": "SwipeRunner",
         },
         projectId: "swipe-runner",
-        contactEmail: "yeojh97@gmail.com",
+        contactEmail: "contact@diskfactory.app",
         effectiveDate: "2026-05-04",
         responseTime: {
             ko: "요청 확인 후 합리적인 기간 내 처리하며, 일반적으로 30일 이내에 결과를 안내합니다.",

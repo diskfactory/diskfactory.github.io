@@ -32,7 +32,7 @@ export const privacyPolicies: PrivacyPolicy[] = [
             "pt-BR": "Esta política de privacidade se aplica ao app mobile 'Smash DownDown', fornecido pela DiskFactory. Valorizamos seus dados pessoais e mantemos esta página para explicar com clareza como os dados são tratados.",
         },
         effectiveDate: "2026. 02. 01",
-        contactEmail: "yeojh97@gmail.com",
+        contactEmail: "contact@diskfactory.app",
         sections: [
             {
                 kind: "collection",
@@ -174,7 +174,7 @@ export const privacyPolicies: PrivacyPolicy[] = [
             "pt-BR": "Esta política de privacidade se aplica ao app SwipeRunner, fornecido pela DiskFactory como um serviço mobile gratuito. Este serviço é disponibilizado para uso no estado em que se encontra.",
         },
         effectiveDate: "2026-05-03",
-        contactEmail: "yeojh97@gmail.com",
+        contactEmail: "contact@diskfactory.app",
         sections: [
             {
                 kind: "collection",
@@ -354,9 +354,9 @@ export const privacyPolicies: PrivacyPolicy[] = [
                 },
                 paragraphs: [
                     {
-                        ko: "서비스 제공자는 사용자가 애플리케이션을 사용하는 동안과 그 이후 합리적인 기간 동안 사용자가 제공한 데이터를 보유합니다. 애플리케이션을 통해 제공한 데이터의 삭제를 원할 경우 yeojh97@gmail.com 으로 연락하면 합리적인 기간 내에 응답합니다.",
-                        en: "The Service Provider will retain User Provided data for as long as you use the Application and for a reasonable time thereafter. If you'd like them to delete User Provided Data that you have provided via the Application, please contact them at yeojh97@gmail.com and they will respond in a reasonable time.",
-                        "pt-BR": "O Provedor do Serviço manterá os dados fornecidos pelo usuário enquanto você usar o Aplicativo e por um período razoável depois disso. Se quiser excluir dados que você forneceu pelo Aplicativo, entre em contato pelo e-mail yeojh97@gmail.com, e a solicitação será respondida em prazo razoável.",
+                        ko: "서비스 제공자는 사용자가 애플리케이션을 사용하는 동안과 그 이후 합리적인 기간 동안 사용자가 제공한 데이터를 보유합니다. 애플리케이션을 통해 제공한 데이터의 삭제를 원할 경우 contact@diskfactory.app 으로 연락하면 합리적인 기간 내에 응답합니다.",
+                        en: "The Service Provider will retain User Provided data for as long as you use the Application and for a reasonable time thereafter. If you'd like them to delete User Provided Data that you have provided via the Application, please contact them at contact@diskfactory.app and they will respond in a reasonable time.",
+                        "pt-BR": "O Provedor do Serviço manterá os dados fornecidos pelo usuário enquanto você usar o Aplicativo e por um período razoável depois disso. Se quiser excluir dados que você forneceu pelo Aplicativo, entre em contato pelo e-mail contact@diskfactory.app, e a solicitação será respondida em prazo razoável.",
                     },
                     {
                         ko: "Mixpanel로 전송된 게임 이벤트 분석 데이터와 가명 처리된 고유 식별자, Sentry로 전송된 오류 및 진단 데이터는 서비스 개선, 통계 분석, 오류 대응 등 처리 목적에 필요한 기간 동안 보유되며, 목적 달성 또는 삭제 요청 처리 후에는 삭제 또는 익명화됩니다.",
@@ -451,12 +451,12 @@ export const privacyPolicies: PrivacyPolicy[] = [
             "pt-BR": "Esta política de privacidade se aplica ao app Tank Pop Block Puzzle.",
         },
         introduction: {
-            ko: "본 개인정보처리방침은 디스크팩토리(이하 '서비스 제공자')가 무료 서비스로 제작한 모바일 기기용 Tank Pop Block Puzzle 앱(이하 '애플리케이션')에 적용됩니다. 본 서비스는 '있는 그대로' 이용하도록 제공됩니다.",
-            en: "This privacy policy applies to the Tank Pop Block Puzzle app (hereby referred to as the Application) for mobile devices that was created by 디스크팩토리 (hereby referred to as the Service Provider) as a Free service. This service is intended for use AS IS.",
-            "pt-BR": "Esta política de privacidade se aplica ao app Tank Pop Block Puzzle para dispositivos móveis (doravante, o \"Aplicativo\"), criado pela DiskFactory (doravante, o \"Provedor do Serviço\") como um serviço gratuito. Este serviço é disponibilizado para uso no estado em que se encontra.",
+            ko: "본 개인정보처리방침은 디스크팩토리(이하 '서비스 제공자')가 제공하는 모바일 게임 Tank Pop Block Puzzle(이하 '애플리케이션')에 적용됩니다. 애플리케이션은 기본적으로 무료로 이용할 수 있으며, 광고제거권 등 일부 유료상품을 제공할 수 있습니다.",
+            en: "This Privacy Policy applies to the Tank Pop Block Puzzle mobile game (the \"Application\") provided by DiskFactory (the \"Service Provider\"). The Application is generally available free of charge and may offer paid products such as a no-ads entitlement.",
+            "pt-BR": "Esta Política de Privacidade se aplica ao jogo mobile Tank Pop Block Puzzle (o \"Aplicativo\"), fornecido pela DiskFactory (o \"Provedor do Serviço\"). O Aplicativo é disponibilizado, em geral, gratuitamente e pode oferecer produtos pagos, como o direito de remover anúncios.",
         },
-        effectiveDate: "2026-05-08",
-        contactEmail: "yeojh97@gmail.com",
+        effectiveDate: "2026-07-23",
+        contactEmail: "contact@diskfactory.app",
         sections: [
             {
                 kind: "collection",
@@ -467,9 +467,9 @@ export const privacyPolicies: PrivacyPolicy[] = [
                 },
                 paragraphs: [
                     {
-                        ko: "애플리케이션은 다운로드 및 사용 시 정보를 수집할 수 있습니다. 수집될 수 있는 정보는 다음과 같습니다.",
-                        en: "The Application collects information when you download and use it. This information may include the following.",
-                        "pt-BR": "O Aplicativo pode coletar informações quando você o baixa e usa. Essas informações podem incluir os itens abaixo.",
+                        ko: "애플리케이션은 서비스 제공, 이용환경 개선, 광고 제공, 유료상품 구매·복구, 환불 확인 및 부정 이용 방지를 위해 아래 정보를 처리할 수 있습니다.",
+                        en: "The Application may process the information below to provide and improve the Service, deliver ads, process and restore paid purchases, confirm refunds, and prevent fraudulent use.",
+                        "pt-BR": "O Aplicativo pode tratar as informações abaixo para prestar e melhorar o Serviço, exibir anúncios, processar e restaurar compras pagas, confirmar reembolsos e prevenir uso fraudulento.",
                     },
                     {
                         ko: "애플리케이션은 모바일 기기의 정밀 위치 정보를 수집하지 않습니다.",
@@ -480,6 +480,21 @@ export const privacyPolicies: PrivacyPolicy[] = [
                         ko: "애플리케이션은 사용자의 데이터를 처리하거나 기능을 제공하기 위해 인공지능(AI) 기술을 사용하지 않습니다.",
                         en: "The Application does not use Artificial Intelligence (AI) technologies to process your data or provide features.",
                         "pt-BR": "O Aplicativo não usa tecnologias de inteligência artificial (IA) para tratar seus dados ou fornecer funcionalidades.",
+                    },
+                    {
+                        ko: "Google Play 버전에서 광고제거권을 이용하는 경우 Google Play Billing이 결제를 처리하고 RevenueCat이 구매 확인과 권리 관리를 수행합니다. 이 과정에서 상품 식별자(SKU), 구매내역과 구매·환불 상태, 광고제거권 활성 상태 및 RevenueCat 앱 이용자 식별값이 처리될 수 있습니다. Google Play Games에 로그인한 경우에는 해당 이용자 식별값이 RevenueCat 앱 이용자 식별에 사용되며, 로그인하지 않은 경우에는 RevenueCat의 익명 앱 이용자 식별값이 사용될 수 있습니다. 이 처리 경로에는 Apps in Toss와 Apps in Toss 전용 구매 서버가 사용되지 않습니다.",
+                        en: "In the Google Play version, Google Play Billing processes the payment and RevenueCat verifies the purchase and manages the entitlement. The product identifier (SKU), purchase history and purchase or refund status, entitlement status, and RevenueCat app user identifier may be processed. When you are signed in to Google Play Games, that user identifier is used for RevenueCat app-user identification; otherwise, a RevenueCat anonymous app-user identifier may be used. Apps in Toss and its dedicated purchase server are not used in this processing path.",
+                        "pt-BR": "Na versão do Google Play, o Google Play Billing processa o pagamento e a RevenueCat verifica a compra e gerencia o direito. Podem ser tratados o identificador do produto (SKU), o histórico e o status da compra ou do reembolso, o status do direito e o identificador de usuário do aplicativo da RevenueCat. Quando você está conectado ao Google Play Games, esse identificador é usado para identificar o usuário na RevenueCat; caso contrário, pode ser usado um identificador anônimo de usuário do aplicativo da RevenueCat. O Apps in Toss e seu servidor de compras exclusivo não são usados nesse fluxo.",
+                    },
+                    {
+                        ko: "Apps in Toss 버전에서 광고제거권을 이용하는 경우 Apps in Toss 로그인과 IAP가 인증 및 결제를 처리하고, 디스크팩토리가 Cloudflare Worker와 D1으로 운영하는 전용 구매 서버가 주문 확인과 권리 관리를 수행합니다. 이 과정에서 토스가 제공하는 이용자 식별값, 상품 식별자(SKU), 주문번호, 주문·환불 상태, 광고제거권 활성 상태와 확인 시각 및 인증용 세션 토큰이 처리되며, 서버에는 세션 토큰의 해시값이 저장됩니다. 이 처리 경로에는 RevenueCat이 사용되지 않습니다.",
+                        en: "In the Apps in Toss version, Apps in Toss login and IAP handle authentication and payment, and DiskFactory's dedicated purchase server, operated with Cloudflare Worker and D1, verifies orders and manages entitlements. The user identifier provided by Toss, product identifier (SKU), order number, order or refund status, entitlement status and verification timestamps, and authentication session token are processed, while a hash of the session token is stored on the server. RevenueCat is not used in this processing path.",
+                        "pt-BR": "Na versão do Apps in Toss, o login e o IAP do Apps in Toss realizam a autenticação e o pagamento, e o servidor de compras exclusivo da DiskFactory, operado com Cloudflare Worker e D1, verifica pedidos e gerencia direitos. São tratados o identificador de usuário fornecido pela Toss, o identificador do produto (SKU), o número e o status do pedido ou do reembolso, o status do direito e os horários de verificação e o token de sessão de autenticação, enquanto um hash do token é armazenado no servidor. A RevenueCat não é usada nesse fluxo.",
+                    },
+                    {
+                        ko: "서비스 제공자는 이용자의 카드번호, 계좌번호 등 결제수단의 상세정보를 직접 수집하지 않습니다. 해당 정보는 이용자가 결제하는 Google Play 또는 Apps in Toss 등 결제 플랫폼에서 처리합니다.",
+                        en: "The Service Provider does not directly collect detailed payment credentials such as card or bank account numbers. Such information is processed by the payment platform used for the transaction, such as Google Play or Apps in Toss.",
+                        "pt-BR": "O Provedor do Serviço não coleta diretamente dados detalhados de pagamento, como números de cartão ou conta bancária. Essas informações são tratadas pela plataforma usada na transação, como Google Play ou Apps in Toss.",
                     },
                     {
                         ko: "푸시 알림 기능을 제공하는 경우, 서비스 제공자는 알림 전송을 위한 푸시 토큰, 기기 또는 앱 인스턴스 식별자, 알림 수신 설정, 광고성 정보 수신 동의 여부 및 동의·철회 일시를 처리할 수 있습니다.",
@@ -528,24 +543,29 @@ export const privacyPolicies: PrivacyPolicy[] = [
             {
                 kind: "sharing",
                 title: {
-                    ko: "제삼자 접근",
-                    en: "Third Party Access",
-                    "pt-BR": "Acesso de terceiros",
+                    ko: "외부 플랫폼 및 처리위탁",
+                    en: "External Platforms and Service Providers",
+                    "pt-BR": "Plataformas externas e prestadores de serviço",
                 },
                 paragraphs: [
                     {
-                        ko: "서비스 제공자가 애플리케이션과 서비스를 개선할 수 있도록 집계 및 익명화된 데이터만 외부 서비스로 주기적으로 전송됩니다. 서비스 제공자는 본 개인정보처리방침에 설명된 방식으로 사용자의 정보를 제삼자와 공유할 수 있습니다.",
-                        en: "Only aggregated, anonymized data is periodically transmitted to external services to aid the Service Provider in improving the Application and their service. The Service Provider may share your information with third parties in the ways that are described in this privacy statement.",
-                        "pt-BR": "Apenas dados agregados e anonimizados são enviados periodicamente a serviços externos para ajudar o Provedor do Serviço a melhorar o Aplicativo e seu serviço. O Provedor do Serviço pode compartilhar suas informações com terceiros das formas descritas nesta política de privacidade.",
+                        ko: "서비스 제공자는 게임 운영, 이용 분석, 광고 제공, 로그인, 유료상품 결제, 구매 복구 및 환불 확인을 위해 필요한 범위에서 정보를 외부 플랫폼 또는 수탁업체를 통해 처리할 수 있습니다.",
+                        en: "The Service Provider may process information through external platforms or service providers as needed to operate the game, analyze usage, deliver ads, authenticate users, process paid purchases, restore purchases, and confirm refunds.",
+                        "pt-BR": "O Provedor do Serviço pode tratar informações por meio de plataformas externas ou prestadores de serviço, conforme necessário para operar o jogo, analisar o uso, exibir anúncios, autenticar usuários, processar compras pagas, restaurar compras e confirmar reembolsos.",
                     },
                     {
-                        ko: "애플리케이션은 자체 개인정보처리방침을 가진 제삼자 서비스를 사용합니다. 애플리케이션이 사용하는 제삼자 서비스 제공업체의 개인정보처리방침 링크는 아래와 같습니다.",
-                        en: "Please note that the Application utilizes third-party services that have their own Privacy Policy about handling data. Below are the links to the Privacy Policy of the third-party service providers used by the Application.",
-                        "pt-BR": "Observe que o Aplicativo utiliza serviços de terceiros que possuem suas próprias políticas de privacidade sobre o tratamento de dados. Abaixo estão os links para as políticas de privacidade dos provedores de terceiros usados pelo Aplicativo.",
+                        ko: "Google Play 버전의 광고제거권 결제에는 Google Play Billing을, 구매 확인과 권리 관리에는 RevenueCat을 사용합니다. Apps in Toss 버전에서는 Apps in Toss 로그인/IAP와 디스크팩토리가 운영하는 Cloudflare Worker/D1 구매 서버를 사용합니다. 서로 다른 버전의 결제 경로는 해당 광고제거권 구매 처리에 함께 사용되지 않으며, 공통 광고·분석·알림 서비스는 구매 처리와 별개로 적용될 수 있습니다.",
+                        en: "The Google Play version uses Google Play Billing for payment and RevenueCat for purchase verification and entitlement management. The Apps in Toss version uses Apps in Toss login/IAP and DiskFactory's Cloudflare Worker/D1 purchase server. The two purchase paths are not used together for the same no-ads purchase, while common advertising, analytics, or notification services may apply separately from purchase processing.",
+                        "pt-BR": "A versão do Google Play usa o Google Play Billing para pagamento e a RevenueCat para verificação da compra e gestão do direito. A versão do Apps in Toss usa o login/IAP do Apps in Toss e o servidor de compras Cloudflare Worker/D1 operado pela DiskFactory. Os dois fluxos não são usados juntos na mesma compra do direito de remover anúncios, enquanto serviços comuns de publicidade, análise ou notificações podem ser aplicados separadamente do processamento da compra.",
+                    },
+                    {
+                        ko: "애플리케이션은 아래와 같이 자체 개인정보처리방침을 운영하는 외부 서비스를 이용할 수 있습니다. 결제와 무관한 광고·분석·알림 서비스는 해당 기능이 제공되는 버전에서 적용됩니다.",
+                        en: "The Application may use the external services listed below, each of which maintains its own privacy policy. Advertising, analytics, and notification services unrelated to payment apply only to versions in which those features are provided.",
+                        "pt-BR": "O Aplicativo pode usar os serviços externos abaixo, cada um com sua própria política de privacidade. Serviços de publicidade, análise e notificações não relacionados ao pagamento se aplicam somente às versões em que esses recursos são oferecidos.",
                     },
                     {
                         ko: "서비스 제공자는 사용자 제공 정보 및 자동 수집 정보를 다음과 같은 경우 공개할 수 있습니다.",
-                        en: "The Service Provider may disclose User Provided and Automatically Collected Information in the following cases.",
+                        en: "The Service Provider may disclose user-provided and automatically collected information in the following cases.",
                         "pt-BR": "O Provedor do Serviço pode divulgar informações fornecidas pelo usuário e informações coletadas automaticamente nos seguintes casos.",
                     },
                 ],
@@ -553,6 +573,18 @@ export const privacyPolicies: PrivacyPolicy[] = [
                     {
                         name: "Google Play Services",
                         url: "https://www.google.com/policies/privacy/",
+                    },
+                    {
+                        name: "RevenueCat",
+                        url: "https://www.revenuecat.com/privacy",
+                    },
+                    {
+                        name: "Apps in Toss",
+                        url: "https://privacy.toss.im/privacy-policy",
+                    },
+                    {
+                        name: "Cloudflare",
+                        url: "https://www.cloudflare.com/privacypolicy/",
                     },
                     {
                         name: "AdMob",
@@ -598,9 +630,19 @@ export const privacyPolicies: PrivacyPolicy[] = [
                 },
                 paragraphs: [
                     {
-                        ko: "애플리케이션을 삭제하면 모든 정보 수집을 쉽게 중단할 수 있습니다. 모바일 기기 또는 모바일 애플리케이션 마켓플레이스나 네트워크에서 제공하는 표준 삭제 절차를 이용하면 됩니다.",
-                        en: "You can stop all collection of information by the Application easily by uninstalling it. You may use the standard uninstall processes as may be available as part of your mobile device or via the mobile application marketplace or network.",
-                        "pt-BR": "Você pode interromper facilmente toda coleta de informações pelo Aplicativo desinstalando-o. Use os procedimentos padrão de desinstalação disponíveis no seu dispositivo móvel ou pela loja/rede de aplicativos.",
+                        ko: "애플리케이션을 삭제하면 일반적으로 해당 기기의 애플리케이션을 통한 추가 정보 수집은 중단됩니다. 다만 플랫폼 또는 서버에서 구매 복구, 광고제거권 유지, 환불 확인, 분쟁 처리 및 관계 법령 준수를 위해 구매·권리 정보를 계속 처리하거나 보관할 수 있으며, 해당 정보는 애플리케이션 삭제만으로 즉시 삭제되지 않을 수 있습니다.",
+                        en: "Uninstalling the Application generally stops additional collection through the Application on that device. However, a platform or server may continue to process or retain purchase and entitlement information to restore purchases, maintain the no-ads entitlement, confirm refunds, resolve disputes, or comply with law, and that information may not be deleted immediately upon uninstall.",
+                        "pt-BR": "A desinstalação do Aplicativo geralmente interrompe novas coletas realizadas pelo Aplicativo naquele dispositivo. No entanto, uma plataforma ou servidor poderá continuar tratando ou conservando informações de compra e de direitos para restaurar compras, manter o direito de remover anúncios, confirmar reembolsos, resolver disputas ou cumprir a lei, e essas informações podem não ser excluídas imediatamente após a desinstalação.",
+                    },
+                    {
+                        ko: "이용자는 개인정보의 열람·정정·삭제 또는 처리정지를 contact@diskfactory.app으로 요청할 수 있습니다. 관계 법령에 따라 보존해야 하는 거래기록은 해당 기간 동안 다른 정보와 분리하여 보관한 후 파기합니다.",
+                        en: "You may request access, correction, deletion, or restriction of processing by contacting contact@diskfactory.app. Transaction records that must be retained by law will be stored separately for the required period and then deleted.",
+                        "pt-BR": "Você pode solicitar acesso, correção, exclusão ou limitação do tratamento pelo e-mail contact@diskfactory.app. Registros de transações cuja conservação seja exigida por lei serão mantidos separadamente pelo período obrigatório e depois excluídos.",
+                    },
+                    {
+                        ko: "구매·권리 정보의 삭제는 광고제거권의 유지 또는 향후 구매 복구에 영향을 줄 수 있습니다. 서비스 제공자는 해당 삭제 요청을 처리하기 전에 예상되는 영향을 안내하고 요청 범위를 확인하며, 법령상 보존해야 하는 거래기록은 삭제 요청과 별도로 보관합니다.",
+                        en: "Deleting purchase or entitlement information may affect continued access to the no-ads entitlement or future purchase restoration. Before processing such a request, the Service Provider will explain the expected effect and confirm the scope of the request; transaction records required by law will be retained separately.",
+                        "pt-BR": "A exclusão de informações de compra ou de direitos pode afetar a continuidade do direito de remover anúncios ou a restauração futura da compra. Antes de processar essa solicitação, o Provedor do Serviço explicará o efeito esperado e confirmará seu escopo; registros de transações exigidos por lei serão conservados separadamente.",
                     },
                 ],
             },
@@ -613,9 +655,36 @@ export const privacyPolicies: PrivacyPolicy[] = [
                 },
                 paragraphs: [
                     {
-                        ko: "서비스 제공자는 사용자가 애플리케이션을 사용하는 동안과 그 이후 합리적인 기간 동안 사용자 제공 데이터를 보유합니다. 애플리케이션을 통해 제공한 사용자 제공 데이터의 삭제를 원할 경우 yeojh97@gmail.com 으로 연락하면 합리적인 기간 내에 응답합니다.",
-                        en: "The Service Provider will retain User Provided data for as long as you use the Application and for a reasonable time thereafter. If you'd like them to delete User Provided Data that you have provided via the Application, please contact them at yeojh97@gmail.com and they will respond in a reasonable time.",
-                        "pt-BR": "O Provedor do Serviço manterá os dados fornecidos pelo usuário enquanto você usar o Aplicativo e por um período razoável depois disso. Se quiser excluir dados fornecidos por você pelo Aplicativo, entre em contato pelo e-mail yeojh97@gmail.com, e a solicitação será respondida em prazo razoável.",
+                        ko: "서비스 제공자는 개인정보의 처리 목적이 달성되면 지체 없이 해당 정보를 파기합니다. 광고제거권 유지와 구매 복구에 필요한 권리정보는 환불·삭제 요청 등으로 권리가 종료되거나 서비스가 종료될 때까지 보유할 수 있습니다. 관계 법령에서 별도의 보존기간을 정한 거래기록은 해당 기간 동안 분리하여 보관한 후 파기합니다.",
+                        en: "The Service Provider deletes personal information without undue delay when its processing purpose is fulfilled. Information needed to maintain or restore a no-ads entitlement may be retained until the entitlement ends due to a refund or deletion request, or until the Service ends. Transaction records subject to a separate statutory period will be stored separately for that period and then deleted.",
+                        "pt-BR": "O Provedor do Serviço exclui os dados pessoais sem demora indevida quando a finalidade do tratamento é atingida. As informações necessárias para manter ou restaurar o direito de remover anúncios podem ser conservadas até o término do direito por reembolso ou solicitação de exclusão, ou até o encerramento do Serviço. Registros de transações sujeitos a prazo legal separado serão armazenados separadamente por esse período e depois excluídos.",
+                    },
+                ],
+                bullets: [
+                    {
+                        ko: "전자상거래법에 따른 계약 또는 청약철회 기록: 계약 또는 청약철회일부터 5년",
+                        en: "Contract or withdrawal records under e-commerce law: 5 years from the contract or withdrawal date",
+                        "pt-BR": "Registros de contrato ou arrependimento conforme a lei de comércio eletrônico: 5 anos a partir da data do contrato ou do arrependimento",
+                    },
+                    {
+                        ko: "전자상거래법에 따른 대금결제 및 상품 공급 기록: 결제 또는 공급일부터 5년",
+                        en: "Payment and product-supply records under e-commerce law: 5 years from payment or supply",
+                        "pt-BR": "Registros de pagamento e fornecimento conforme a lei de comércio eletrônico: 5 anos a partir do pagamento ou fornecimento",
+                    },
+                    {
+                        ko: "전자상거래법에 따른 소비자 불만 또는 분쟁 처리 기록: 처리일부터 3년",
+                        en: "Consumer complaint and dispute records under e-commerce law: 3 years from resolution",
+                        "pt-BR": "Registros de reclamações e disputas de consumidores conforme a lei de comércio eletrônico: 3 anos a partir da resolução",
+                    },
+                    {
+                        ko: "전자상거래법에 따른 표시·광고 기록: 표시·광고일부터 6개월",
+                        en: "Representations and advertising records under e-commerce law: 6 months from publication",
+                        "pt-BR": "Registros de oferta e publicidade conforme a lei de comércio eletrônico: 6 meses a partir da publicação",
+                    },
+                    {
+                        ko: "만료된 인증 세션: 만료 후 다음 인증 또는 세션 정리 과정에서 파기",
+                        en: "Expired authentication sessions: deleted during the next authentication or session-cleanup process after expiration",
+                        "pt-BR": "Sessões de autenticação expiradas: excluídas no próximo processo de autenticação ou limpeza de sessões após o vencimento",
                     },
                 ],
             },
@@ -663,9 +732,9 @@ export const privacyPolicies: PrivacyPolicy[] = [
                 },
                 paragraphs: [
                     {
-                        ko: "본 개인정보처리방침은 사유를 불문하고 수시로 업데이트될 수 있습니다. 서비스 제공자는 이 페이지를 새로운 개인정보처리방침으로 업데이트하여 변경 사항을 알립니다. 정기적으로 본 개인정보처리방침을 확인하는 것이 좋으며, 계속 사용하면 모든 변경 사항에 동의한 것으로 간주됩니다.",
-                        en: "This Privacy Policy may be updated from time to time for any reason. The Service Provider will notify you of any changes to the Privacy Policy by updating this page with the new Privacy Policy. You are advised to consult this Privacy Policy regularly for any changes, as continued use is deemed approval of all changes.",
-                        "pt-BR": "Esta Política de Privacidade pode ser atualizada periodicamente por qualquer motivo. O Provedor do Serviço notificará você sobre alterações atualizando esta página com a nova Política de Privacidade. Recomendamos consultar esta Política de Privacidade regularmente, pois o uso contínuo será considerado aceitação das alterações.",
+                        ko: "본 개인정보처리방침이 변경되는 경우 서비스 제공자는 적용일과 주요 변경 내용을 이 페이지 또는 서비스 내 공지를 통해 안내합니다. 이용자의 권리에 중대한 영향을 미치는 변경은 관련 법령에서 정한 방법과 기간에 따라 사전에 안내합니다.",
+                        en: "If this Privacy Policy changes, the Service Provider will announce the effective date and material changes on this page or through an in-service notice. Changes that materially affect your rights will be announced in advance using the method and notice period required by applicable law.",
+                        "pt-BR": "Se esta Política de Privacidade for alterada, o Provedor do Serviço informará a data de vigência e as principais mudanças nesta página ou por aviso no Serviço. Alterações que afetem de forma relevante seus direitos serão comunicadas previamente conforme o método e o prazo exigidos pela legislação aplicável.",
                     },
                 ],
             },
@@ -678,9 +747,9 @@ export const privacyPolicies: PrivacyPolicy[] = [
                 },
                 paragraphs: [
                     {
-                        ko: "애플리케이션을 사용함으로써 사용자는 현재 및 향후 개정되는 본 개인정보처리방침에 명시된 정보 처리에 동의하는 것으로 간주됩니다.",
-                        en: "By using the Application, you are consenting to the processing of your information as set forth in this Privacy Policy now and as amended by us.",
-                        "pt-BR": "Ao usar o Aplicativo, você consente com o tratamento das suas informações conforme estabelecido nesta Política de Privacidade, inclusive conforme alterações futuras.",
+                        ko: "개인정보는 위에서 안내한 항목과 목적의 범위에서 관계 법령에 따라 처리합니다. 별도의 동의가 필요한 경우에는 처리 전에 필요한 내용을 안내하고 동의를 받습니다.",
+                        en: "Personal information is processed under applicable law within the categories and purposes described above. Where separate consent is required, the relevant details will be provided and consent obtained before processing.",
+                        "pt-BR": "Os dados pessoais são tratados conforme a legislação aplicável, dentro das categorias e finalidades descritas acima. Quando for necessário consentimento separado, as informações pertinentes serão apresentadas e o consentimento será obtido antes do tratamento.",
                     },
                 ],
             },
@@ -693,9 +762,9 @@ export const privacyPolicies: PrivacyPolicy[] = [
                 },
                 paragraphs: [
                     {
-                        ko: "애플리케이션 사용 중 개인정보와 관련하여 질문이 있거나 서비스 제공자의 처리 방식에 관한 문의가 있는 경우 yeojh97@gmail.com 으로 연락해 주세요.",
-                        en: "If you have any questions regarding privacy while using the Application, or have questions about the practices, please contact the Service Provider via email at yeojh97@gmail.com.",
-                        "pt-BR": "Se tiver dúvidas sobre privacidade ao usar o Aplicativo ou sobre as práticas do Provedor do Serviço, entre em contato por e-mail em yeojh97@gmail.com.",
+                        ko: "애플리케이션 사용 중 개인정보와 관련하여 질문이 있거나 서비스 제공자의 처리 방식에 관한 문의가 있는 경우 contact@diskfactory.app 으로 연락해 주세요.",
+                        en: "If you have any questions regarding privacy while using the Application, or have questions about the practices, please contact the Service Provider via email at contact@diskfactory.app.",
+                        "pt-BR": "Se tiver dúvidas sobre privacidade ao usar o Aplicativo ou sobre as práticas do Provedor do Serviço, entre em contato por e-mail em contact@diskfactory.app.",
                     },
                 ],
             },

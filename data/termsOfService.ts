@@ -27,8 +27,8 @@ export const termsOfService: TermsOfService[] = [
             en: "These Terms govern your use of the Tank Pop Block Puzzle mobile game application and related websites, customer support, notices, and other services provided by DiskFactory (collectively, the \"Service\"). By installing or using the Service, you agree to these Terms.",
             "pt-BR": "Estes Termos regulam o uso do aplicativo mobile Tank Pop Block Puzzle e de sites relacionados, atendimento ao cliente, avisos e outros serviços correlatos fornecidos pela DiskFactory (em conjunto, o \"Serviço\"). Ao instalar ou usar o Serviço, você concorda com estes Termos.",
         },
-        effectiveDate: "2026-05-27",
-        contactEmail: "yeojh97@gmail.com",
+        effectiveDate: "2026-07-23",
+        contactEmail: "contact@diskfactory.app",
         sections: [
             {
                 kind: "purpose",
@@ -181,19 +181,59 @@ export const termsOfService: TermsOfService[] = [
                 },
                 paragraphs: [
                     {
-                        ko: "기본 서비스는 무료로 제공될 수 있으나, 회사는 향후 유료 콘텐츠, 광고 제거 상품, 구독, 게임 내 재화 또는 아이템을 제공할 수 있습니다. 유료 콘텐츠가 제공되는 경우 구매 전 가격, 주요 내용 및 이용 조건을 표시합니다.",
-                        en: "The basic Service may be provided free of charge, but the Company may later offer paid content, ad-removal products, subscriptions, in-game currency, or items. If paid content is offered, the price, main details, and usage conditions will be displayed before purchase.",
-                        "pt-BR": "O Serviço básico pode ser oferecido gratuitamente, mas a Empresa poderá futuramente oferecer conteúdo pago, produtos para remover anúncios, assinaturas, moedas do jogo ou itens. Se houver conteúdo pago, o preço, as informações principais e as condições de uso serão exibidos antes da compra.",
+                        ko: "기본 서비스는 무료로 제공되며, 회사는 광고제거권 등 일부 유료상품을 제공할 수 있습니다. 유료상품의 상품명, 최종 결제가격, 제공 내용 및 이용 조건은 구매 화면에 표시합니다.",
+                        en: "The basic Service is provided free of charge, and the Company may offer paid products such as a no-ads entitlement. The product name, final purchase price, benefits, and conditions will be displayed on the purchase screen.",
+                        "pt-BR": "O Serviço básico é oferecido gratuitamente, e a Empresa pode disponibilizar produtos pagos, como o direito de remover anúncios. O nome do produto, o preço final, os benefícios e as condições serão exibidos na tela de compra.",
                     },
                     {
-                        ko: "앱 마켓 또는 결제 플랫폼을 통해 구매한 상품의 결제, 청약철회, 환불은 해당 플랫폼 정책과 관련 법령에 따릅니다. 이미 사용되었거나 즉시 효력이 발생한 소모성 콘텐츠는 관련 법령 또는 플랫폼 정책에서 허용하는 범위 내에서 청약철회 또는 환불이 제한될 수 있습니다.",
-                        en: "Payment, cancellation, and refund for products purchased through app stores or payment platforms are governed by the applicable platform policies and law. Consumable content that has been used or becomes effective immediately may be restricted from cancellation or refund to the extent permitted by law or platform policy.",
-                        "pt-BR": "Pagamentos, cancelamentos e reembolsos de produtos adquiridos por lojas de aplicativos ou plataformas de pagamento seguem as políticas da respectiva plataforma e a legislação aplicável. Conteúdos consumíveis já usados ou que produzam efeito imediato podem ter cancelamento ou reembolso restringido na medida permitida por lei ou pela política da plataforma.",
+                        ko: "광고제거권은 한 번 구매하면 서비스 제공기간 동안 구매에 사용된 이용자 또는 플랫폼 계정에서 사용할 수 있는 비소모성·일회성 상품이며, 정기적으로 결제되는 구독상품이 아닙니다.",
+                        en: "The no-ads entitlement is a non-consumable, one-time product available to the user or platform account used for the purchase while the Service is provided. It is not a recurring subscription.",
+                        "pt-BR": "O direito de remover anúncios é um produto não consumível e de compra única, disponível para o usuário ou a conta da plataforma usada na compra enquanto o Serviço for oferecido. Não é uma assinatura recorrente.",
                     },
                     {
-                        ko: "미성년자의 유료 결제에는 법정대리인의 동의가 필요할 수 있으며, 동의 없는 결제는 관련 법령에 따라 취소될 수 있습니다.",
-                        en: "Paid purchases by minors may require consent from a parent or legal guardian, and purchases made without required consent may be cancelled in accordance with applicable law.",
-                        "pt-BR": "Compras pagas feitas por menores de idade podem exigir consentimento de um dos pais ou responsável legal, e compras realizadas sem o consentimento necessário poderão ser canceladas conforme a legislação aplicável.",
+                        ko: "광고제거권이 정상적으로 적용되면 해당 버전의 서비스에서 배너광고, 전면광고 및 보상형 광고 영상의 노출이 제거됩니다. 보상형 광고와 연결되었던 게임 내 보상은 기존 지급 조건을 충족한 경우 광고 영상 시청 없이 동일하게 지급됩니다.",
+                        en: "When the no-ads entitlement is active, banner ads, interstitial ads, and rewarded-ad videos are removed from the applicable version of the Service. In-game rewards previously associated with rewarded ads will be granted without viewing an ad when the existing reward conditions are met.",
+                        "pt-BR": "Quando o direito de remover anúncios estiver ativo, banners, anúncios intersticiais e vídeos de anúncios recompensados serão removidos da versão aplicável do Serviço. As recompensas do jogo antes vinculadas a anúncios recompensados serão concedidas sem assistir ao vídeo quando as condições de recompensa existentes forem atendidas.",
+                    },
+                    {
+                        ko: "본 약관에서 '영구'란 별도의 정기결제 없이 광고제거권이 적용된 계정에서 서비스 제공기간 동안 혜택이 유지된다는 의미입니다. 서비스 종료 이후까지 서비스 제공을 보장하거나 광고제거권의 소유권 또는 양도권을 부여한다는 의미는 아닙니다.",
+                        en: "In these Terms, \"lifetime\" means that the benefit remains on the applicable account without recurring charges while the Service is provided. It does not guarantee operation after the Service ends or grant ownership or transfer rights in the entitlement.",
+                        "pt-BR": "Nestes Termos, \"vitalício\" significa que o benefício permanece na conta aplicável, sem cobranças recorrentes, enquanto o Serviço for oferecido. Isso não garante a operação após o encerramento do Serviço nem concede propriedade ou direito de transferência sobre o benefício.",
+                    },
+                    {
+                        ko: "Google Play 버전의 광고제거권은 Google Play Billing을 통해 결제되고 RevenueCat을 통해 구매 확인과 복구가 이루어집니다. Google Play Games에 로그인한 경우 해당 이용자 식별값을 사용해 RevenueCat 권리를 연결하며, 로그인하지 않은 경우에는 RevenueCat의 익명 앱 이용자 식별값이 사용될 수 있습니다. 이 버전의 광고제거권 처리에는 Apps in Toss와 Apps in Toss 전용 구매 서버가 사용되지 않습니다.",
+                        en: "In the Google Play version, the no-ads entitlement is purchased through Google Play Billing and verified or restored through RevenueCat. When you are signed in to Google Play Games, that user identifier is used to link the RevenueCat entitlement; otherwise, a RevenueCat anonymous app-user identifier may be used. Apps in Toss and its dedicated purchase server are not used for this version's no-ads purchase.",
+                        "pt-BR": "Na versão do Google Play, o direito de remover anúncios é comprado pelo Google Play Billing e verificado ou restaurado pela RevenueCat. Quando você está conectado ao Google Play Games, esse identificador é usado para vincular o direito na RevenueCat; caso contrário, pode ser usado um identificador anônimo de usuário do aplicativo da RevenueCat. O Apps in Toss e seu servidor de compras exclusivo não são usados nessa versão.",
+                    },
+                    {
+                        ko: "Apps in Toss 버전의 광고제거권은 Apps in Toss 로그인/IAP를 통해 인증·결제되고, 토스 계정과 디스크팩토리가 Cloudflare Worker/D1으로 운영하는 전용 구매 서버를 통해 구매 확인 및 복구가 이루어집니다. 이 버전의 광고제거권 처리에는 RevenueCat이 사용되지 않습니다.",
+                        en: "In the Apps in Toss version, authentication and payment use Apps in Toss login/IAP, and the purchase is verified or restored using the Toss account and DiskFactory's dedicated purchase server operated with Cloudflare Worker/D1. RevenueCat is not used for this version's no-ads purchase.",
+                        "pt-BR": "Na versão do Apps in Toss, a autenticação e o pagamento usam o login/IAP do Apps in Toss, e a compra é verificada ou restaurada por meio da conta Toss e do servidor de compras exclusivo da DiskFactory operado com Cloudflare Worker/D1. A RevenueCat não é usada nessa versão.",
+                    },
+                    {
+                        ko: "Google Play 버전과 Apps in Toss 버전의 광고제거권은 서로 다른 결제 경로와 이용자 식별체계를 사용하므로 다른 버전으로 자동 이전되거나 복구되지 않습니다. 이용자는 광고제거권을 구매한 버전과 해당 계정에서 구매 복구를 진행해야 합니다.",
+                        en: "The Google Play and Apps in Toss versions use different purchase paths and user-identification systems, so a no-ads entitlement is not automatically transferred or restored across versions. You must restore the purchase in the version and account through which it was purchased.",
+                        "pt-BR": "As versões do Google Play e do Apps in Toss usam fluxos de compra e sistemas de identificação diferentes; por isso, o direito de remover anúncios não é transferido nem restaurado automaticamente entre versões. A restauração deve ser feita na versão e na conta em que a compra foi realizada.",
+                    },
+                    {
+                        ko: "이용자는 계약내용에 관한 서면을 받은 날 또는 상품을 이용할 수 있게 된 날 중 늦은 날부터 7일 이내에 유료상품의 청약철회를 요청할 수 있습니다. 다만 광고제거권과 같이 구매 즉시 제공되는 디지털콘텐츠는 구매 전에 청약철회 제한 가능성을 안내하고 이용자가 즉시 제공에 동의한 경우 관계 법령이 허용하는 범위에서 청약철회가 제한될 수 있습니다.",
+                        en: "You may request withdrawal from a paid-product purchase within seven days from the later of the date you receive the purchase terms in writing or the date the product becomes available. For digital content supplied immediately, such as the no-ads entitlement, withdrawal may be restricted to the extent permitted by law if the restriction was disclosed before purchase and you agreed to immediate supply.",
+                        "pt-BR": "Você pode solicitar o arrependimento da compra de um produto pago no prazo de sete dias contado da data mais recente entre o recebimento por escrito das condições da compra e a disponibilização do produto. Para conteúdo digital fornecido imediatamente, como o direito de remover anúncios, o arrependimento poderá ser limitado na medida permitida por lei se essa possibilidade tiver sido informada antes da compra e você tiver concordado com o fornecimento imediato.",
+                    },
+                    {
+                        ko: "상품이 구매 화면의 표시·광고 내용과 다르거나 계약 내용과 다르게 제공된 경우에는 상품 제공일부터 3개월 이내 또는 그 사실을 안 날이나 알 수 있었던 날부터 30일 이내에 청약철회를 요청할 수 있습니다.",
+                        en: "If a product differs from its description or advertising on the purchase screen, or is supplied differently from the contract, you may request withdrawal within three months after supply or within 30 days after you knew or reasonably could have known of the issue.",
+                        "pt-BR": "Se o produto for diferente da descrição ou publicidade exibida na tela de compra, ou for fornecido em desacordo com o contrato, você poderá solicitar o arrependimento em até três meses após o fornecimento ou em até 30 dias após tomar conhecimento, ou poder razoavelmente ter tomado conhecimento, do problema.",
+                    },
+                    {
+                        ko: "결제 취소와 환불은 관계 법령 및 실제 결제가 이루어진 Google Play 또는 Apps in Toss의 절차에 따라 처리됩니다. 환불 또는 결제 취소가 완료되면 해당 구매로 제공된 광고제거권은 회수되며 광고가 다시 노출될 수 있습니다.",
+                        en: "Cancellations and refunds are processed under applicable law and the procedures of the platform on which the purchase was made, either Google Play or Apps in Toss. When a refund or cancellation is completed, the no-ads entitlement granted by that purchase will be revoked and ads may appear again.",
+                        "pt-BR": "Cancelamentos e reembolsos são processados conforme a legislação aplicável e os procedimentos da plataforma em que a compra foi realizada, Google Play ou Apps in Toss. Quando o reembolso ou cancelamento for concluído, o direito de remover anúncios concedido pela compra será revogado e os anúncios poderão voltar a aparecer.",
+                    },
+                    {
+                        ko: "미성년자가 광고제거권을 포함한 유료상품을 구매하려는 경우에는 법정대리인의 동의가 필요합니다. 필요한 동의 없이 이루어진 결제는 관계 법령에 따라 미성년자 본인 또는 법정대리인이 취소할 수 있습니다. 다만 법정대리인이 처분을 허락한 재산의 범위에서 이루어진 결제 등 관계 법령상 취소가 제한되는 경우는 제외합니다.",
+                        en: "A minor must obtain consent from a parent or legal guardian before purchasing paid products, including the no-ads entitlement. A purchase made without required consent may be cancelled by the minor or legal guardian as permitted by law, except where cancellation is legally restricted, such as a purchase made with property the guardian permitted the minor to use.",
+                        "pt-BR": "O menor de idade deve obter o consentimento de um dos pais ou responsável legal antes de comprar produtos pagos, inclusive o direito de remover anúncios. Uma compra feita sem o consentimento necessário poderá ser cancelada pelo menor ou responsável conforme permitido por lei, salvo quando o cancelamento for legalmente limitado, como em compras feitas com recursos cuja utilização foi autorizada pelo responsável.",
                     },
                 ],
             },
@@ -358,9 +398,14 @@ export const termsOfService: TermsOfService[] = [
                 },
                 paragraphs: [
                     {
-                        ko: "서비스 이용에는 Google Play, Apple App Store, 광고 네트워크, 분석 도구, 클라우드 또는 기타 제3자 서비스가 필요할 수 있습니다. 이용자는 해당 제3자의 약관과 정책을 함께 준수해야 합니다.",
-                        en: "Use of the Service may require Google Play, Apple App Store, advertising networks, analytics tools, cloud services, or other third-party services. You must also comply with the terms and policies of those third parties.",
-                        "pt-BR": "O uso do Serviço pode exigir Google Play, Apple App Store, redes de anúncios, ferramentas de análise, serviços de nuvem ou outros serviços de terceiros. Você também deve cumprir os termos e políticas desses terceiros.",
+                        ko: "Google Play 버전은 Google Play Billing과 RevenueCat을 통해 광고제거권의 가격 조회, 결제, 구매 확인, 구매 복구 및 환불 상태 확인 기능을 제공합니다. Apps in Toss 버전은 Apps in Toss 로그인/IAP와 디스크팩토리가 운영하는 Cloudflare Worker/D1 구매 서버를 통해 같은 기능을 제공합니다. 두 결제 경로는 동일한 광고제거권 구매 처리에 함께 사용되지 않습니다.",
+                        en: "The Google Play version uses Google Play Billing and RevenueCat to retrieve prices, process payments, verify or restore purchases, and confirm refund status for the no-ads entitlement. The Apps in Toss version provides those functions through Apps in Toss login/IAP and DiskFactory's Cloudflare Worker/D1 purchase server. The two purchase paths are not used together for the same no-ads purchase.",
+                        "pt-BR": "A versão do Google Play usa o Google Play Billing e a RevenueCat para consultar preços, processar pagamentos, verificar ou restaurar compras e confirmar o status de reembolso do direito de remover anúncios. A versão do Apps in Toss oferece essas funções pelo login/IAP do Apps in Toss e pelo servidor de compras Cloudflare Worker/D1 operado pela DiskFactory. Os dois fluxos não são usados juntos na mesma compra do direito de remover anúncios.",
+                    },
+                    {
+                        ko: "외부 플랫폼을 통한 결제에는 실제 결제가 이루어진 플랫폼의 이용약관, 결제정책 및 환불정책이 함께 적용됩니다. 이용자는 해당 외부 플랫폼의 정책을 확인하고 준수해야 합니다.",
+                        en: "Purchases through an external platform are also subject to the terms, payment policies, and refund policies of the platform on which the purchase was actually made. You must review and comply with the applicable platform policies.",
+                        "pt-BR": "Compras realizadas por uma plataforma externa também estão sujeitas aos termos e às políticas de pagamento e reembolso da plataforma em que a compra foi efetivamente feita. Você deve consultar e cumprir as políticas aplicáveis.",
                     },
                     {
                         ko: "제3자 서비스의 장애, 정책 변경, 계정 제한, 결제 처리, 네트워크 요금 또는 기기 환경으로 인해 서비스 이용이 제한될 수 있습니다.",
@@ -408,9 +453,9 @@ export const termsOfService: TermsOfService[] = [
                         "pt-BR": "A Empresa não se responsabiliza por danos decorrentes do uso de serviços gratuitos, exceto quando causados por dolo ou culpa grave da Empresa, ou quando a limitação de responsabilidade não for permitida pela legislação aplicável.",
                     },
                     {
-                        ko: "회사가 유료 서비스를 제공하는 경우, 회사의 책임 범위는 관련 법령, 플랫폼 정책 및 구매 조건에 따릅니다.",
-                        en: "If the Company provides paid services, the scope of the Company's liability is governed by applicable law, platform policies, and purchase conditions.",
-                        "pt-BR": "Se a Empresa oferecer serviços pagos, o escopo de responsabilidade da Empresa será regido pela legislação aplicável, pelas políticas da plataforma e pelas condições de compra.",
+                        ko: "회사의 귀책사유로 광고제거권을 정상적으로 제공하거나 복구할 수 없는 경우 회사는 관계 법령과 실제 결제가 이루어진 플랫폼의 절차에 따라 복구, 대체 제공 또는 환불에 필요한 조치를 합니다.",
+                        en: "If the no-ads entitlement cannot be provided or restored due to a cause attributable to the Company, the Company will take steps necessary to restore or replace the entitlement or process a refund under applicable law and the procedures of the platform on which the purchase was made.",
+                        "pt-BR": "Se o direito de remover anúncios não puder ser fornecido ou restaurado por motivo atribuível à Empresa, a Empresa tomará as medidas necessárias para restaurar ou substituir o direito ou processar o reembolso conforme a legislação aplicável e os procedimentos da plataforma em que a compra foi realizada.",
                     },
                 ],
             },
@@ -453,9 +498,9 @@ export const termsOfService: TermsOfService[] = [
                         "pt-BR": "Para dúvidas sobre estes Termos, uso do Serviço, revogação do consentimento para push de marketing ou tratamento de disputas, entre em contato pelo e-mail abaixo.",
                     },
                     {
-                        ko: "이메일: yeojh97@gmail.com",
-                        en: "Email: yeojh97@gmail.com",
-                        "pt-BR": "E-mail: yeojh97@gmail.com",
+                        ko: "이메일: contact@diskfactory.app",
+                        en: "Email: contact@diskfactory.app",
+                        "pt-BR": "E-mail: contact@diskfactory.app",
                     },
                 ],
             },

@@ -8,6 +8,7 @@ import Link from "next/link";
 import { LanguageToggle } from "@/components/LanguageToggle";
 import { useLocale } from "@/components/LocaleProvider";
 import { getLocalizedText, localizeHref } from "@/lib/i18n";
+import { ProjectCard } from "@/components/ProjectCard";
 
 export default function Home() {
   const { locale } = useLocale();
@@ -21,6 +22,11 @@ export default function Home() {
       ko: "프로젝트",
       en: "CURRENT PROJECTS",
       "pt-BR": "PROJETOS ATUAIS",
+    },
+    viewAllProjects: {
+      ko: "전체 프로젝트 보기",
+      en: "VIEW ALL PROJECTS",
+      "pt-BR": "VER TODOS OS PROJETOS",
     },
     rights: {
       ko: "© 2026 DiskFactory. All rights reserved.",
@@ -38,6 +44,7 @@ export default function Home() {
       "pt-BR": "Termos de Serviço",
     },
   };
+  const featuredProjects = projects.slice(0, 4);
 
   return (
     <main className="min-h-screen bg-black text-white relative overflow-hidden">
@@ -97,71 +104,21 @@ export default function Home() {
 
       {/* Projects Section */}
       <Section id="projects">
-        <h2 className="text-4xl font-bold mb-12 flex items-center gap-3">
-          <Gamepad2 className="text-[#00FF41]" /> {getLocalizedText(copy.projectsTitle, locale)}
-        </h2>
+        <div className="mb-12 flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
+          <h2 className="text-4xl font-bold flex items-center gap-3">
+            <Gamepad2 className="text-[#00FF41]" /> {getLocalizedText(copy.projectsTitle, locale)}
+          </h2>
+          <Link
+            href={localizeHref("/projects", locale)}
+            className="group inline-flex w-fit items-center gap-2 rounded-full border border-gray-700 px-5 py-3 text-sm font-bold text-gray-200 transition-colors hover:border-[#00FF41] hover:text-[#00FF41] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#00FF41]"
+          >
+            {getLocalizedText(copy.viewAllProjects, locale)}
+            <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
+          </Link>
+        </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {projects.map((project) => (
-            <Link key={project.id} href={localizeHref(`/projects/${project.id}`, locale)}>
-              <div className="game-card p-8 group cursor-pointer h-full flex flex-col">
-                {project.thumbnail && (
-                  <div className="w-full h-48 bg-gray-900 rounded-md mb-6 overflow-hidden relative border border-gray-800 group-hover:border-[#00FF41]/30 transition-colors">
-                    <img src={project.thumbnail} alt={getLocalizedText(project.title, locale)} className="w-full h-full object-cover" />
-                  </div>
-                )}
-
-                <div className="flex items-center gap-4 mb-4">
-                  {project.icon && (
-                    <div className="w-12 h-12 bg-gray-800 rounded-lg flex items-center justify-center text-[10px] text-gray-600 border border-gray-700 overflow-hidden shrink-0">
-                      <img src={project.icon} alt={getLocalizedText(project.title, locale)} className="w-full h-full object-cover" />
-                    </div>
-                  )}
-                  <div>
-                    <h3 className="text-2xl font-bold group-hover:text-[#00FF41] transition-colors flex items-center gap-2">
-                      {getLocalizedText(project.title, locale)} <ArrowRight size={18} className="opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 transition-all text-[#00FF41]" />
-                    </h3>
-                    <div className="flex flex-wrap gap-2 mt-1">
-                      {project.tags.map(tag => (
-                        <span key={tag} className="text-[10px] uppercase tracking-wider bg-gray-900 text-gray-400 px-2 py-0.5 rounded border border-gray-800">
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-
-                <p className="text-gray-400 text-sm leading-relaxed mb-6 flex-grow">
-                  {getLocalizedText(project.description, locale)}
-                </p>
-
-                {/* 
-                {project.links && Object.keys(project.links).length > 0 && (
-                  <div className="mt-auto pt-6 border-t border-gray-900 flex items-center justify-between">
-                    <div className="flex gap-2">
-                      {project.links.playstore && (
-                        <div className="w-5 h-5 rounded-sm bg-[#00FF41]/10 flex items-center justify-center border border-[#00FF41]/20" title="Google Play">
-                          <div className="w-1.5 h-1.5 bg-[#00FF41] rotate-45" />
-                        </div>
-                      )}
-                      {project.links.appstore && (
-                        <div className="w-5 h-5 rounded-sm bg-white/10 flex items-center justify-center border border-white/20" title="App Store">
-                          <div className="w-1.5 h-1.5 bg-white rounded-full" />
-                        </div>
-                      )}
-                      {project.links.steam && (
-                        <div className="w-5 h-5 rounded-sm bg-[#66c0f4]/10 flex items-center justify-center border border-[#66c0f4]/20" title="Steam">
-                          <div className="w-2 h-1 bg-[#66c0f4]" />
-                        </div>
-                      )}
-                    </div>
-                    <span className="text-[10px] font-mono text-[#00FF41] animate-pulse">
-                      READY TO LAUNCH _
-                    </span>
-                  </div>
-                )}
-                */}
-              </div>
-            </Link>
+          {featuredProjects.map((project) => (
+            <ProjectCard key={project.id} project={project} />
           ))}
         </div>
       </Section>
