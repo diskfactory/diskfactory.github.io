@@ -35,9 +35,9 @@ export default function Home() {
       "pt-BR": "VER JOGOS",
     },
     projectsTitle: {
-      ko: "프로젝트",
-      en: "PROJECTS",
-      "pt-BR": "PROJETOS",
+      ko: "게임 보관함",
+      en: "GAME SHELF",
+      "pt-BR": "COLEÇÃO DE JOGOS",
     },
     projectsDescription: {
       ko: "빠른 액션부터 한 손 퍼즐까지, 작은 아이디어를 재미있는 플레이로 다듬었습니다.",
@@ -45,9 +45,9 @@ export default function Home() {
       "pt-BR": "Da ação rápida aos puzzles com uma mão, transformamos pequenas ideias em momentos divertidos.",
     },
     viewAll: {
-      ko: "전체 프로젝트 보기",
-      en: "VIEW ALL PROJECTS",
-      "pt-BR": "VER TODOS OS PROJETOS",
+      ko: "게임 보관함 보기",
+      en: "VIEW GAME SHELF",
+      "pt-BR": "VER COLEÇÃO DE JOGOS",
     },
     noteTitle: {
       ko: "재미를 만드는 작은 공장",
