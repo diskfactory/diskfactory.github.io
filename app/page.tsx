@@ -20,9 +20,9 @@ export default function Home() {
       "pt-BR": "TIME PEQUENO, DIVERSÃO GIGANTE",
     },
     headline: {
-      ko: "톡톡 튀는 아이디어를\n손안의 게임으로",
-      en: "PLAYFUL IDEAS,\nPOCKET-SIZED GAMES",
-      "pt-BR": "IDEIAS DIVERTIDAS,\nJOGOS NA SUA MÃO",
+      ko: "재밌는 게임을\n만들고 싶어요!",
+      en: "I WANT TO MAKE\nFUN GAMES!",
+      "pt-BR": "QUERO CRIAR\nJOGOS DIVERTIDOS!",
     },
     subtitle: {
       ko: "디스크팩토리는 가볍게 시작해 오래 즐길 수 있는 캐주얼 게임을 만드는 1인 게임 스튜디오입니다.",
@@ -71,8 +71,7 @@ export default function Home() {
   return (
     <main className="casual-shell min-h-screen overflow-hidden">
       <header className="relative z-30 mx-auto flex max-w-7xl items-center justify-between px-6 py-6">
-        <Link href={localizeHref("/", locale)} className="flex items-center gap-3 font-black tracking-tight">
-          <span className="sticker grid h-11 w-11 rotate-[-4deg] place-items-center rounded-2xl bg-[#ffd95a] text-xl">D</span>
+        <Link href={localizeHref("/", locale)} className="flex items-center font-black tracking-tight">
           <span className="text-lg sm:text-xl">DISKFACTORY</span>
         </Link>
         <div className="flex items-center gap-3">
