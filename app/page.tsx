@@ -85,12 +85,12 @@ export default function Home() {
         </div>
       </header>
 
-      <Section className="relative grid min-h-[44rem] items-center gap-14 pb-28 pt-14 lg:grid-cols-[1.08fr_0.92fr] lg:pt-10">
-        <div className="relative z-10">
+      <Section className="relative grid min-h-[44rem] items-center gap-12 pb-24 pt-12 lg:grid-cols-2 lg:gap-16 lg:pt-8">
+        <div className="relative z-10 max-w-[38rem]">
           <motion.div
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
-            className="mb-7 inline-flex items-center gap-2 rounded-full border-2 border-[#252442] bg-[#dff8f0] px-4 py-2 text-xs font-black tracking-[0.15em]"
+            className="mb-6 inline-flex items-center gap-2 rounded-full border-2 border-[#252442] bg-[#dff8f0] px-4 py-2 text-xs font-black tracking-[0.15em]"
           >
             <Sparkles size={15} className="text-[#ff7163]" />
             {getLocalizedText(copy.studio, locale)}
@@ -99,7 +99,7 @@ export default function Home() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.08 }}
-            className="whitespace-pre-line text-[clamp(3.25rem,8vw,6.8rem)] font-black leading-[0.93] tracking-[-0.065em]"
+            className="whitespace-pre-line text-5xl font-black leading-[1.02] tracking-[-0.045em] sm:text-6xl xl:text-[5rem]"
           >
             {getLocalizedText(copy.headline, locale)}
           </motion.h1>
@@ -107,7 +107,7 @@ export default function Home() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.16 }}
-            className="mt-8 max-w-2xl text-lg font-medium leading-relaxed text-[#66627c] sm:text-xl"
+            className="mt-7 max-w-[36rem] text-base font-medium leading-[1.75] text-[#66627c] sm:text-lg"
           >
             {getLocalizedText(copy.subtitle, locale)}
           </motion.p>
@@ -115,7 +115,7 @@ export default function Home() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.24 }}
-            className="mt-9 flex flex-wrap gap-4"
+            className="mt-8 flex flex-wrap gap-4"
           >
             <Link href="#projects" className="play-button bg-[#6c7cff] px-6 py-3.5 text-white">
               <Gamepad2 size={19} /> {getLocalizedText(copy.explore, locale)}
@@ -126,7 +126,7 @@ export default function Home() {
           </motion.div>
         </div>
 
-        <div className="dot-grid relative mx-auto h-[30rem] w-full max-w-[34rem] rounded-[3.5rem] border-2 border-[#252442] bg-[#aeb8ff]/70">
+        <div className="dot-grid relative mx-auto h-[29rem] w-full max-w-[32rem] rounded-[3.25rem] border-2 border-[#252442] bg-[#aeb8ff]/70">
           <div className="absolute -left-5 top-16 h-24 w-24 rotate-12 rounded-[2rem] bg-[#ffd95a]" />
           <div className="absolute -right-5 bottom-16 h-28 w-28 -rotate-12 rounded-full bg-[#65ddbd]" />
           {featuredProjects.map((project, index) => {
