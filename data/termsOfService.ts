@@ -27,7 +27,7 @@ export const termsOfService: TermsOfService[] = [
             en: "These Terms govern your use of the Tank Pop Block Puzzle mobile game application and related websites, customer support, notices, and other services provided by DiskFactory (collectively, the \"Service\"). By installing or using the Service, you agree to these Terms.",
             "pt-BR": "Estes Termos regulam o uso do aplicativo mobile Tank Pop Block Puzzle e de sites relacionados, atendimento ao cliente, avisos e outros serviços correlatos fornecidos pela DiskFactory (em conjunto, o \"Serviço\"). Ao instalar ou usar o Serviço, você concorda com estes Termos.",
         },
-        effectiveDate: "2026-07-23",
+        effectiveDate: "2026-07-25",
         contactEmail: "contact@diskfactory.app",
         sections: [
             {

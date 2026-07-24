@@ -425,7 +425,7 @@ export const privacyPolicies: PrivacyPolicy[] = [
             en: "This Privacy Policy applies to the Tank Pop Block Puzzle mobile game (the \"Application\") provided by DiskFactory (the \"Service Provider\"). The Application is generally available free of charge and may offer paid products such as a no-ads entitlement.",
             "pt-BR": "Esta Política de Privacidade se aplica ao jogo mobile Tank Pop Block Puzzle (o \"Aplicativo\"), fornecido pela DiskFactory (o \"Provedor do Serviço\"). O Aplicativo é disponibilizado, em geral, gratuitamente e pode oferecer produtos pagos, como o direito de remover anúncios.",
         },
-        effectiveDate: "2026-07-23",
+        effectiveDate: "2026-07-25",
         contactEmail: "contact@diskfactory.app",
         sections: [
             {
